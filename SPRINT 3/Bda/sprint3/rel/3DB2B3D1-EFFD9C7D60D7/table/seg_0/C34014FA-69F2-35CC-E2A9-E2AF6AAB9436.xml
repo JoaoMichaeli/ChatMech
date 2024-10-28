@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C34014FA-69F2-35CC-E2A9-E2AF6AAB9436" name="TBL_DIAGNOSTICOS">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:50:21 UTC</createdTime>
+<generatorID>E0F86A10-89A3-2FD8-904C-0C7CB653A9BE</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_diagnostico" id="14F08B8E-BBD3-B934-6410-B4628E2D7751">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:50:21 UTC</createdTime>
+<generatorID>1AF263EE-8A8B-3260-26F3-6F5F167512DB</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="placa" id="EC5443E0-5A37-130B-91B5-F1A8F19672D9">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:50:21 UTC</createdTime>
+<generatorID>6E202FA7-9C5A-FEB5-A86D-5D92EA731918</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9070C66F-61AF-218E-63BE-733AA4E4B468" referredColumn="5AD339F9-5F07-AD84-CE37-4B8CE932C441"/>
+</associations>
+</Column>
+<Column name="problema_veiculo" id="F80F8DCC-BDCE-EC2C-8B50-7A01AB4F3C44">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:50:21 UTC</createdTime>
+<generatorID>E1344ACB-A9FE-EFD6-3280-7120BEE95124</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="relatorio" id="94ADAEA9-A054-A10B-7C23-9946F6C942FE">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:50:21 UTC</createdTime>
+<generatorID>CE796B8C-23D9-7570-EA45-17CBBFD6C832</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="753AD0A1-B09A-0EF4-6ABF-47ADE66370AF" name="TBL_DIAGNOSTICOS_PK">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:50:21 UTC</createdTime>
+<generatorID>57297AA6-41E0-1383-C9A1-7D7B811C6822</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="14F08B8E-BBD3-B934-6410-B4628E2D7751"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="17D5078D-3FFA-4ADE-E060-8297D5B41E9D" name="TBL_DIAGNOSTICOS_TBL_VEICULOS_FK">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:50:21 UTC</createdTime>
+<generatorID>B1FE6D3E-F81B-F121-514D-B135B917549A</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EC5443E0-5A37-130B-91B5-F1A8F19672D9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D715EED7-6E49-A181-5C83-5AEAE5FDAB51" containerWithKeyObject="5123B96E-1916-D867-201B-DFFB2A2E10A2" localFKIndex="F7DEACDD-1A79-384F-4F18-9DED4D685CBF" name="TBL_CLIENTES_TBL_CADASTRO_FK">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:59:19 UTC</createdTime>
+<generatorID>BE70E056-0833-02AC-6E00-BF02E6A35440</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<referredTableLongName>TBL_CADASTRO</referredTableLongName>
+<arc>054A043C-EA0D-BB78-60E4-0B3BF0EC89EB</arc>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>3C34C639-4611-27BB-DDF5-A4D36904E667</referredTableID>
+<keyObject>7FCAC80F-CD98-E1EC-6CF5-E6E2D1B29EFC</keyObject>
+<referredKeyID>7FCAC80F-CD98-E1EC-6CF5-E6E2D1B29EFC</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_cadastro</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

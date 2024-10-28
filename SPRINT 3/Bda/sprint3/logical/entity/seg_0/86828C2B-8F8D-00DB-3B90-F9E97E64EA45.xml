@@ -1,0 +1,241 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="86828C2B-8F8D-00DB-3B90-F9E97E64EA45" name="TBL_CADASTRO">
+<createdBy>João</createdBy>
+<createdTime>2024-08-31 16:22:32 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3593DCF9-FDB4-560E-B7A5-DAA9C9E92414" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_cadastro" id="99EAC643-8CC0-5872-5BE8-3367A123FF5E">
+<createdBy>João</createdBy>
+<createdTime>2024-08-31 16:22:43 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3593DCF9-FDB4-560E-B7A5-DAA9C9E92414" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="usuario" id="4B825ED3-44D7-307B-25A1-9976236105A5">
+<createdBy>João</createdBy>
+<createdTime>2024-08-31 16:23:05 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3593DCF9-FDB4-560E-B7A5-DAA9C9E92414" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="BD30DB6C-2A5B-1546-95FE-E890CAA5FFC8">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:09:40 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3593DCF9-FDB4-560E-B7A5-DAA9C9E92414" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefone" id="2B104D4E-FA5D-CAFB-C63C-0D71919AB3BD">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:09:42 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3593DCF9-FDB4-560E-B7A5-DAA9C9E92414" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="senha" id="6F28F11B-B802-794E-1626-BC4D79D5E356">
+<createdBy>João</createdBy>
+<createdTime>2024-08-31 16:23:45 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3593DCF9-FDB4-560E-B7A5-DAA9C9E92414" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16</dataTypeSize>
+<ownDataTypeParameters>16,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome" id="E6A70472-B8E9-002A-4C37-1622D7070ADE">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:09:42 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3593DCF9-FDB4-560E-B7A5-DAA9C9E92414" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cpf" id="B2DF9C1A-808B-9B54-03F5-F98EA1A3208D">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 17:45:49 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3593DCF9-FDB4-560E-B7A5-DAA9C9E92414" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rua" id="E0F0A5A8-FF03-82BA-A19E-1F1182F56155">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:09:43 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3593DCF9-FDB4-560E-B7A5-DAA9C9E92414" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numero" id="DF0317FD-385F-E33B-F423-A2E0CA08306B">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:09:43 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3593DCF9-FDB4-560E-B7A5-DAA9C9E92414" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="complemento" id="4EAC115B-9707-61CA-5676-09BA41A07F3F">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:09:43 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3593DCF9-FDB4-560E-B7A5-DAA9C9E92414" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bairro" id="61624061-29C8-D8CA-94BD-055DEC2E2498">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:09:44 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3593DCF9-FDB4-560E-B7A5-DAA9C9E92414" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cep" id="51830527-364D-F466-834C-F8F730EB5367">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:09:46 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3593DCF9-FDB4-560E-B7A5-DAA9C9E92414" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estado" id="E2BBFE82-6C2D-8737-697B-E8AD2429A600">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:09:49 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3593DCF9-FDB4-560E-B7A5-DAA9C9E92414" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cidade" id="A4FB4516-47E1-A0F1-E16E-5945052A356F">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:12:05 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3593DCF9-FDB4-560E-B7A5-DAA9C9E92414" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>70</dataTypeSize>
+<ownDataTypeParameters>70,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo" id="62A953B9-63A1-850C-B3FC-83BB452E52C1">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:22:58 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3593DCF9-FDB4-560E-B7A5-DAA9C9E92414" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="19137A0D-CC2E-30AD-3691-F704BB27BAE7" name="TBL_CADASTRO_PK">
+<createdBy>João</createdBy>
+<createdTime>2024-08-31 16:22:59 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3593DCF9-FDB4-560E-B7A5-DAA9C9E92414" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>99EAC643-8CC0-5872-5BE8-3367A123FF5E</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="03434393-2965-8B61-B764-01ED51B438EE" name="TBL_CADASTRO_UN">
+<createdBy>João</createdBy>
+<createdTime>2024-08-31 16:24:10 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3593DCF9-FDB4-560E-B7A5-DAA9C9E92414" value="true"/>
+</engineerTo>
+<newElementsIDs>4B825ED3-44D7-307B-25A1-9976236105A5,BD30DB6C-2A5B-1546-95FE-E890CAA5FFC8,2B104D4E-FA5D-CAFB-C63C-0D71919AB3BD</newElementsIDs>
+<usedAttributes>
+<attributeRef>4B825ED3-44D7-307B-25A1-9976236105A5</attributeRef>
+<attributeRef>BD30DB6C-2A5B-1546-95FE-E890CAA5FFC8</attributeRef>
+<attributeRef>2B104D4E-FA5D-CAFB-C63C-0D71919AB3BD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

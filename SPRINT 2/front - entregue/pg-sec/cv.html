@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/cv.css">
+</head>
+<body>
+    <header class="logo">
+        <a class="homme" href="../index.html"><img src="../img/robo3.png" width="80px"  height="80px"></a>
+        <a class="home" href="../index.html">ChatMech</a><br>
+        <img class="usu" src="../img/usuario.png" width="80px"  height="80px">
+        <a class="us" href="perfil.html">Usuário</a>
+                
+        <section class="i1">
+            <a class="cv" href="cv.html">Cadastrar Veiculo</a><br>    
+        </section>
+                
+        <section class="i2">
+            <a  class="mc" href="#">Mechzinho</a><br>
+        </section>
+                
+        <section class="i3">
+            <a class="orc" href="orc.html">Orçamento</a><br>
+        </section>
+                
+        <section class="i4">
+            <a class="ser" href="ser.html">Serviços</a><br>
+        </section>
+                
+        <section class="i5">
+            <a class="man" href="man.html">Manutenções</a><br>
+        </section>
+           
+    </header>
+
+    <section class="titulo2">
+        <h1>Cadastre seu veículo</h1>
+    </section>
+
+    <figure class="rb4">
+        <img src="../img/robo4.png" alt="">
+    </figure>
+
+    <label for="idplaca"></label>
+            <input  placeholder="Digite a placa do veículo" type="text" name="placa" maxlength="7" id="idplaca" required><br>
+        
+        <label for="idtipo"></label>
+            <input  placeholder="Digite o tipo do seu carro(ex:kombi,moto,suv...)" type="text" name="tipo" id="idtipo" required><br>
+        
+        
+        <label for="idmarca"></label>
+        <input placeholder="Digite a marca do seu veiculo(ex:honda,fiat,chevrolet...)"  type="text" name="marca" id="idmarca" required><br> 
+        
+        <label for="idkmRodado"></label>
+        <input placeholder="Digite quantos km rodads tem o seu veiculo"  type="text"  name="hmRodado" id="idkmRodado" required><br> 
+       
+        <button onclick="alert('Veiculo Registrado')">
+            <a  href="perfil.html"><input class="entrar" type="submit" value="Registrar Veículo" ></a>
+        </button>
+    
+    
+</body>
+</html>

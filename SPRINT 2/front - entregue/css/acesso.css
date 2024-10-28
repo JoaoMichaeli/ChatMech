@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Montserrat:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.box1{
+    display: flex;
+    position: absolute;
+    top: 30%;
+    left: 4%;
+    width: 30%;
+
+    
+}
+.titulo1{
+    font-size: 3.5em;
+    
+}
+
+.box2{
+    display: flex;
+    position: absolute;
+    top: 55%;
+    left: 4%;
+    width: 30%;   
+}
+.texto1{
+    font-size: 2em;
+    
+}
+
+.tl{
+    color: rgb(32, 120, 178);
+    text-decoration-line: none;
+}
+
+.rb2{
+    position: absolute;
+    top: 26%;
+    left: 39%;   
+}
+
+#idemail{
+    background-color: #c8ddf3;
+    border: 1.2px solid #c8ddf3;
+    border-radius: 10px;
+    height: 5%;
+    width: 25%;
+    color:black;
+    list-style: none;
+    font-weight: bold;
+    position: absolute;
+    display: flex;
+    top: 40%;
+    left: 70%;
+    
+}
+#idsenha{
+    background-color: #c8ddf3;
+    border: 1.2px solid #c8ddf3;
+    border-radius: 10px;
+    height: 5%;
+    width: 25%;
+    color:black;
+    list-style: none;
+    font-weight: bold;
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 70%;
+    
+}
+
+.rs{
+    position: absolute;
+    top: 56%;
+    left: 87%;
+}
+
+.entrar{
+    background-color: #3f5dec;
+    border: 1.2px solid #3f5dec;
+    border-radius: 10px;
+    height: 5%;
+    width: 20%;
+    color:black;
+    list-style: none;
+    font-weight: bold;
+    position: absolute;
+    display: flex;
+    top: 60%;
+    left: 72%;
+    
+}
+
+.ent{
+    position: absolute;
+    display: flex;
+    left: 78%;
+    text-decoration-line:underline;
+}
+
+.reg{
+    position: absolute;
+    display: flex;
+    color: black;
+    top: 5.5%;
+    left: 87%;
+    text-decoration-line: none;
+    font-size: 0.7em;
+}
+
+.st{
+    position: absolute;
+    top: 5%;
+    left: 2%;
+}
+
+@media (min-width:1281px){
+    .box1{
+        display: flex;
+        position: absolute;
+        top: 30%;
+        left: 4%;
+        width: 30%;
+    
+        
+    }
+    .titulo1{
+        font-size: 3.5em;
+        
+    }
+    
+    .box2{
+        display: flex;
+        position: absolute;
+        top: 55%;
+        left: 4%;
+        width: 30%;   
+    }
+    .texto1{
+        font-size: 2em;
+        
+    }
+    
+    .tl{
+        color: rgb(32, 120, 178);
+        text-decoration-line: none;
+    }
+    
+    .rb2{
+        position: absolute;
+        top: 26%;
+        left: 39%;   
+    }
+    
+    #idemail{
+        background-color: #c8ddf3;
+        border: 1.2px solid #c8ddf3;
+        border-radius: 10px;
+        height: 5%;
+        width: 25%;
+        color:black;
+        list-style: none;
+        font-weight: bold;
+        position: absolute;
+        display: flex;
+        top: 40%;
+        left: 70%;
+        
+    }
+    #idsenha{
+        background-color: #c8ddf3;
+        border: 1.2px solid #c8ddf3;
+        border-radius: 10px;
+        height: 5%;
+        width: 25%;
+        color:black;
+        list-style: none;
+        font-weight: bold;
+        position: absolute;
+        display: flex;
+        top: 50%;
+        left: 70%;
+        
+    }
+    
+    .rs{
+        position: absolute;
+        top: 56%;
+        left: 87%;
+    }
+    
+    .entrar{
+        background-color: #3f5dec;
+        border: 1.2px solid #3f5dec;
+        border-radius: 10px;
+        height: 5%;
+        width: 20%;
+        color:black;
+        list-style: none;
+        font-weight: bold;
+        position: absolute;
+        display: flex;
+        top: 60%;
+        left: 72%;
+        
+    }
+    
+    .ent{
+        position: absolute;
+        display: flex;
+        left: 78%;
+        text-decoration-line:underline;
+    }
+    
+    .reg{
+        position: absolute;
+        display: flex;
+        color: black;
+        top: 5.5%;
+        left: 87%;
+        text-decoration-line: none;
+        font-size: 0.7em;
+    }
+    
+    .st{
+        position: absolute;
+        top: 5%;
+        left: 2%;
+    }
+}
+@media (min-width:768px) and (max-width:1024px){
+    .box1{
+        display: flex;
+        position: absolute;
+        top: 30%;
+        left: 4%;
+        width: 30%;
+    
+        
+    }
+    .titulo1{
+        font-size: 3.5em;
+        
+    }
+    
+    .box2{
+        display: flex;
+        position: absolute;
+        top: 55%;
+        left: 4%;
+        width: 30%;   
+    }
+    .texto1{
+        font-size: 2em;
+        
+    }
+    
+    .tl{
+        color: rgb(32, 120, 178);
+        text-decoration-line: none;
+    }
+    
+    .rb2{
+        position: absolute;
+        top: 26%;
+        left: 39%;   
+    }
+    
+    #idemail{
+        background-color: #c8ddf3;
+        border: 1.2px solid #c8ddf3;
+        border-radius: 10px;
+        height: 5%;
+        width: 20%;
+        color:black;
+        list-style: none;
+        font-weight: bold;
+        position: absolute;
+        display: flex;
+        top: 40%;
+        left: 75%;
+        
+    }
+    #idsenha{
+        background-color: #c8ddf3;
+        border: 1.2px solid #c8ddf3;
+        border-radius: 10px;
+        height: 5%;
+        width: 20%;
+        color:black;
+        list-style: none;
+        font-weight: bold;
+        position: absolute;
+        display: flex;
+        top: 50%;
+        left: 75%;
+        
+    }
+    
+    .rs{
+        position: absolute;
+        top: 56%;
+        left: 85%;
+    }
+    
+    .entrar{
+        background-color: #3f5dec;
+        border: 1.2px solid #3f5dec;
+        border-radius: 10px;
+        height: 5%;
+        width: 20%;
+        color:black;
+        list-style: none;
+        font-weight: bold;
+        position: absolute;
+        display: flex;
+        top: 60%;
+        left: 75%;
+        
+    }
+    
+    .ent{
+        position: absolute;
+        display: flex;
+        left: 70%;
+        text-decoration-line:underline;
+    }
+    
+    .reg{
+        position: absolute;
+        display: flex;
+        color: black;
+        top: 4%;
+        left: 87%;
+        text-decoration-line: none;
+        font-size: 0.7em;
+    }
+    
+    .st{
+        position: absolute;
+        top: 5%;
+        left: 2%;
+    }
+}
+
+@media (min-width:320px) and (max-width:480px){
+    .box1{
+        display: flex;
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        width: 60%;
+    
+        
+    }
+    .titulo1{
+        font-size: 3.5em;
+        
+    }
+    
+    .box2{
+        display: flex;
+        position: absolute;
+        top: 35%;
+        left: 10%;
+        width: 60%;   
+    }
+    .texto1{
+        font-size: 2em;
+        
+    }
+    
+    .tl{
+        color: rgb(32, 120, 178);
+        text-decoration-line: none;
+    }
+    
+    .rb2{
+        position: absolute;
+        top: 50%;
+        left: 10%;   
+    }
+    
+    #idemail{
+        background-color: #c8ddf3;
+        border: 1.2px solid #c8ddf3;
+        border-radius: 10px;
+        height: 5%;
+        width: 45%;
+        color:black;
+        list-style: none;
+        font-weight: bold;
+        position: absolute;
+        display: flex;
+        top: 80%;
+        left: 10%;
+        
+    }
+    #idsenha{
+        background-color: #c8ddf3;
+        border: 1.2px solid #c8ddf3;
+        border-radius: 10px;
+        height: 5%;
+        width: 45%;
+        color:black;
+        list-style: none;
+        font-weight: bold;
+        position: absolute;
+        display: flex;
+        top: 90%;
+        left: 10%;
+        
+    }
+    
+    .rs{
+        position: absolute;
+        top: 96%;
+        left: 27%;
+    }
+    
+    .entrar{
+        background-color: #3f5dec;
+        border: 1.2px solid #3f5dec;
+        border-radius: 10px;
+        height: 5%;
+        width: 45%;
+        color:black;
+        list-style: none;
+        font-weight: bold;
+        position: absolute;
+        display: flex;
+        top: 100%;
+        left: 10%;
+        
+    }
+    
+    .ent{
+        position: absolute;
+        display: flex;
+        left: 48%;
+        text-decoration-line:underline;
+    }
+    
+    .reg{
+        position: absolute;
+        display: flex;
+        color: black;
+        top: 7%;
+        left: 47%;
+        text-decoration-line: none;
+        font-size: 0.7em;
+    }
+    
+    .st{
+        position: absolute;
+        top: 5%;
+        left: 2%;
+    }
+    
+}
+
+

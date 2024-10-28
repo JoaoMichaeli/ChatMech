@@ -1,0 +1,2414 @@
+{
+  "intents": [
+    {
+      "intent": "Agradecimento",
+      "examples": [
+        {
+          "text": "Agradecido"
+        },
+        {
+          "text": "brigado"
+        },
+        {
+          "text": "muito obrigado!"
+        },
+        {
+          "text": "Muito obrigado pela sua ajuda!"
+        },
+        {
+          "text": "não"
+        },
+        {
+          "text": "obrigado"
+        },
+        {
+          "text": "Obrigado pela ajuda."
+        },
+        {
+          "text": "salvou muito."
+        },
+        {
+          "text": "Sua ajuda fez toda a diferença. Muito obrigado"
+        },
+        {
+          "text": "Sua ajuda foi muito boa,obrigado!"
+        },
+        {
+          "text": "valeu"
+        },
+        {
+          "text": "Valeu pela ajuda."
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "cadastro",
+      "examples": [
+        {
+          "text": "02310001"
+        },
+        {
+          "text": "02310-120"
+        },
+        {
+          "text": "123456789 10"
+        },
+        {
+          "text": "cliente"
+        },
+        {
+          "text": "Como começar a parte de cadastro no site?"
+        },
+        {
+          "text": "Como faço cadastro?"
+        },
+        {
+          "text": "fernando@gamil.com"
+        },
+        {
+          "text": "fernando@gmail.com"
+        },
+        {
+          "text": "Me ajude a me cadastrar."
+        },
+        {
+          "text": "Mechzinho,me ajuda no cadastro do site?"
+        },
+        {
+          "text": "moto"
+        },
+        {
+          "text": "Oque eu faço na parte do cadastro?"
+        },
+        {
+          "text": "Por onde começar o cadastro?"
+        },
+        {
+          "text": "Quero ajuda para me cadastrar."
+        },
+        {
+          "text": "Quero me cadastrar no site"
+        },
+        {
+          "text": "veiculo"
+        },
+        {
+          "text": "Você pode fazer meu cadastro?"
+        },
+        {
+          "text": "Você pode fazer meu cadastro no site??"
+        },
+        {
+          "text": "Você pode me ajudar a fazer o cadastro?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Cancelamento",
+      "examples": [
+        {
+          "text": "Bot,voce pode cancelar meu agendamento"
+        },
+        {
+          "text": "Como cancelo o agendamento"
+        },
+        {
+          "text": "Como faço para cancelar a amnutenção do meu veículo?"
+        },
+        {
+          "text": "Como faço para cancelar a manutenção do meu veículo"
+        },
+        {
+          "text": "Como faço para cancelar um agendamento de manutenção?"
+        },
+        {
+          "text": "Mech,cancele o agendamento marcado"
+        },
+        {
+          "text": "Quero cancelar a manutenção."
+        },
+        {
+          "text": "Quero cancelar manutenção do veículo"
+        },
+        {
+          "text": "Quero cancelar meu agendamento"
+        },
+        {
+          "text": "Quero fazer o cancelamento da manutenção do veículo"
+        },
+        {
+          "text": "Quero o cancelamento da manutenção"
+        },
+        {
+          "text": "Voce pode cancelar o agendamento feito?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "diagnostico",
+      "examples": [
+        {
+          "text": "carro"
+        },
+        {
+          "text": "estou com problemas no meu carro"
+        },
+        {
+          "text": "Estou tendo problemas com a minha moto."
+        },
+        {
+          "text": "Estou tendo problemas com o meu veiculo."
+        },
+        {
+          "text": "Estou tendo problemas com o sistema elétrico do meu veiculo Pode me ajudar??"
+        },
+        {
+          "text": "Estou tendo problemas no meu carro. Você pode me ajudar a descobrir o que é?"
+        },
+        {
+          "text": "honda"
+        },
+        {
+          "text": "meu carro está com defeito,me ajuda??"
+        },
+        {
+          "text": "Meu carro não esta funcionando"
+        },
+        {
+          "text": "Meu carro quebrou."
+        },
+        {
+          "text": "Meu veiculo quebrou. Você pode me ajudar a diagnosticar o problema?"
+        },
+        {
+          "text": "Minha moto esta estranha. Você pode me ajudar?"
+        },
+        {
+          "text": "Minha mto não esta funcionando"
+        }
+      ],
+      "description": "Vai ajudar a fazer um diagnostico do veiculo"
+    },
+    {
+      "intent": "feedback",
+      "examples": [
+        {
+          "text": "0"
+        },
+        {
+          "text": "1"
+        },
+        {
+          "text": "10"
+        },
+        {
+          "text": "2"
+        },
+        {
+          "text": "3"
+        },
+        {
+          "text": "4"
+        },
+        {
+          "text": "5"
+        },
+        {
+          "text": "6"
+        },
+        {
+          "text": "7"
+        },
+        {
+          "text": "8"
+        },
+        {
+          "text": "9"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Histórico-manutencao",
+      "examples": [
+        {
+          "text": "Como entro no histórico de manutenção do veículo?"
+        },
+        {
+          "text": "Como faço para ter acesso aos meus históricos de manutenção?"
+        },
+        {
+          "text": "Como funciona o historico das mecanicas agendadas nesse site?"
+        },
+        {
+          "text": "Como funciona o histórico de manutenção?"
+        },
+        {
+          "text": "Como posso saber o nome das oficinas que fiz agendamento por aqui"
+        },
+        {
+          "text": "Fiz um agendamento aqui e quero o nome da oficina que me atendeu."
+        },
+        {
+          "text": "Fiz um agendamento aqui e quero saber se poderia me informar como eu conssigo nome da oficina que me atendeu."
+        },
+        {
+          "text": "Fiz um agendamento no site e queria saber o nome da oficina que me atendeu,me ajude?"
+        },
+        {
+          "text": "Me ajude a achar o nome das mecanicas que agendei uma manutenção nesse site por favor?"
+        },
+        {
+          "text": "Onde consigo achar o nome das mecanicas que fiz o agendamento aqui?"
+        },
+        {
+          "text": "Quero saaber como funciona o historico de mecanicas agendadas aqui"
+        },
+        {
+          "text": "Quero saber das mecanicas que me atenderam ja que fiz meus agendamentos por aqui,me ajude?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "info-site",
+      "examples": [
+        {
+          "text": "Como funciona o seu site?"
+        },
+        {
+          "text": "Eu quero entender mais sobre esse site.Voce poderia me ajudar"
+        },
+        {
+          "text": "Me ajude a entender mais sobre o chatMech"
+        },
+        {
+          "text": "Oque é o chatMech"
+        },
+        {
+          "text": "Oque é o chatMech?"
+        },
+        {
+          "text": "Oque o chatMech me oferecerá?"
+        },
+        {
+          "text": "Quais as funcionalidades do site?"
+        },
+        {
+          "text": "Quais as funcoes do site?"
+        },
+        {
+          "text": "Qual o objetivo desse site?"
+        },
+        {
+          "text": "Quero saber como o seu site funciona."
+        },
+        {
+          "text": "Você pode me informar mais sobre esse site?"
+        }
+      ],
+      "description": "Fala sobre as informacoes e funcionalidades do site"
+    },
+    {
+      "intent": "mecanica",
+      "examples": [
+        {
+          "text": "11 987603456"
+        },
+        {
+          "text": "2000"
+        },
+        {
+          "text": "Eu estou tentando achar uma mecanica,me ajude a achar uma?"
+        },
+        {
+          "text": "Eu quero achar uma mecanica perto da minha casa."
+        },
+        {
+          "text": "Me ajuda a achar uma oficina mecanica por favor."
+        },
+        {
+          "text": "Me ajude a encontrar uma mecanica perto de onde estou."
+        },
+        {
+          "text": "Me ajude a encontrar uma oficina para arrumar a minha moto."
+        },
+        {
+          "text": "Meu carro esta com problemas.Me ajude a encontrar um lugar que concerte meu veiculo?"
+        },
+        {
+          "text": "Minha moto quebrou.Me ajude a encontrar uma oficina mecanica por favor?"
+        },
+        {
+          "text": "ok"
+        },
+        {
+          "text": "Preciso de uma mecanica para o meu carro.Me ajuda?"
+        },
+        {
+          "text": "Quero marcar uma manutenção em uma mecanica,voce poderia me ajudar?"
+        },
+        {
+          "text": "Voce pode me mostrar uma mecanica perto da minha localizacao?"
+        }
+      ],
+      "description": "Ajuda a achar uma mecanica"
+    },
+    {
+      "intent": "problema-veiculo",
+      "examples": [
+        {
+          "text": "esta saindo muito fluido do meu carro."
+        },
+        {
+          "text": "Esta saindo um som estranho do motor"
+        },
+        {
+          "text": "Estou com problemas no motor do carro"
+        },
+        {
+          "text": "Meu carro amassou"
+        },
+        {
+          "text": "Meu carro esta desligando do nada"
+        },
+        {
+          "text": "Meus freios não estao funcionando direito"
+        },
+        {
+          "text": "Meus pneus furaram."
+        },
+        {
+          "text": "Meu veiculo esta consumindo mais gasolina que o normal"
+        },
+        {
+          "text": "Minha embreagem esta estranha"
+        },
+        {
+          "text": "O parachoque do carro saiu"
+        },
+        {
+          "text": "Os farois estao queimados"
+        },
+        {
+          "text": "Os farois n querem acender"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "regendamento",
+      "examples": [
+        {
+          "text": "Cancelei meu agendamento e quero fazer outro,como faço??"
+        },
+        {
+          "text": "Caso eu não ir na oficina no dia do agendamento,oque faço??"
+        },
+        {
+          "text": "Como faço para areagendar uma manutenção na mecanica"
+        },
+        {
+          "text": "Como faço para reagendar??"
+        },
+        {
+          "text": "Como funciona o processo de agendamento no site,perdi um e quero reagendar??"
+        },
+        {
+          "text": "Como que posso fazer outro agendamento??"
+        },
+        {
+          "text": "Mas como funciona o processo de reagendamento??"
+        },
+        {
+          "text": "Me ajude a reagendar a manutencao do meu carro"
+        },
+        {
+          "text": "Não fui na oficina nos horarios agendados,oque faço?"
+        },
+        {
+          "text": "Quero reagendar a manutenção do meu carro."
+        },
+        {
+          "text": "Quero reagendar a manutencao do meu veiculo"
+        },
+        {
+          "text": "Tive um compromisso e não irei na oficina no horario agendado,me ajude a fazer outro?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Serviços-agendados",
+      "examples": [
+        {
+          "text": "Como eu acesso meus agendaamentos??"
+        },
+        {
+          "text": "Como eu acesso os meus agendamentos marcados??"
+        },
+        {
+          "text": "Esse site tem um sistema de armazenamento de aagendamentos das mecânicas??"
+        },
+        {
+          "text": "Onde acessar os agendamentos marcados??"
+        },
+        {
+          "text": "Onde acesso as informações sobre os agendamentos marcados?"
+        },
+        {
+          "text": "Onde posso encontrar meus agendamentos?"
+        },
+        {
+          "text": "Onde posso ver as informações dos meus agndamentos?"
+        },
+        {
+          "text": "Onde posso ver meus agendamentos marcados?"
+        },
+        {
+          "text": "Onde posso ver os meus agendamentos?"
+        },
+        {
+          "text": "Onde vejo os meus agendamentos?"
+        },
+        {
+          "text": "Quero editar meus agendamentos,como faço isso?"
+        },
+        {
+          "text": "Seu site tem um sistema que armazena agendamentos,onde encontro eles?"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "ano-veiculo",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "ano",
+          "patterns": [
+            "(\\d{4})"
+          ]
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "cep",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "cep",
+          "patterns": [
+            "(\\d{5}-\\d{3})",
+            "(\\d{5}) (\\d{3})"
+          ]
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "cpf",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "cpf",
+          "patterns": [
+            "(\\d{3}.\\d{3}.\\d{3}-\\d{2})",
+            "(\\d{3})(\\d{3})(\\d{3})(\\d{2})"
+          ]
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "dia",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "dia",
+          "patterns": [
+            "(\\d{2}/\\d{2})"
+          ]
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "email",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "email",
+          "patterns": [
+            "([a-zA-Z0-9+._-]+@[a-zA-Z0-9._-]+\\.[a-zA-Z0-9_-]+)",
+            "\\b[A-Za-z0-9._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,}\\b"
+          ]
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "especialidade-oficina",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Ar-condicionado automotivo",
+          "synonyms": [
+            "ar-condicionado automotivo"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Geral",
+          "synonyms": [
+            "geral"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Pintura e funilaria",
+          "synonyms": [
+            "pintura e funilaria"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Sistema Elétrico",
+          "synonyms": [
+            "sistema Elétrico"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Suspensão e Direção",
+          "synonyms": [
+            "suspensão e direção"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Transmissão",
+          "synonyms": [
+            "transmissão"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "horario",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "hora",
+          "patterns": [
+            "(\\d{2}:\\d{2})"
+          ]
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "marca-veiculo",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "audi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "bmw",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "chevrolet",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "citroen",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "fiat",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "ford",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "honda",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "hyundai",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "jeep",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "kiv",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "mercedez-benz",
+          "synonyms": [
+            "mercedez"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "mitsubishi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "nissan",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "renaut",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Placa",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "placa",
+          "patterns": [
+            "(\\d{7})",
+            "(\\d{3}-\\d{4})"
+          ]
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "regiao",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Belo Horizonte",
+          "synonyms": [
+            "bh"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Espírito Santo",
+          "synonyms": [
+            "es"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Minas Gerais",
+          "synonyms": [
+            "mg"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Rio de Janeiro",
+          "synonyms": [
+            "rj"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "São Paulo",
+          "synonyms": [
+            "sp"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Vitória",
+          "synonyms": [
+            "vi"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sim-nao",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "nao",
+          "synonyms": [
+            "n",
+            "nn"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "sim",
+          "synonyms": [
+            "claro",
+            "ok",
+            "s",
+            "ss",
+            "yes"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-currency",
+      "values": []
+    },
+    {
+      "entity": "telefone",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "celular",
+          "patterns": [
+            "(\\d{2}) (\\d{5})-(\\d{4})",
+            "(\\d{2}) (\\d{9})"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "fixo",
+          "patterns": [
+            "(\\d{2}) (\\d{4}-\\d{4})",
+            "(\\d{2}) (\\d{8})"
+          ]
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "tipo-cadastro",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Cliente",
+          "synonyms": [
+            "cliente"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Oficina",
+          "synonyms": [
+            "oficina"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Veículo",
+          "synonyms": [
+            "veiculo",
+            "veículo"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "tipo-veiculo",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "caminhao",
+          "synonyms": [
+            "carreta"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "caminhonetes",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "carro",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "kombi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Moto",
+          "synonyms": [
+            "Motocicleta"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá,sou o Mechzinho,é um prazer te conhecer.Como posso te ajudar?"
+              },
+              {
+                "text": "Seja bem-vindo ao ChatMech, em que posso te ajudar??"
+              },
+              {
+                "text": "Olá,sou o Mech,precisa de alguma ajuda?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Você pode repetir?"
+              },
+              {
+                "text": "Não entendi oque quer dizer. Tente novamente,por favor."
+              },
+              {
+                "text": "Eu não entendi o sentido."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_3_1713645084278",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_19_1715625839758",
+      "context": {
+        "telefone": "@telefone"
+      },
+      "conditions": "@telefone",
+      "event_name": "input",
+      "dialog_node": "handler_20_1715625839758"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para melhor comunicação entre você e a oficina,me informe seu telefone por favor."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_19_1715625839758",
+      "event_name": "focus",
+      "dialog_node": "handler_21_1715625839758",
+      "previous_sibling": "handler_20_1715625839758"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1715636374579",
+      "context": {
+        "Placa": "@Placa.literal"
+      },
+      "conditions": "@Placa",
+      "event_name": "input",
+      "dialog_node": "handler_2_1715636374604"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Todo agendamento é marcado pelo seu email.Me informe seu telefone para localizarmos suas exigencias por gentileza."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_8_1715711359750",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1715711359751",
+      "previous_sibling": "handler_5_1715711359751"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_23_1715635061627",
+      "context": {
+        "cep": "@cep.literal"
+      },
+      "conditions": "@cep",
+      "event_name": "input",
+      "dialog_node": "handler_24_1715635061627"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para começarmos o seu cadastro precisamos insira o CEP da sua residência:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_23_1715635061627",
+      "event_name": "focus",
+      "dialog_node": "handler_25_1715635061627",
+      "previous_sibling": "handler_24_1715635061627"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_26_1715635061627",
+      "context": {
+        "email": "@email.literal"
+      },
+      "conditions": "@email",
+      "event_name": "input",
+      "dialog_node": "handler_27_1715635061627"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ótimo!Agora digite seu email por favor:"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_26_1715635061627",
+      "event_name": "focus",
+      "dialog_node": "handler_28_1715635061627",
+      "previous_sibling": "handler_27_1715635061627"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_29_1715635061627",
+      "context": {
+        "telefone": "@telefone.literal"
+      },
+      "conditions": "@telefone",
+      "event_name": "input",
+      "dialog_node": "handler_30_1715635061627"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Informe o seu telefone:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_29_1715635061627",
+      "event_name": "focus",
+      "dialog_node": "handler_31_1715635061627",
+      "previous_sibling": "handler_30_1715635061627"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ótimo!Agora digite seu email por favor:"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_9_1715634870563",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1715634870564",
+      "previous_sibling": "handler_6_1715634870564"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Quase lá.Informe a placa do seu carro!"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_8_1715636374579",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1715636374604",
+      "previous_sibling": "handler_2_1715636374604"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1715708521384",
+      "context": {
+        "cpf": "@cpf.literal"
+      },
+      "conditions": "@cpf",
+      "event_name": "input",
+      "dialog_node": "handler_3_1715708521385"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1715715087061",
+      "context": {
+        "email": "@email.literal"
+      },
+      "conditions": "@email",
+      "event_name": "input",
+      "dialog_node": "handler_4_1715715087082"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1715634434943",
+      "context": {
+        "cep": "@cep.literal"
+      },
+      "conditions": "@cep",
+      "event_name": "input",
+      "dialog_node": "handler_5_1715634434962"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Quase lá,informe o telefone da oficina:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_6_1715634930403",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1715634930404",
+      "previous_sibling": "handler_9_1715634930404"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1715636557645",
+      "context": {
+        "ano_veiculo": "@ano-veiculo.literal"
+      },
+      "conditions": "@ano-veiculo",
+      "event_name": "input",
+      "dialog_node": "handler_5_1715636557647"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para Finalizar,digite seu cpf por favor."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_7_1715708521384",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1715708521385",
+      "previous_sibling": "handler_3_1715708521385"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1715711359750",
+      "context": {
+        "email": "@email.literal"
+      },
+      "conditions": "@email",
+      "event_name": "input",
+      "dialog_node": "handler_5_1715711359751"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1715711819140",
+      "context": {
+        "horario": "@horario.literal"
+      },
+      "conditions": "@horario",
+      "event_name": "input",
+      "dialog_node": "handler_5_1715711819141"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para cancelar,preciso que me informe seu email:"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_10_1715715087061",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1715715087082",
+      "previous_sibling": "handler_4_1715715087082"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1715634870563",
+      "context": {
+        "email": "@email.literal"
+      },
+      "conditions": "@email",
+      "event_name": "input",
+      "dialog_node": "handler_6_1715634870564"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Informe o melhor horário para você nesse dia"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_1_1715711819140",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1715711819141",
+      "previous_sibling": "handler_5_1715711819141"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1715625230107",
+      "context": {
+        "telefone": "@telefone"
+      },
+      "conditions": "@telefone",
+      "event_name": "input",
+      "dialog_node": "handler_7_1715625230107"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual o ano do seu veículo?"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_6_1715636557645",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1715636557647",
+      "previous_sibling": "handler_5_1715636557647"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1715711894678",
+      "context": {
+        "dia": "@dia.literal"
+      },
+      "conditions": "@dia",
+      "event_name": "input",
+      "dialog_node": "handler_7_1715711894680"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para melhor comunicação entre você e a oficina,me informe seu telefone por favor."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_6_1715625230107",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1715625230107",
+      "previous_sibling": "handler_7_1715625230107"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para começarmos o seu cadastro precisamos insira o CEP da sua mecânica:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_7_1715634434943",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1715634434962",
+      "previous_sibling": "handler_5_1715634434962"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1715711232574",
+      "context": {
+        "telefone": "@telefone"
+      },
+      "conditions": "@telefone",
+      "event_name": "input",
+      "dialog_node": "handler_8_1715711232574"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1715634930403",
+      "context": {
+        "telefone": "@telefone.literal"
+      },
+      "conditions": "@telefone",
+      "event_name": "input",
+      "dialog_node": "handler_9_1715634930404"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ótimo!Agora para receber as informações do seu agendamento, informe seutelefone de contato:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_7_1715711232574",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1715711232574",
+      "previous_sibling": "handler_8_1715711232574"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Informe o melhor dia para você:"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_3_1715711894678",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1715711894680",
+      "previous_sibling": "handler_7_1715711894680"
+    },
+    {
+      "type": "standard",
+      "title": "diagnóstico",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok.Vou fazer um diagnóstico para você,para isso preciso fazer algumas perguntas.Tudo bem?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#diagnostico",
+      "dialog_node": "node_10_1713646208677",
+      "previous_sibling": "node_3_1715633726129"
+    },
+    {
+      "type": "standard",
+      "title": "ok",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual é o tipo do seu veiculo?(ex:moto,carro,kombie...)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1715625839757",
+      "conditions": "@sim-nao",
+      "dialog_node": "node_10_1715625839758"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Perfeito!Para finalizarmos o cadastro da oficina,confirme as informações preenchidas: o seu cep é $cep,o email é $email ,o seu telefone é $telefonece a especialidade é $especialidade-oficina_escolhida  ."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1715634369567",
+      "context": {
+        "especialidade-oficina_escolhida": "@especialidade-oficina.literal"
+      },
+      "conditions": "@especialidade-oficina",
+      "dialog_node": "node_10_1715636995385"
+    },
+    {
+      "type": "standard",
+      "title": "Serviço de Agendamento",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O serviço de agendamento é uma funcionalidade que guarda todos os agendamentos feitos aqui e que ainda não foram concluidos guardando o nome das mecanicas que fará a manutenção do seu veículo,a data , a hora do agendamento,preço e se foi util ou não.Para acessa-lo pe preciso entrar no perfil do usuárioe na aba de utilidades estará o histórico de manutenção e se precisar é possível edita-lo e excluí-lo.Essa Explicação te ajudou?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Serviços-agendados",
+      "dialog_node": "node_10_1715714302026",
+      "previous_sibling": "node_6_1715712480797"
+    },
+    {
+      "type": "standard",
+      "title": "tipo-de-veiculo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual marca é o seu veiculo?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1715625839758",
+      "context": {
+        "tipo-veiculo_escolhido": "@tipo-veiculo.literal"
+      },
+      "conditions": "@tipo-veiculo",
+      "dialog_node": "node_11_1715625839758"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Precisa de mais alguma coisa??"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1715714302026",
+      "conditions": "@sim-nao:sim",
+      "dialog_node": "node_11_1715714302028"
+    },
+    {
+      "type": "standard",
+      "title": "ok",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual é o tipo do seu veiculo?(ex:moto,carro,kombie...)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1713646208677",
+      "conditions": "@sim-nao",
+      "dialog_node": "node_1_1713646831678"
+    },
+    {
+      "type": "standard",
+      "title": "marca-do-veiculo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual o problema do seu veículo?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1713646930228",
+      "context": {
+        "marca-veiculo_escolhido": "@marca-veiculo.literal"
+      },
+      "conditions": "@marca-veiculo",
+      "dialog_node": "node_1_1713647956895"
+    },
+    {
+      "type": "standard",
+      "title": "mecanica -diagnostico",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok.Irei fazer alguma perguntas para te ajudar a achar a melhor mecânica para você.Beleza?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1713648082965",
+      "conditions": "@sim-nao:sim",
+      "dialog_node": "node_1_1715625230105"
+    },
+    {
+      "type": "frame",
+      "title": "telefone-reagendamento",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Maravilha!Agendamento enviado novamente,voce receberá um email com as informações e ajuste de horário caso não for posível o horario e dia escolhido.Mais alguma coisa?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1715710941746",
+      "conditions": "@sim-nao:sim",
+      "dialog_node": "node_1_1715711232572"
+    },
+    {
+      "type": "standard",
+      "title": "marca-do-veiculo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual o problema do seu veículo?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_11_1715625839758",
+      "context": {
+        "marca-veiculo_escolhido": "@marca-veiculo.literal"
+      },
+      "conditions": "@marca-veiculo",
+      "dialog_node": "node_12_1715625839758"
+    },
+    {
+      "type": "standard",
+      "title": "problema-veiculo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Maravilha!Seu diagnóstico está pronto!Obigado pela paciência!PDeseja encontrar uma oficina para solucionar seu problema?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_12_1715625839758",
+      "conditions": "@problema_veículo",
+      "dialog_node": "node_13_1715625839758"
+    },
+    {
+      "type": "standard",
+      "title": "mecanica",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok.Irei fazer alguma perguntas para te ajudar a achar a melhor mecânica para você.Beleza?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@sim-nao:sim",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_14_1715625839758",
+      "previous_sibling": "node_10_1713646208677"
+    },
+    {
+      "type": "standard",
+      "title": "ok",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Em que local você quer ser atendido?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_14_1715625839758",
+      "conditions": "@sim-nao",
+      "dialog_node": "node_15_1715625839758"
+    },
+    {
+      "type": "standard",
+      "title": "regiao",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Você tem um valor máximo para o orçamento?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_15_1715625839758",
+      "context": {
+        "regiao_escolhida": "@regiao.literal"
+      },
+      "conditions": "@regiao",
+      "dialog_node": "node_16_1715625839758"
+    },
+    {
+      "type": "standard",
+      "title": "orçamento",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ótimo!Encontrei uma oficina mecânica em $regiao_escolhida com um orçamento maximo escolhido.Deseja agendar nesta oficina?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_16_1715625839758",
+      "conditions": "@sim-nao || @sys-currency",
+      "dialog_node": "node_17_1715625839758"
+    },
+    {
+      "type": "frame",
+      "title": "telefone",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Agendamento marcado com sucesso. Para agilizar de manutenção em seu veículo  aconselho a fazer um diagnóstico completo de seu automóvel, gostaria de fazer?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_17_1715625839758",
+      "conditions": "@sim-nao",
+      "dialog_node": "node_18_1715625839758"
+    },
+    {
+      "type": "standard",
+      "title": "problema-veiculo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Maravilha!Seu diagnóstico está pronto!Obigado pela paciência!PDeseja encontrar uma oficina para solucionar seu problema?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1713647956895",
+      "conditions": "@problema_veículo",
+      "dialog_node": "node_2_1713648082965"
+    },
+    {
+      "type": "standard",
+      "title": "ok",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Em que local você quer ser atendido?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1715625230105",
+      "conditions": "@sim-nao",
+      "dialog_node": "node_2_1715625230107"
+    },
+    {
+      "type": "frame",
+      "title": "Cadastro-Veiculo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para começarmos,informe o tipo do seu veículo(carro,moto,caminhão...) ."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1715633726129",
+      "conditions": "@tipo-cadastro:Veículo",
+      "dialog_node": "node_2_1715635001613",
+      "previous_sibling": "node_22_1715635061626"
+    },
+    {
+      "type": "standard",
+      "title": "reagendamento",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para reagendar sua manutenção é necessário ver a disponibilidade da mecânica e qual dia será possivel realizar.Irei perguntar alguns itens do agendamento novamente.Tudo bem?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#regendamento",
+      "dialog_node": "node_2_1715710941746",
+      "previous_sibling": "node_10_1715714302026"
+    },
+    {
+      "type": "frame",
+      "title": "Cadastro-Cliente",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "poderia confirmar que o seu cep é $cep, o email é $email, o seu telefone é $telefone e seu cpf é $cpf  ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1715633726129",
+      "conditions": "@tipo-cadastro:Cliente",
+      "dialog_node": "node_22_1715635061626",
+      "previous_sibling": "node_9_1715634369567"
+    },
+    {
+      "type": "standard",
+      "title": "feedback",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "qual a sua nota para esse atendimento"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Agradecimento",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_3_1713645084278",
+      "previous_sibling": "node_6_1713644112336"
+    },
+    {
+      "type": "standard",
+      "title": "regiao",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Você tem um valor máximo para o orçamento?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1715625230107",
+      "context": {
+        "regiao_escolhida": "@regiao.literal"
+      },
+      "conditions": "@regiao",
+      "dialog_node": "node_3_1715625230107"
+    },
+    {
+      "type": "standard",
+      "title": "Cadastro",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok. Realizarei seu cadastro! Primeiro qual tipo de cadastro você realizará:\n-Oficina;                                                                                                                                                                \n-Cliente;                                                                                                                                                                \n-Veículo"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#cadastro",
+      "dialog_node": "node_3_1715633726129",
+      "previous_sibling": "node_2_1715710941746"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Posso te ajudar em algo mais?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_22_1715635061626",
+      "conditions": "@sim-nao:sim",
+      "dialog_node": "node_32_1715637046481"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Posso te ajudar em algo mais?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1715636273592",
+      "conditions": "@sim-nao:sim",
+      "dialog_node": "node_33_1715637062153"
+    },
+    {
+      "type": "standard",
+      "title": "orçamento",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ótimo!Encontrei uma oficina mecânica em $regiao_escolhida com um orçamento maximo escolhido.Deseja agendar nesta oficina?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1715625230107",
+      "conditions": "@sim-nao || @sys-currency",
+      "dialog_node": "node_4_1715625230107"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Maravilha!!Para finalizar seu cadastro,confirme os dados colocados:                                                             Tipo do Veículo:$tipo-veiculo_escolhido;                                                                                                                                   Marca do Veículo:$marca-veiculo_escolhido;                                                                                                                                 Placa:$Placa                                                                                                                                                                  Ano do carro:@ano_veiculo"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1715635751262",
+      "context": {
+        "marca-veiculo_escolhido": "@marca-veiculo.literal"
+      },
+      "conditions": "@marca-veiculo",
+      "dialog_node": "node_4_1715636273592"
+    },
+    {
+      "type": "standard",
+      "title": "tipo-de-veiculo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual marca é o seu veiculo?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1713646831678",
+      "context": {
+        "tipo-veiculo_escolhido": "@tipo-veiculo.literal"
+      },
+      "conditions": "@tipo-veiculo",
+      "dialog_node": "node_5_1713646930228"
+    },
+    {
+      "type": "frame",
+      "title": "telefone",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Agendamento marcado com sucesso.Posso ajudar em mais alguma coisa?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1715625230107",
+      "conditions": "@sim-nao",
+      "dialog_node": "node_5_1715625230107"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Agendamento cancelado com sucesso!!(caso queira refazer seu agendamento é só escrever \"quero agendar uma manutenção\")Mais alguma coisa??"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1715714897607",
+      "conditions": "@sim-nao:sim",
+      "dialog_node": "node_5_1715715007376"
+    },
+    {
+      "type": "standard",
+      "title": "info-site",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O nosso site é destinado a ajudar as pessoas com seus problemas cotidianos de seus automoveis,criando diagnosticos e agendando e mostarndo oficinas mecânicas que os ajudaram em seus problemas.Mias informações na aa \"quem somos\".Mais algo?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#info-site",
+      "dialog_node": "node_6_1713644112336",
+      "previous_sibling": "node_14_1715625839758"
+    },
+    {
+      "type": "standard",
+      "title": "Histórico de Manutenção",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O histórico e manutenção é uma funcionalidade que guarda todos os agendamentos feitos aqui guardando o nome das mecanicas que fizeram a manutenção do seu veículo,a data , a hora do agendamento,preço e se foi util ou não.Para acessa-lo pe preciso entrar no perfil do usuárioe na aba de utilidades estará o histórico de manutenção.Essa Explicação te ajudou?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Histórico-manutencao",
+      "dialog_node": "node_6_1715712480797",
+      "previous_sibling": "node_6_1715714897607"
+    },
+    {
+      "type": "standard",
+      "title": "Cancelamento",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok,mas você tem certeza de que quer cancelar o agendamento para a manutenção de seu veículo??"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Cancelamento",
+      "dialog_node": "node_6_1715714897607",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok.Agora informe a marca de seu automóvel."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1715635001613",
+      "context": {
+        "tipo-veiculo_escolhido": "@tipo-veiculo.literal"
+      },
+      "conditions": "@tipo-veiculo",
+      "dialog_node": "node_7_1715635751262"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Maravilha!!Seu cadastro está finalizado,mais alguma coisa que posso ajudar??"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1715636995385",
+      "conditions": "@sim-nao:sim",
+      "dialog_node": "node_7_1715710170420"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Precisa de mais alguma coisa??"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1715712480797",
+      "conditions": "@sim-nao:sim",
+      "dialog_node": "node_7_1715712678148"
+    },
+    {
+      "type": "standard",
+      "title": "nota",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Obrigado pela sua avaliação!"
+              },
+              {
+                "text": "Valeu pela resposta!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1713645084278",
+      "conditions": "#feedback",
+      "dialog_node": "node_9_1713645273529"
+    },
+    {
+      "type": "standard",
+      "title": "diagnóstico - mecanica",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok.Vou fazer um diagnóstico para você,para isso preciso fazer algumas perguntas.Tudo bem?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_18_1715625839758",
+      "conditions": "@sim-nao:sim",
+      "dialog_node": "node_9_1715625839757"
+    },
+    {
+      "type": "frame",
+      "title": "Cadastro-Oficina",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Me fale qual a especialidade ou parte do carro que é mais trabalhada na sua oficina."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1715633726129",
+      "conditions": "@tipo-cadastro:Oficina",
+      "dialog_node": "node_9_1715634369567"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_5_1715715007376",
+      "variable": "$email",
+      "dialog_node": "slot_10_1715715087061"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1715711232572",
+      "variable": "$horario",
+      "dialog_node": "slot_1_1715711819140",
+      "previous_sibling": "slot_3_1715711894678"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_18_1715625839758",
+      "variable": "$telefone",
+      "dialog_node": "slot_19_1715625839758",
+      "previous_sibling": "node_9_1715625839757"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_22_1715635061626",
+      "variable": "$cep",
+      "dialog_node": "slot_23_1715635061627",
+      "previous_sibling": "node_32_1715637046481"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_22_1715635061626",
+      "variable": "$email",
+      "dialog_node": "slot_26_1715635061627",
+      "previous_sibling": "slot_23_1715635061627"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_22_1715635061626",
+      "variable": "$telefone",
+      "dialog_node": "slot_29_1715635061627",
+      "previous_sibling": "slot_26_1715635061627"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1715711232572",
+      "variable": "$dia",
+      "dialog_node": "slot_3_1715711894678"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_5_1715625230107",
+      "variable": "$telefone",
+      "dialog_node": "slot_6_1715625230107"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_9_1715634369567",
+      "variable": "$telefone",
+      "dialog_node": "slot_6_1715634930403",
+      "previous_sibling": "slot_9_1715634870563"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_4_1715636273592",
+      "variable": "$ano_veiculo",
+      "dialog_node": "slot_6_1715636557645",
+      "previous_sibling": "slot_8_1715636374579"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_9_1715634369567",
+      "variable": "$cep",
+      "dialog_node": "slot_7_1715634434943",
+      "previous_sibling": "node_10_1715636995385"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_22_1715635061626",
+      "variable": "$cpf",
+      "dialog_node": "slot_7_1715708521384",
+      "previous_sibling": "slot_29_1715635061627"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1715711232572",
+      "variable": "$telefone",
+      "dialog_node": "slot_7_1715711232574",
+      "previous_sibling": "slot_8_1715711359750"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_4_1715636273592",
+      "variable": "$Placa",
+      "dialog_node": "slot_8_1715636374579",
+      "previous_sibling": "node_33_1715637062153"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1715711232572",
+      "variable": "$email",
+      "dialog_node": "slot_8_1715711359750",
+      "previous_sibling": "slot_1_1715711819140"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_9_1715634369567",
+      "variable": "$email",
+      "dialog_node": "slot_9_1715634870563",
+      "previous_sibling": "slot_7_1715634434943"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "generative_ai": {
+      "slot_filling": {
+        "enabled": false
+      }
+    },
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores",
+      "use_connect_to_support_prompt": "Connect to support",
+      "single_answer_clarification_prompt": "Something else"
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "language": "pt-br",
+  "description": "",
+  "name": "ChatMech V2-dialog"
+}

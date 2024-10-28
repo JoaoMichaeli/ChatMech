@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B8CD1BA6-2D9D-C982-BCB4-9AA7FD70B986" containerWithKeyObject="565F748B-F28E-9437-B793-96A123C7AA53" localFKIndex="CC7B5898-D10B-83E2-0A98-19F1BBC9558F" name="TBL_MECANICAS_TBL_FUNCIONARIOS_FK">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:59:19 UTC</createdTime>
+<generatorID>C0FCC752-F9C6-B86A-63BC-E3AD021679ED</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<referredTableLongName>TBL_FUNCIONARIOS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>CBB454A5-58FA-E844-32E1-D7AC26ED9F33</referredTableID>
+<keyObject>CF1C88D5-240F-E53F-A76F-F5D6CC09B178</keyObject>
+<referredKeyID>CF1C88D5-240F-E53F-A76F-F5D6CC09B178</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_funcionario</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

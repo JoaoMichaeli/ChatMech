@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D199C111-88B1-2A34-53A1-15040351472D" name="DIAGNOSTICOS">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>1B054C64-A536-C387-BF74-0744B1D80250</generatorID>
+<ownerDesignName>logico2-data</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nr_diagnostico" id="6B6DCA30-573D-ADA2-9CDD-79686B6ADAF7">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>446B66BE-5606-7CEF-046C-BEBA3CEE1523</generatorID>
+<ownerDesignName>logico2-data</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo_veiculo" id="B487962E-EEEF-CA83-8178-CADCEB7D9DCF">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>79EB364F-F635-25F3-2C86-1FDF3C4F8AD1</generatorID>
+<ownerDesignName>logico2-data</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="marca_veiculo" id="EE15D464-488D-690B-F732-336AB17F1D17">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>7DD11D99-0945-91A5-00F9-D1831C98645B</generatorID>
+<ownerDesignName>logico2-data</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="problema_veiculo" id="952838D8-810D-5EC1-4343-364ED3AB31E2">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>F1119C58-2BA7-8C77-D4DE-2F73AA3A6C7A</generatorID>
+<ownerDesignName>logico2-data</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="placa_veiculo" id="A4B8C542-D151-A52D-79BD-2283CA442BEF">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>D2C1F3AA-B895-41BB-B107-982495EAAE8F</generatorID>
+<ownerDesignName>logico2-data</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VEICULOS_nr_veiculo" id="4227116B-E8B2-6B00-73DC-E0959E7A3875">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>8C918EAE-7075-8E4F-480A-E93152ADB4FB</generatorID>
+<ownerDesignName>logico2-data</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C3504304-1862-8321-5F23-697974F7EB60" referredColumn="330848F1-4306-ADFC-27E3-890CD16CD475"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FB75146D-D2F8-EE74-1361-C550FF30F318" name="DIAGNOSTICOS_PK">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>28B0BD1C-4E48-A9CB-7507-4F8A8E5A98A5</generatorID>
+<ownerDesignName>logico2-data</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6B6DCA30-573D-ADA2-9CDD-79686B6ADAF7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="451F6222-2700-3A24-8A16-01583BEC1D0E" name="DIAGNOSTICOS_VEICULOS_FK">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>E43836FB-A07B-7498-7655-637C80A15B34</generatorID>
+<ownerDesignName>logico2-data</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4227116B-E8B2-6B00-73DC-E0959E7A3875"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B3BFED9D-A096-D60B-3EB4-74A986CFB297" containerWithKeyObject="9504F6E9-63FE-CE39-4B83-4ACACA8FE7AD" localFKIndex="C22A1483-9195-801F-CCC8-4320051827BD" name="CLIENTES_CADASTROS_FK">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>94DCC52E-2771-7922-BA23-958516FD1C4D</generatorID>
+<ownerDesignName>sprint2</ownerDesignName>
+<referredTableLongName>CADASTROS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4567542A-4A60-E0A4-4230-2C3F4F4AC8F7</referredTableID>
+<keyObject>53C43D16-051A-3566-FAC8-D4AC47246E71</keyObject>
+<referredKeyID>53C43D16-051A-3566-FAC8-D4AC47246E71</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>nr_cadastro</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

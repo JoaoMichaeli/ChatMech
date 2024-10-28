@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="99FCE568-46A8-0949-932C-9C3E445D780D" name="TBL_CLIENTES">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:50:21 UTC</createdTime>
+<generatorID>90D02B52-5898-156C-BD7A-E28333798AE2</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_cadastro" id="867367B6-A470-C4E2-8D6D-BCF75B9BC2AD">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:50:21 UTC</createdTime>
+<generatorID>99EAC643-8CC0-5872-5BE8-3367A123FF5E</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="96C175D7-17C0-8F4E-EAFB-3E94A1AF74E5" referredColumn="636FE57A-DE6E-D67E-0591-53D6D1F6DD49"/>
+</associations>
+</Column>
+<Column name="id_cliente" id="C9413AAB-AB20-4479-B3C0-B4B04E039F33">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:50:21 UTC</createdTime>
+<generatorID>C3F6AE6B-91E4-1347-21BD-D406C30F1676</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5701A246-CABB-C06F-62B0-44D1CAE65707" name="TBL_CLIENTES_PK">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:50:21 UTC</createdTime>
+<generatorID>19137A0D-CC2E-30AD-3691-F704BB27BAE7</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="867367B6-A470-C4E2-8D6D-BCF75B9BC2AD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2C068937-BCEC-7C2F-0923-F063EA7E2A95" name="TBL_CLIENTES_PKv1">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:50:21 UTC</createdTime>
+<generatorID>F8F569CE-2F62-AC7C-B9DE-C4CBBD76AA4B</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C9413AAB-AB20-4479-B3C0-B4B04E039F33"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0D4CAAA8-1FCA-EF40-1504-58934C620BF9" name="TBL_CLIENTES_TBL_CADASTRO_FK">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:50:21 UTC</createdTime>
+<generatorID>BE70E056-0833-02AC-6E00-BF02E6A35440</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="867367B6-A470-C4E2-8D6D-BCF75B9BC2AD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A024F444-B160-940A-57BE-BD89A9879EE9" name="TBL_MODELO">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:59:19 UTC</createdTime>
+<generatorID>82A2336D-E6A6-A009-6B80-8572B11024E5</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="modelo" id="9C4CDA03-827D-586A-6B3F-305CDD0C662D">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:59:19 UTC</createdTime>
+<generatorID>5179F0EF-819B-D9C0-F833-384AD0BA73F7</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="marca" id="CE1686B7-355B-5FE4-622C-15E68B252E82">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:59:19 UTC</createdTime>
+<generatorID>315FEF56-0062-5B91-9943-735CC3B4B408</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ano" id="3A2FA617-2E7C-BCE6-9074-9E0615D9E592">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:59:19 UTC</createdTime>
+<generatorID>7AC6DEE2-FE13-33AA-D951-F9DD1F1E05F3</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="quilometragem" id="17F1E048-33AB-AB14-6704-47EF6CE4BE08">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:59:19 UTC</createdTime>
+<generatorID>53B9BF8E-772C-E4D4-4ECB-28FA907C033F</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="57EA07AE-2FCC-2B2E-0735-C5437B64B7F3" name="TBL_MODELO_PK">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:59:19 UTC</createdTime>
+<generatorID>67ED9CC4-ED99-6824-C7DC-7958E47BB81D</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9C4CDA03-827D-586A-6B3F-305CDD0C662D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="sprint2" id="B51A16ED-96D4-B282-9CD2-4037F0F19B8E" version="3.5">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 19:59:06 UTC</createdTime>
+<ownerDesignName>challenge_data</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>B51A16ED-96D4-B282-9CD2-4037F0F19B8E</designId>
+</OSDM_Design>

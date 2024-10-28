@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CBB454A5-58FA-E844-32E1-D7AC26ED9F33" name="TBL_FUNCIONARIOS">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:59:19 UTC</createdTime>
+<generatorID>70C1C833-DA69-3056-B6A5-B65B536886B1</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_cadastro" id="3DDA59F6-65A1-397F-1E93-54490815C508">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:59:19 UTC</createdTime>
+<generatorID>99EAC643-8CC0-5872-5BE8-3367A123FF5E</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="58D3E80A-2049-2A89-622F-9A1B236532E4" referredColumn="75A1E5A7-BCF4-7605-462B-7825B4AA328E"/>
+</associations>
+</Column>
+<Column name="id_funcionario" id="DC901E31-8FF1-F87A-7002-26400EEC6BE3">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:59:19 UTC</createdTime>
+<generatorID>D3674058-141D-A566-D93F-860F90FFA246</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cargo" id="2588C12C-39DB-3288-08A1-798A5D799B63">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:59:19 UTC</createdTime>
+<generatorID>8E398747-4619-2671-24F7-FB4334F251B5</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1AE0E88D-3B5F-1986-1342-8E6ABDC3E731" name="TBL_FUNCIONARIOS_PK">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:59:19 UTC</createdTime>
+<generatorID>19137A0D-CC2E-30AD-3691-F704BB27BAE7</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3DDA59F6-65A1-397F-1E93-54490815C508"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CF1C88D5-240F-E53F-A76F-F5D6CC09B178" name="TBL_FUNCIONARIOS_PKv1">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:59:19 UTC</createdTime>
+<generatorID>599BF9BA-D6C0-44D4-6E20-C23BC91400EA</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DC901E31-8FF1-F87A-7002-26400EEC6BE3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9DA9D763-5453-240F-DE00-3AC88928B2BF" name="TBL_FUNCIONARIOS_TBL_CADASTRO_FK">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:59:19 UTC</createdTime>
+<generatorID>53F76C00-AB0B-915D-EB17-1B4E39CE8432</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3DDA59F6-65A1-397F-1E93-54490815C508"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

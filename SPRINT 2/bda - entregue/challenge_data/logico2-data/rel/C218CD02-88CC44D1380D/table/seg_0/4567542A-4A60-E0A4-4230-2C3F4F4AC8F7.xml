@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4567542A-4A60-E0A4-4230-2C3F4F4AC8F7" name="CADASTROS">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>83AA39C4-5182-9C6E-0582-7E0D2234B850</generatorID>
+<ownerDesignName>logico2-data</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nr_cadastro" id="16EED0C0-1A03-2A11-687A-513DA2B8F11F">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>286AC53C-0FB9-D11A-61F1-9A89DFAD0FB1</generatorID>
+<ownerDesignName>logico2-data</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="usuario" id="D4A06D94-BB54-0DCD-F470-6CA738888DB9">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>C9D6AD3C-9315-6C2B-6FE1-CC1F18A744F5</generatorID>
+<ownerDesignName>logico2-data</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="senha" id="C4926A95-1AD6-2A3F-3645-F199EAD38A57">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>E4762E23-B22B-BA3B-7E26-DF16F7D3A6A3</generatorID>
+<ownerDesignName>logico2-data</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="53C43D16-051A-3566-FAC8-D4AC47246E71" name="CADASTROS_PK">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>616164FD-C5A8-0B80-BCA0-E9BBC9AFFA3E</generatorID>
+<ownerDesignName>logico2-data</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="16EED0C0-1A03-2A11-687A-513DA2B8F11F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

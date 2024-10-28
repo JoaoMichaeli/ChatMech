@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="695D4DD2-5CE2-877A-F47E-D9ABFA1EE49B" name="SERVICOS">
+<createdBy>joaov</createdBy>
+<createdTime>2024-05-20 20:36:33 UTC</createdTime>
+<ownerDesignName>sprint2</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_servico" id="1096F964-43BA-CB4A-233A-78D15390D085">
+<createdBy>joaov</createdBy>
+<createdTime>2024-05-20 20:37:00 UTC</createdTime>
+<ownerDesignName>sprint2</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_mecanica" id="A83ECEF3-C388-5C0C-FE8C-2EA70DCD5F14">
+<createdBy>joaov</createdBy>
+<createdTime>2024-05-20 20:36:45 UTC</createdTime>
+<generatorID>03D0563E-D479-F356-2045-DC7BF3E49F86</generatorID>
+<ownerDesignName>sprint2</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<referedAttribute>5B222097-6A20-C301-F47A-96BFD2EF66DB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_conserto" id="49D0920B-3E70-D134-6B7B-8EAEF52F7BAB">
+<createdBy>joaov</createdBy>
+<createdTime>2024-05-20 20:37:20 UTC</createdTime>
+<ownerDesignName>sprint2</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="inicio_servico" id="E511EEC0-96F3-5C3A-65CE-8001E79BDA5D">
+<createdBy>joaov</createdBy>
+<createdTime>2024-05-20 20:37:20 UTC</createdTime>
+<ownerDesignName>sprint2</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fim_servico" id="43B61F86-4FDC-4CED-1751-7B8E8F1ACF6A">
+<createdBy>joaov</createdBy>
+<createdTime>2024-05-20 20:37:20 UTC</createdTime>
+<ownerDesignName>sprint2</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pecas_trocadas" id="5EBDCA5D-352A-A8DE-7DF2-91C5ADD0DF4D">
+<createdBy>joaov</createdBy>
+<createdTime>2024-05-20 20:37:20 UTC</createdTime>
+<ownerDesignName>sprint2</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="41D27C8F-7ACD-A644-2798-55A358190B22" name="SERVICOS PK">
+<createdBy>joaov</createdBy>
+<createdTime>2024-05-20 20:37:12 UTC</createdTime>
+<ownerDesignName>sprint2</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1096F964-43BA-CB4A-233A-78D15390D085</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

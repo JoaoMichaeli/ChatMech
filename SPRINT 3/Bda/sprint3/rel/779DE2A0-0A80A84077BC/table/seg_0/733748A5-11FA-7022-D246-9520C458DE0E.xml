@@ -1,0 +1,206 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="733748A5-11FA-7022-D246-9520C458DE0E" name="TBL_CADASTRO">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>86828C2B-8F8D-00DB-3B90-F9E97E64EA45</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_cadastro" id="8EBC80A1-68AF-2488-B356-BAFF10144C73">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>99EAC643-8CC0-5872-5BE8-3367A123FF5E</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="usuario" id="95C2BDA0-6203-D27A-D169-80D108644800">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>4B825ED3-44D7-307B-25A1-9976236105A5</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="8EEA0D66-240E-8C4B-9A6E-D69D18411087">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>BD30DB6C-2A5B-1546-95FE-E890CAA5FFC8</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefone" id="548D52B3-C5A8-0A2D-2F94-891E45279F0B">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>2B104D4E-FA5D-CAFB-C63C-0D71919AB3BD</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="senha" id="C9986B58-DE1A-9E80-1CC0-0A592F70EDB8">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>6F28F11B-B802-794E-1626-BC4D79D5E356</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16</dataTypeSize>
+<ownDataTypeParameters>16,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome" id="A506DF9A-40F2-1B34-2185-74D849ED7AC1">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>E6A70472-B8E9-002A-4C37-1622D7070ADE</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rua" id="A08B1D0B-2438-5C1D-B8CF-394BE1EBB92B">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>E0F0A5A8-FF03-82BA-A19E-1F1182F56155</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numero" id="13D2F998-B495-792E-E0F9-24F7C42C08A0">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>DF0317FD-385F-E33B-F423-A2E0CA08306B</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="complemento" id="A6C2D346-F2CA-4F71-5CC7-6063C70820E0">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>4EAC115B-9707-61CA-5676-09BA41A07F3F</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bairro" id="80673F9B-3B6E-31B1-A598-8A8D1BDBC0B7">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>61624061-29C8-D8CA-94BD-055DEC2E2498</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cep" id="E5475120-B69D-A704-05AC-2FB8677C7EE4">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>51830527-364D-F466-834C-F8F730EB5367</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado" id="05AAD13A-26B1-473F-5325-BD1798346D1D">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>E2BBFE82-6C2D-8737-697B-E8AD2429A600</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cidade" id="E95E2C2B-8992-1364-E10F-F73AC7505536">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>A4FB4516-47E1-A0F1-E16E-5945052A356F</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>70</dataTypeSize>
+<ownDataTypeParameters>70,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo" id="763F9E32-02FA-470B-4D70-4AFD56CF2A52">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>62A953B9-63A1-850C-B3FC-83BB452E52C1</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CC54FC37-03DD-8653-17F7-E07B1AA641C8" name="TBL_CADASTRO_PK">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>19137A0D-CC2E-30AD-3691-F704BB27BAE7</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8EBC80A1-68AF-2488-B356-BAFF10144C73"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="52CA48D3-2D33-1E5A-9321-7369EA6576AF" name="TBL_CADASTRO_usuario_email_telefone_UN">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>03434393-2965-8B61-B764-01ED51B438EE</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="95C2BDA0-6203-D27A-D169-80D108644800"/>
+<colUsage columnID="8EEA0D66-240E-8C4B-9A6E-D69D18411087"/>
+<colUsage columnID="548D52B3-C5A8-0A2D-2F94-891E45279F0B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="TBL DIAGNOSTICOS TBL VEICULOS FK" directorySegmentName="seg_0" id="B1FE6D3E-F81B-F121-514D-B135B917549A">
+<createdBy>João</createdBy>
+<createdTime>2024-08-31 16:53:35 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="FB7891AA-8BF7-7DA5-8DEE-298402275C39" value="true"/>
+</engineerTo>
+<sourcePk>18899FC0-72DF-AD3F-0730-994F6D050C9B</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>E3951D50-C8EC-43C5-9ECF-34FB8E3A2DE6</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E0F86A10-89A3-2FD8-904C-0C7CB653A9BE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

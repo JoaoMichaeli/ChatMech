@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1B054C64-A536-C387-BF74-0744B1D80250" name="DIAGNOSTICOS">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:28:09 UTC</createdTime>
+<ownerDesignName>logico2-data</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nr_diagnostico" id="446B66BE-5606-7CEF-046C-BEBA3CEE1523">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:28:16 UTC</createdTime>
+<ownerDesignName>logico2-data</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo_veiculo" id="79EB364F-F635-25F3-2C86-1FDF3C4F8AD1">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:28:55 UTC</createdTime>
+<ownerDesignName>logico2-data</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="marca_veiculo" id="7DD11D99-0945-91A5-00F9-D1831C98645B">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:29:32 UTC</createdTime>
+<ownerDesignName>logico2-data</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="problema_veiculo" id="F1119C58-2BA7-8C77-D4DE-2F73AA3A6C7A">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:29:44 UTC</createdTime>
+<ownerDesignName>logico2-data</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="placa_veiculo" id="D2C1F3AA-B895-41BB-B107-982495EAAE8F">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:30:11 UTC</createdTime>
+<ownerDesignName>logico2-data</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_veiculo" id="8C918EAE-7075-8E4F-480A-E93152ADB4FB">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:41:58 UTC</createdTime>
+<generatorID>E43836FB-A07B-7498-7655-637C80A15B34</generatorID>
+<ownerDesignName>logico2-data</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<referedAttribute>2672D4CE-896A-444C-5EC1-F6CE0908AB4D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="28B0BD1C-4E48-A9CB-7507-4F8A8E5A98A5" name="diagnostico PK">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:29:07 UTC</createdTime>
+<ownerDesignName>logico2-data</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>446B66BE-5606-7CEF-046C-BEBA3CEE1523</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

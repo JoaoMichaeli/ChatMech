@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="70C1C833-DA69-3056-B6A5-B65B536886B1" name="TBL_FUNCIONARIOS">
+<createdBy>João</createdBy>
+<createdTime>2024-08-31 16:29:07 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="E3265138-2AD6-BC2D-B4DE-E631A93E1EA2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>86828C2B-8F8D-00DB-3B90-F9E97E64EA45</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_funcionario" id="D3674058-141D-A566-D93F-860F90FFA246">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:18:31 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="E3265138-2AD6-BC2D-B4DE-E631A93E1EA2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cargo" id="8E398747-4619-2671-24F7-FB4334F251B5">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-10 15:37:00 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="E3265138-2AD6-BC2D-B4DE-E631A93E1EA2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="599BF9BA-D6C0-44D4-6E20-C23BC91400EA" name="TBL FUNCIONARIOS PK">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:18:41 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="E3265138-2AD6-BC2D-B4DE-E631A93E1EA2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D3674058-141D-A566-D93F-860F90FFA246</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

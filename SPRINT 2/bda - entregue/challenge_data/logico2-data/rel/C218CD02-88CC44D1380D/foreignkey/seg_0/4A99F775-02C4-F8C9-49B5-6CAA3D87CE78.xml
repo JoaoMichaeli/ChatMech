@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4A99F775-02C4-F8C9-49B5-6CAA3D87CE78" containerWithKeyObject="6F00B1F5-C394-645A-BCFC-8C7142260B46" localFKIndex="7DB495D1-3149-C5BF-E426-956C4BE60626" name="FUNCIONARIOS_MECANICAS_FK">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>5CE402B2-54D0-9D2A-C288-77517F78CAF2</generatorID>
+<ownerDesignName>logico2-data</ownerDesignName>
+<referredTableLongName>MECANICAS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>90B3CC24-862C-A8C3-98F6-0E4D9EFBD5B7</referredTableID>
+<keyObject>82CCE4CF-9255-5EA8-FB2B-E35BD783914D</keyObject>
+<referredKeyID>82CCE4CF-9255-5EA8-FB2B-E35BD783914D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>nr_mecanica</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

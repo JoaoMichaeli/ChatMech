@@ -1,0 +1,251 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="72F7A99B-C4F6-EEAA-C484-E84E0760E456" name="MECANICAS">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:32:11 UTC</createdTime>
+<ownerDesignName>data_challenge</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nr_mecanica" id="5B222097-6A20-C301-F47A-96BFD2EF66DB">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:32:17 UTC</createdTime>
+<ownerDesignName>data_challenge</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome" id="6381AC09-A2B1-F0B6-19F1-FADA1FC65BC6">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:32:25 UTC</createdTime>
+<ownerDesignName>data_challenge</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome_dono" id="CCC11A73-6DD8-6E24-5CAD-B1B3C0A0551D">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:32:32 UTC</createdTime>
+<ownerDesignName>data_challenge</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_concerto" id="E34CB70E-8D48-2D2F-486F-5EAB4BB4B304">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:32:45 UTC</createdTime>
+<ownerDesignName>data_challenge</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rua" id="30B24A20-8A3C-C773-C9DF-A95E503F57FA">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:33:07 UTC</createdTime>
+<ownerDesignName>data_challenge</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numero" id="8E9A2AFB-A575-1097-1017-6CC466461AEE">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:33:13 UTC</createdTime>
+<ownerDesignName>data_challenge</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="complemento" id="ED8EFA57-68DD-8D63-4017-208C4F698C8D">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:33:34 UTC</createdTime>
+<ownerDesignName>data_challenge</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bairo" id="2EC02DA5-DFC5-658B-EF18-13DBBD559B6F">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:33:40 UTC</createdTime>
+<ownerDesignName>data_challenge</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cep" id="FB11AE0B-BF60-7BD9-E92C-E3766260137E">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:33:44 UTC</createdTime>
+<ownerDesignName>data_challenge</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cidade" id="A6E29093-4D99-B3F2-CCF2-60B904E15A8A">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:33:47 UTC</createdTime>
+<ownerDesignName>data_challenge</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>70</dataTypeSize>
+<ownDataTypeParameters>70,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estado" id="C26B56E9-6778-7E65-8BAF-D5C658FFD0C1">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:33:50 UTC</createdTime>
+<ownerDesignName>data_challenge</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="hora_inicio" id="77517AB2-C089-2FEE-2DFD-AED52C3C3842">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:35:45 UTC</createdTime>
+<ownerDesignName>data_challenge</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="hora_fim" id="FD1DFED1-2AE8-1649-5DB5-6AA8E8F5A633">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:35:57 UTC</createdTime>
+<ownerDesignName>data_challenge</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_diagnostico" id="32F6E56D-F487-EC0B-8775-F142B554B031">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:37:52 UTC</createdTime>
+<generatorID>A557E933-814D-3076-2AF8-298964F87551</generatorID>
+<ownerDesignName>data_challenge</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<referedAttribute>446B66BE-5606-7CEF-046C-BEBA3CEE1523</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefone" id="32159965-5B1E-DC3D-A3B8-D98CA4266F5B">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-19 21:03:59 UTC</createdTime>
+<ownerDesignName>data_challenge</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="E467D0E8-2F1B-1169-D62E-91C4FFEDB62D">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-19 21:04:15 UTC</createdTime>
+<ownerDesignName>data_challenge</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8ADACC9C-DEDA-81E7-F2AC-1E540D8BD929" name="mecanica PK">
+<createdBy>Dell</createdBy>
+<createdTime>2024-04-17 20:36:50 UTC</createdTime>
+<ownerDesignName>data_challenge</ownerDesignName>
+<engineerTo>
+<item key="C218CD02-7041-6F7B-C956-88CC44D1380D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>5B222097-6A20-C301-F47A-96BFD2EF66DB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

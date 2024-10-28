@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B1C50F1E-922F-9AF4-35F5-382E4A6437CD" name="TBL_VEICULOS">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>E3951D50-C8EC-43C5-9ECF-34FB8E3A2DE6</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="placa" id="4D8BF680-5636-FF2A-B04A-4585989B9B5D">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>AB3F33FD-6762-4EE9-5FC7-4BD74DDCC27F</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_cliente" id="64FC857B-C5B7-5D81-2C2A-5660B70611B3">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>DFEACF4B-D92F-8B1A-B6F0-A45619993609</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="119C2FE9-89A5-AAD4-19D4-6690DFBB6EF8" referredColumn="AC6F11A4-96B4-0C37-0CA3-CC7F84AE35B4"/>
+</associations>
+</Column>
+<Column name="modelo" id="6DA0A79A-74B4-10E2-E886-8728A6B6782E">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>5C51A9CF-0564-43FD-360D-F6A4C017AD73</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="08AA96B1-3EFD-25F4-F754-14288F99EA64" referredColumn="0A5B5138-975F-51EA-D2EE-3CFD36023524"/>
+</associations>
+</Column>
+<Column name="dono" id="99C9D1F3-654E-99D5-EBC3-70D86901E1F1">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>61A784A8-A5F9-8EEB-E85E-B92AE0A5B655</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1419A278-99FD-1E6F-F402-63CAFF99B01B" name="TBL_VEICULOS_PK">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>18899FC0-72DF-AD3F-0730-994F6D050C9B</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4D8BF680-5636-FF2A-B04A-4585989B9B5D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A0D08139-7FD9-592A-3B62-1DE568938BA4" name="TBL_VEICULOS_placa_UN">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>F2277FEB-9CBF-0238-BEC1-F3A94C0C24C7</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4D8BF680-5636-FF2A-B04A-4585989B9B5D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A6CC2F06-1827-EB83-B1C1-852ECF160F7B" name="TBL_VEICULOS_TBL_CLIENTES_FK">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>8892607E-DD03-E597-8A8F-60A66A000D25</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="64FC857B-C5B7-5D81-2C2A-5660B70611B3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5EE2EEE8-DC40-9462-39CA-1AC7452E405A" name="TBL_VEICULOS_TBL_MODELO_FK">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-09 17:31:24 UTC</createdTime>
+<generatorID>335EC2D1-C764-9E7F-16F1-3C80368945C2</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6DA0A79A-74B4-10E2-E886-8728A6B6782E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="90D02B52-5898-156C-BD7A-E28333798AE2" name="TBL_CLIENTES">
+<createdBy>João</createdBy>
+<createdTime>2024-08-31 14:59:54 UTC</createdTime>
+<generatorID>1984EFAD-E301-AC9A-5FD0-62D415748EAB</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3DB2B3D1-F56F-5A06-82C2-EFFD9C7D60D7" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>86828C2B-8F8D-00DB-3B90-F9E97E64EA45</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_cliente" id="C3F6AE6B-91E4-1347-21BD-D406C30F1676">
+<createdBy>João</createdBy>
+<createdTime>2024-08-31 14:59:54 UTC</createdTime>
+<generatorID>86D43043-01D8-48B5-632B-CBF8D7ECCF29</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3DB2B3D1-F56F-5A06-82C2-EFFD9C7D60D7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F8F569CE-2F62-AC7C-B9DE-C4CBBD76AA4B" name="TBL CLIENTES PK">
+<createdBy>João</createdBy>
+<createdTime>2024-08-31 14:59:54 UTC</createdTime>
+<generatorID>C9F1CC9D-5E4A-1AB6-10E9-1E00E0B2447F</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="3DB2B3D1-F56F-5A06-82C2-EFFD9C7D60D7" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>C3F6AE6B-91E4-1347-21BD-D406C30F1676</newElementsIDs>
+<usedAttributes>
+<attributeRef>C3F6AE6B-91E4-1347-21BD-D406C30F1676</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

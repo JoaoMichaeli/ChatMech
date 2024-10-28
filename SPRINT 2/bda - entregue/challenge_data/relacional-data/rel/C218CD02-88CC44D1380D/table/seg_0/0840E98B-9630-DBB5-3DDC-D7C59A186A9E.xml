@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0840E98B-9630-DBB5-3DDC-D7C59A186A9E" name="VEICULOS">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>965A11FA-D08D-235A-FC5E-3C6164BEE137</generatorID>
+<ownerDesignName>relacional-data</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nr_veiculo" id="330848F1-4306-ADFC-27E3-890CD16CD475">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>2672D4CE-896A-444C-5EC1-F6CE0908AB4D</generatorID>
+<ownerDesignName>relacional-data</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo_veiculo" id="758B82EB-3A0D-B6FA-06AF-9747B42B3846">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>3272FF94-DFB5-A38C-1889-9A563ECA76C5</generatorID>
+<ownerDesignName>relacional-data</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="marca_veiculo" id="5C410559-835F-A646-F5FB-E90C5E6341A1">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>CA8818C3-2B8C-E391-E677-D1846007D5A3</generatorID>
+<ownerDesignName>relacional-data</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="placa_veiculo" id="2C9E3A2C-5FB2-DC1C-DCCB-ABDB869F8D07">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>04DB9CE5-3AE6-BABF-B248-88829FF7BEEE</generatorID>
+<ownerDesignName>relacional-data</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dono_veiculo" id="E32DC3A0-9A07-825B-E8DB-69C12DD1D006">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>8445D2E5-F916-1304-3982-77DBF2AE9943</generatorID>
+<ownerDesignName>relacional-data</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CLIENTES_nr_clientes" id="319D0503-0823-F5BA-0186-F90968901C5A">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>859AC5DA-9015-4828-ED2A-87C01F169975</generatorID>
+<ownerDesignName>relacional-data</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E556A793-0133-E6B3-6F10-679AE9D28F5A" referredColumn="7338B763-C8B1-F203-45F3-28F606292A9B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D10C7484-8F6C-A6BA-469A-E141557838B2" name="VEICULOS_PK">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>ED844003-30A3-799F-95BC-800A9DC26EAB</generatorID>
+<ownerDesignName>relacional-data</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="330848F1-4306-ADFC-27E3-890CD16CD475"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E36DA4E5-C67A-2879-8A6B-0FE793EA47D7" name="VEICULOS_CLIENTES_FK">
+<createdBy>Dell</createdBy>
+<createdTime>2024-05-19 18:45:43 UTC</createdTime>
+<generatorID>ACA47DD1-951A-1141-0064-59BBFB055E6C</generatorID>
+<ownerDesignName>relacional-data</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="319D0503-0823-F5BA-0186-F90968901C5A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

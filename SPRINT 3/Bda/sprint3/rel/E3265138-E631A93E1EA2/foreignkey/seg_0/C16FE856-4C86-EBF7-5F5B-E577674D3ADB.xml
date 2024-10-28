@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C16FE856-4C86-EBF7-5F5B-E577674D3ADB" containerWithKeyObject="CCC5A988-8EA1-A243-A145-1BD862FA13EC" localFKIndex="AA04A0A8-DFC1-1AA5-484F-FD13642B8348" name="TBL_DIAGNOSTICOS_TBL_VEICULOS_FK">
+<createdBy>joaov</createdBy>
+<createdTime>2024-09-12 22:59:19 UTC</createdTime>
+<generatorID>B1FE6D3E-F81B-F121-514D-B135B917549A</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<referredTableLongName>TBL_VEICULOS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F5B57FD5-8698-CD2A-9BAF-3C36414C8A1E</referredTableID>
+<keyObject>FD0F1ACF-859E-784E-96FB-7DE1CE14BCF9</keyObject>
+<referredKeyID>FD0F1ACF-859E-784E-96FB-7DE1CE14BCF9</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>placa</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
