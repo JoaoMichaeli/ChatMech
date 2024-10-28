@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F8290829-84CD-A85F-ABD3-1F53CC349155" name="TBL_SERVICOS_CADASTRADOS">
+<createdBy>joaov</createdBy>
+<createdTime>2024-10-28 21:01:49 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_mecanica" id="1BE85A51-5549-F127-843B-E13D6A961CA2">
+<createdBy>joaov</createdBy>
+<createdTime>2024-10-28 21:03:40 UTC</createdTime>
+<generatorID>313E3DB0-8E73-FA59-8E64-C005AC25584E</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
+</engineerTo>
+<referedAttribute>D01118A5-771F-B17D-65E4-7B2E4C3E7DCC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_servico" id="BEF0E7B3-7A03-43ED-EC66-BF3E6A8BEDE4">
+<createdBy>joaov</createdBy>
+<createdTime>2024-10-28 21:03:54 UTC</createdTime>
+<generatorID>D0567698-326E-61A4-03EC-39DCC7F31822</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<engineerTo>
+<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
+</engineerTo>
+<referedAttribute>59E88D6E-AEFD-C3D2-9C4E-AFB8C1B51CDB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

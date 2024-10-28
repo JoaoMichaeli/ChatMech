@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D92F989C-9A3E-FF17-15C5-2F0AEB5C91A8" name="TBL_AGENDAMENTOS">
+<createdBy>joaov</createdBy>
+<createdTime>2024-10-28 20:39:12 UTC</createdTime>
+<ownerDesignName>sp4</ownerDesignName>
+<engineerTo>
+<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_agendamento" id="9F3FC20A-65AF-7456-E88E-3D3A1377F2EF">
+<createdBy>joaov</createdBy>
+<createdTime>2024-10-28 20:45:00 UTC</createdTime>
+<ownerDesignName>sp4</ownerDesignName>
+<engineerTo>
+<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="placa" id="0674522A-85C3-B2E7-F262-9FB34D19B3C3">
+<createdBy>joaov</createdBy>
+<createdTime>2024-10-28 20:44:49 UTC</createdTime>
+<generatorID>AE013C60-609C-054D-94BE-7CBB4340952F</generatorID>
+<ownerDesignName>sp4</ownerDesignName>
+<engineerTo>
+<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
+</engineerTo>
+<referedAttribute>AB3F33FD-6762-4EE9-5FC7-4BD74DDCC27F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_agendamento" id="662AD449-9C80-8EAC-1370-260D64DD12DC">
+<createdBy>joaov</createdBy>
+<createdTime>2024-10-28 20:42:57 UTC</createdTime>
+<ownerDesignName>sp4</ownerDesignName>
+<engineerTo>
+<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DC2E9BE8-A08B-C7B0-B99D-465EFF0310D1" name="TBL_AGENDAMENTOS PK">
+<createdBy>joaov</createdBy>
+<createdTime>2024-10-28 20:45:12 UTC</createdTime>
+<ownerDesignName>sp4</ownerDesignName>
+<engineerTo>
+<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9F3FC20A-65AF-7456-E88E-3D3A1377F2EF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

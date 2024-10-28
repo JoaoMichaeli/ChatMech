@@ -2,7 +2,7 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="900A1222-3E35-8DC0-00B5-47E2ABB38D7C" name="TBL_SERVICOS">
 <createdBy>João</createdBy>
 <createdTime>2024-08-31 16:25:39 UTC</createdTime>
-<ownerDesignName>sprint3</ownerDesignName>
+<ownerDesignName>sp4</ownerDesignName>
 <engineerTo>
 <item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>
@@ -18,7 +18,7 @@
 <Attribute name="id_servico" id="59E88D6E-AEFD-C3D2-9C4E-AFB8C1B51CDB">
 <createdBy>João</createdBy>
 <createdTime>2024-08-31 16:25:52 UTC</createdTime>
-<ownerDesignName>sprint3</ownerDesignName>
+<ownerDesignName>sp4</ownerDesignName>
 <engineerTo>
 <item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>
@@ -30,7 +30,7 @@
 <Attribute name="descricao" id="D1D09ABC-3C24-A4F9-4217-0C236E716858">
 <createdBy>João</createdBy>
 <createdTime>2024-08-31 16:28:19 UTC</createdTime>
-<ownerDesignName>sprint3</ownerDesignName>
+<ownerDesignName>sp4</ownerDesignName>
 <engineerTo>
 <item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>
@@ -43,7 +43,7 @@
 <Attribute name="categoria_servico" id="07542246-6C8F-8E8A-DD19-4C01EB8F9983">
 <createdBy>joaov</createdBy>
 <createdTime>2024-10-28 20:40:53 UTC</createdTime>
-<ownerDesignName>sprint3</ownerDesignName>
+<ownerDesignName>sp4</ownerDesignName>
 <engineerTo>
 <item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>
@@ -56,7 +56,7 @@
 <Attribute name="valor_servico" id="C60DFDD1-4B90-93F9-96D2-7148EB6B6237">
 <createdBy>joaov</createdBy>
 <createdTime>2024-10-28 20:41:52 UTC</createdTime>
-<ownerDesignName>sprint3</ownerDesignName>
+<ownerDesignName>sp4</ownerDesignName>
 <engineerTo>
 <item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>
@@ -72,7 +72,7 @@
 <identifier id="F388D8D3-A333-D5FD-3B48-6C5224ED687A" name="TBL_SERVICOS_PK">
 <createdBy>João</createdBy>
 <createdTime>2024-08-31 16:26:09 UTC</createdTime>
-<ownerDesignName>sprint3</ownerDesignName>
+<ownerDesignName>sp4</ownerDesignName>
 <engineerTo>
 <item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>

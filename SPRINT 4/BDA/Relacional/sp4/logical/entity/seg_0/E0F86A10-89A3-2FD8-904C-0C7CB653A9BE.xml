@@ -2,7 +2,7 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E0F86A10-89A3-2FD8-904C-0C7CB653A9BE" name="TBL_DIAGNOSTICOS">
 <createdBy>João</createdBy>
 <createdTime>2024-08-31 15:01:58 UTC</createdTime>
-<ownerDesignName>sprint3</ownerDesignName>
+<ownerDesignName>sp4</ownerDesignName>
 <engineerTo>
 <item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>
@@ -18,7 +18,7 @@
 <Attribute name="id_diagnostico" id="1AF263EE-8A8B-3260-26F3-6F5F167512DB">
 <createdBy>João</createdBy>
 <createdTime>2024-08-31 15:02:26 UTC</createdTime>
-<ownerDesignName>sprint3</ownerDesignName>
+<ownerDesignName>sp4</ownerDesignName>
 <engineerTo>
 <item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>
@@ -30,7 +30,7 @@
 <Attribute name="problema_veiculo" id="E1344ACB-A9FE-EFD6-3280-7120BEE95124">
 <createdBy>João</createdBy>
 <createdTime>2024-08-31 15:02:58 UTC</createdTime>
-<ownerDesignName>sprint3</ownerDesignName>
+<ownerDesignName>sp4</ownerDesignName>
 <engineerTo>
 <item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>
@@ -43,7 +43,7 @@
 <Attribute name="relatorio" id="CE796B8C-23D9-7570-EA45-17CBBFD6C832">
 <createdBy>João</createdBy>
 <createdTime>2024-08-31 15:02:58 UTC</createdTime>
-<ownerDesignName>sprint3</ownerDesignName>
+<ownerDesignName>sp4</ownerDesignName>
 <engineerTo>
 <item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>
@@ -58,7 +58,7 @@
 <identifier id="57297AA6-41E0-1383-C9A1-7D7B811C6822" name="TBL_DIAGNOSTICOS_PK">
 <createdBy>João</createdBy>
 <createdTime>2024-08-31 15:02:56 UTC</createdTime>
-<ownerDesignName>sprint3</ownerDesignName>
+<ownerDesignName>sp4</ownerDesignName>
 <engineerTo>
 <item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>

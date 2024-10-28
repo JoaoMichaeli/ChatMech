@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<InheritanceRelation class="oracle.dbtools.crest.model.design.logical.InheritanceRelation" name="Hierarchy_4" directorySegmentName="seg_0" id="53F76C00-AB0B-915D-EB17-1B4E39CE8432">
+<InheritanceRelation class="oracle.dbtools.crest.model.design.logical.InheritanceRelation" name="Hierarchy_1" directorySegmentName="seg_0" id="BE70E056-0833-02AC-6E00-BF02E6A35440">
 <createdBy>joaov</createdBy>
-<createdTime>2024-09-12 17:41:10 UTC</createdTime>
+<createdTime>2024-09-09 17:17:24 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
 <engineerTo>
-<item key="3593DCF9-FDB4-560E-B7A5-DAA9C9E92414" value="true"/>
+<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>
 <identifying>false</identifying>
 <nameOnSource>Super Type</nameOnSource>
@@ -12,7 +12,7 @@
 <optionalSource>true</optionalSource>
 <optionalTarget>true</optionalTarget>
 <sourceEntity>86828C2B-8F8D-00DB-3B90-F9E97E64EA45</sourceEntity>
-<targetEntity>70C1C833-DA69-3056-B6A5-B65B536886B1</targetEntity>
+<targetEntity>90D02B52-5898-156C-BD7A-E28333798AE2</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
 </InheritanceRelation>

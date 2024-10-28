@@ -1,8 +1,9 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DAD8EC96-6F57-7020-3396-6F8616D00E4E" name="TBL_MECANICAS">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="90D02B52-5898-156C-BD7A-E28333798AE2" name="TBL_CLIENTES">
 <createdBy>João</createdBy>
-<createdTime>2024-08-31 16:44:19 UTC</createdTime>
-<ownerDesignName>sprint3</ownerDesignName>
+<createdTime>2024-08-31 14:59:54 UTC</createdTime>
+<generatorID>1984EFAD-E301-AC9A-5FD0-62D415748EAB</generatorID>
+<ownerDesignName>sp4</ownerDesignName>
 <engineerTo>
 <item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>
@@ -16,10 +17,11 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_mecanica" id="D01118A5-771F-B17D-65E4-7B2E4C3E7DCC">
+<Attribute name="id_cliente" id="C3F6AE6B-91E4-1347-21BD-D406C30F1676">
 <createdBy>João</createdBy>
-<createdTime>2024-08-31 16:44:31 UTC</createdTime>
-<ownerDesignName>sprint3</ownerDesignName>
+<createdTime>2024-08-31 14:59:54 UTC</createdTime>
+<generatorID>86D43043-01D8-48B5-632B-CBF8D7ECCF29</generatorID>
+<ownerDesignName>sp4</ownerDesignName>
 <engineerTo>
 <item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>
@@ -28,31 +30,33 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cnpj" id="D25C3221-6829-0D0F-722A-F0DD69439A65">
+<Attribute name="cpf" id="019BEEFE-2BBB-B9F2-1E24-9AD2D1654B70">
 <createdBy>joaov</createdBy>
-<createdTime>2024-09-12 17:48:40 UTC</createdTime>
-<ownerDesignName>sprint3</ownerDesignName>
+<createdTime>2024-10-28 20:35:20 UTC</createdTime>
+<ownerDesignName>sp4</ownerDesignName>
 <engineerTo>
 <item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>14</dataTypeSize>
-<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="20A16EDA-47D5-2E21-404D-5A57E9E37EF8" name="TBL_MECANICAS_PK">
+<identifier id="F8F569CE-2F62-AC7C-B9DE-C4CBBD76AA4B" name="TBL CLIENTES PK">
 <createdBy>João</createdBy>
-<createdTime>2024-08-31 16:44:49 UTC</createdTime>
-<ownerDesignName>sprint3</ownerDesignName>
+<createdTime>2024-08-31 14:59:54 UTC</createdTime>
+<generatorID>C9F1CC9D-5E4A-1AB6-10E9-1E00E0B2447F</generatorID>
+<ownerDesignName>sp4</ownerDesignName>
 <engineerTo>
 <item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>
 <pk>true</pk>
+<newElementsIDs>C3F6AE6B-91E4-1347-21BD-D406C30F1676</newElementsIDs>
 <usedAttributes>
-<attributeRef>D01118A5-771F-B17D-65E4-7B2E4C3E7DCC</attributeRef>
+<attributeRef>C3F6AE6B-91E4-1347-21BD-D406C30F1676</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

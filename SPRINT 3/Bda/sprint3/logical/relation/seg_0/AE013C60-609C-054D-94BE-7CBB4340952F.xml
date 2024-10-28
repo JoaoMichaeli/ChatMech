@@ -1,19 +1,19 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="TBL DIAGNOSTICOS TBL VEICULOS FK" directorySegmentName="seg_0" id="B1FE6D3E-F81B-F121-514D-B135B917549A">
-<createdBy>João</createdBy>
-<createdTime>2024-08-31 16:53:35 UTC</createdTime>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_9" directorySegmentName="seg_0" id="AE013C60-609C-054D-94BE-7CBB4340952F">
+<createdBy>joaov</createdBy>
+<createdTime>2024-10-28 20:44:49 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
 <engineerTo>
-<item key="FB7891AA-8BF7-7DA5-8DEE-298402275C39" value="true"/>
+<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>
 <sourcePk>18899FC0-72DF-AD3F-0730-994F6D050C9B</sourcePk>
 <identifying>false</identifying>
-<optionalSource>false</optionalSource>
+<optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>E3951D50-C8EC-43C5-9ECF-34FB8E3A2DE6</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
-<targetEntity>E0F86A10-89A3-2FD8-904C-0C7CB653A9BE</targetEntity>
+<targetEntity>D92F989C-9A3E-FF17-15C5-2F0AEB5C91A8</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
 </Relation>

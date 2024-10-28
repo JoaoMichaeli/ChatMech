@@ -2,7 +2,7 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DAD8EC96-6F57-7020-3396-6F8616D00E4E" name="TBL_MECANICAS">
 <createdBy>João</createdBy>
 <createdTime>2024-08-31 16:44:19 UTC</createdTime>
-<ownerDesignName>sprint3</ownerDesignName>
+<ownerDesignName>sp4</ownerDesignName>
 <engineerTo>
 <item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>
@@ -19,7 +19,7 @@
 <Attribute name="id_mecanica" id="D01118A5-771F-B17D-65E4-7B2E4C3E7DCC">
 <createdBy>João</createdBy>
 <createdTime>2024-08-31 16:44:31 UTC</createdTime>
-<ownerDesignName>sprint3</ownerDesignName>
+<ownerDesignName>sp4</ownerDesignName>
 <engineerTo>
 <item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>
@@ -31,7 +31,7 @@
 <Attribute name="cnpj" id="D25C3221-6829-0D0F-722A-F0DD69439A65">
 <createdBy>joaov</createdBy>
 <createdTime>2024-09-12 17:48:40 UTC</createdTime>
-<ownerDesignName>sprint3</ownerDesignName>
+<ownerDesignName>sp4</ownerDesignName>
 <engineerTo>
 <item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>
@@ -46,7 +46,7 @@
 <identifier id="20A16EDA-47D5-2E21-404D-5A57E9E37EF8" name="TBL_MECANICAS_PK">
 <createdBy>João</createdBy>
 <createdTime>2024-08-31 16:44:49 UTC</createdTime>
-<ownerDesignName>sprint3</ownerDesignName>
+<ownerDesignName>sp4</ownerDesignName>
 <engineerTo>
 <item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
 </engineerTo>
