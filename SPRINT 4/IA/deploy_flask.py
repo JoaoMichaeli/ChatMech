@@ -1,34 +1,43 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import pandas as pd
 import pickle
 
 app = Flask(__name__)
 
-# Carregar o modelo e o escalonador
-model_filename = 'sprint4_modelo.pkl'
+# Carregar o modelo e o vetor TF-IDF
+with open('modelo_tfidf.pkl', 'rb') as modelo_file:
+    modelo_tfidf = pickle.load(modelo_file)
 
-with open(model_filename, 'rb') as file:
-    model = pickle.load(file)
+with open('vetor_tfidf.pkl', 'rb') as vetor_file:
+    vetor_tfidf = pickle.load(vetor_file)
 
 @app.route('/')
 def home():
-    return "Bem-vindo ao ChatMech!"
+    return render_template('index.html')
 
-@app.route('/predict', methods=['POST'])
-def predict():
-    data = request.get_json(force=True)
+@app.route('/prever', methods=['POST'])
+def prever():
+    # Receber a nova conversa como JSON
+    dados = request.get_json()
+
+    # Converter a conversa em DataFrame
+    nova_conversa_df = pd.DataFrame([dados])
     
-    # Transformar o dicionário em um DataFrame
-    nova_amostra_df = pd.DataFrame.from_dict(data, orient='index').transpose()
-    
-    
+    # Concatenar as colunas em uma única coluna de texto
+    nova_conversa_df['unificação'] = nova_conversa_df.apply(lambda x: ' '.join(x.astype(str)), axis=1)
+
+    # Transformar para TF-IDF
+    nova_conversa_tfidf = vetor_tfidf.transform(nova_conversa_df['unificação'])
+
     # Fazer a previsão
-    prediction = model.predict(nova_amostra_scaled)
-    
-    # Mapear o resultado para o nome da flor
-    prediction_name = prediction[0]
-    
-    return jsonify({'prediction': prediction_name})
+    predicao = modelo_tfidf.predict(nova_conversa_tfidf)
+
+    # Retornar a previsão como JSON
+    return jsonify({'previsao': predicao[0]})
+
+@app.route('/cliente')
+def cliente():
+    return render_template('cliente.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
