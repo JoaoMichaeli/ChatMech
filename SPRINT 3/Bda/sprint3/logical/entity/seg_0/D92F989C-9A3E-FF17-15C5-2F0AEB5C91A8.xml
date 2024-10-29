@@ -3,9 +3,6 @@
 <createdBy>joaov</createdBy>
 <createdTime>2024-10-28 20:39:12 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -19,9 +16,6 @@
 <createdBy>joaov</createdBy>
 <createdTime>2024-10-28 20:45:00 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -32,9 +26,6 @@
 <createdTime>2024-10-28 20:44:49 UTC</createdTime>
 <generatorID>AE013C60-609C-054D-94BE-7CBB4340952F</generatorID>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <referedAttribute>AB3F33FD-6762-4EE9-5FC7-4BD74DDCC27F</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -46,9 +37,7 @@
 <createdBy>joaov</createdBy>
 <createdTime>2024-10-28 20:42:57 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT008</logicalDatatype>
@@ -60,9 +49,6 @@
 <createdBy>joaov</createdBy>
 <createdTime>2024-10-28 20:45:12 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>9F3FC20A-65AF-7456-E88E-3D3A1377F2EF</attributeRef>

@@ -3,9 +3,6 @@
 <createdBy>joaov</createdBy>
 <createdTime>2024-10-28 21:01:49 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -15,14 +12,20 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_servico_agendado" id="806C972F-C049-A4A0-6F01-5FC8123B8759">
+<createdBy>joaov</createdBy>
+<createdTime>2024-10-29 18:49:53 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="id_mecanica" id="1BE85A51-5549-F127-843B-E13D6A961CA2">
 <createdBy>joaov</createdBy>
 <createdTime>2024-10-28 21:03:40 UTC</createdTime>
 <generatorID>313E3DB0-8E73-FA59-8E64-C005AC25584E</generatorID>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <referedAttribute>D01118A5-771F-B17D-65E4-7B2E4C3E7DCC</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -34,9 +37,6 @@
 <createdTime>2024-10-28 21:03:54 UTC</createdTime>
 <generatorID>D0567698-326E-61A4-03EC-39DCC7F31822</generatorID>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <referedAttribute>59E88D6E-AEFD-C3D2-9C4E-AFB8C1B51CDB</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -44,4 +44,25 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="95E78858-9629-1F76-243F-06EED3CBA604" name="TBL_SERVICOS_CADASTRADOS PK">
+<createdBy>joaov</createdBy>
+<createdTime>2024-10-29 18:50:13 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>806C972F-C049-A4A0-6F01-5FC8123B8759</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="5E4EF35F-24B6-DC69-9FE5-3976B672C178" name="TBL_SERVICOS_CADASTRADOS_UN">
+<createdBy>joaov</createdBy>
+<createdTime>2024-10-29 18:56:18 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<newElementsIDs>1BE85A51-5549-F127-843B-E13D6A961CA2,BEF0E7B3-7A03-43ED-EC66-BF3E6A8BEDE4</newElementsIDs>
+<usedAttributes>
+<attributeRef>1BE85A51-5549-F127-843B-E13D6A961CA2</attributeRef>
+<attributeRef>BEF0E7B3-7A03-43ED-EC66-BF3E6A8BEDE4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

@@ -3,9 +3,6 @@
 <createdBy>João</createdBy>
 <createdTime>2024-08-31 16:44:19 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -20,9 +17,6 @@
 <createdBy>João</createdBy>
 <createdTime>2024-08-31 16:44:31 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -32,9 +26,6 @@
 <createdBy>joaov</createdBy>
 <createdTime>2024-09-12 17:48:40 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -47,12 +38,18 @@
 <createdBy>João</createdBy>
 <createdTime>2024-08-31 16:44:49 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>D01118A5-771F-B17D-65E4-7B2E4C3E7DCC</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="EB04CDDF-4509-E0C6-51BC-441C295BC7DD" name="TBL_MECANICAS_UN">
+<createdBy>joaov</createdBy>
+<createdTime>2024-10-29 18:13:00 UTC</createdTime>
+<ownerDesignName>sprint3</ownerDesignName>
+<newElementsIDs>D25C3221-6829-0D0F-722A-F0DD69439A65</newElementsIDs>
+<usedAttributes>
+<attributeRef>D25C3221-6829-0D0F-722A-F0DD69439A65</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

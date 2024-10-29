@@ -4,9 +4,6 @@
 <createdTime>2024-08-31 14:59:54 UTC</createdTime>
 <generatorID>056BD7C0-20D4-8A09-000C-5918D47C0FAE</generatorID>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -21,37 +18,17 @@
 <createdTime>2024-08-31 14:59:54 UTC</createdTime>
 <generatorID>A23301B0-8576-C765-3221-C14EC0A03D69</generatorID>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>7</dataTypeSize>
 <ownDataTypeParameters>7,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_cliente" id="DFEACF4B-D92F-8B1A-B6F0-A45619993609">
-<createdBy>joaov</createdBy>
-<createdTime>2024-09-03 17:23:45 UTC</createdTime>
-<generatorID>8892607E-DD03-E597-8A8F-60A66A000D25</generatorID>
-<ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
-<referedAttribute>C3F6AE6B-91E4-1347-21BD-D406C30F1676</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="dono" id="61A784A8-A5F9-8EEB-E85E-B92AE0A5B655">
 <createdBy>João</createdBy>
 <createdTime>2024-08-31 14:59:54 UTC</createdTime>
 <generatorID>84D73B3A-57C0-20EC-4350-BEC7F0073B67</generatorID>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -62,9 +39,6 @@
 <createdBy>joaov</createdBy>
 <createdTime>2024-10-28 20:34:07 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -75,9 +49,6 @@
 <createdBy>joaov</createdBy>
 <createdTime>2024-10-28 20:34:07 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -88,9 +59,6 @@
 <createdBy>joaov</createdBy>
 <createdTime>2024-10-28 20:34:07 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT018</logicalDatatype>
@@ -100,9 +68,17 @@
 <createdBy>joaov</createdBy>
 <createdTime>2024-10-28 20:34:44 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_cadastro" id="A60C09C2-3B70-F58F-FCF8-250BC1BDBCFD">
+<createdBy>joaov</createdBy>
+<createdTime>2024-10-29 18:04:50 UTC</createdTime>
+<generatorID>8892607E-DD03-E597-8A8F-60A66A000D25</generatorID>
+<ownerDesignName>sprint3</ownerDesignName>
+<referedAttribute>99EAC643-8CC0-5872-5BE8-3367A123FF5E</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -115,9 +91,6 @@
 <createdTime>2024-08-31 14:59:54 UTC</createdTime>
 <generatorID>F875D6F2-49A6-F148-9A20-5E682D8593FB</generatorID>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>AB3F33FD-6762-4EE9-5FC7-4BD74DDCC27F</attributeRef>
@@ -127,9 +100,6 @@
 <createdBy>joaov</createdBy>
 <createdTime>2024-09-09 17:21:30 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <newElementsIDs>AB3F33FD-6762-4EE9-5FC7-4BD74DDCC27F</newElementsIDs>
 <usedAttributes>
 <attributeRef>AB3F33FD-6762-4EE9-5FC7-4BD74DDCC27F</attributeRef>

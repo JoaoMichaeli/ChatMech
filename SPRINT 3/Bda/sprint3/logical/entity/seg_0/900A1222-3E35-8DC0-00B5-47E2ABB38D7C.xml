@@ -3,9 +3,6 @@
 <createdBy>João</createdBy>
 <createdTime>2024-08-31 16:25:39 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -19,9 +16,6 @@
 <createdBy>João</createdBy>
 <createdTime>2024-08-31 16:25:52 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -31,9 +25,6 @@
 <createdBy>João</createdBy>
 <createdTime>2024-08-31 16:28:19 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -44,9 +35,6 @@
 <createdBy>joaov</createdBy>
 <createdTime>2024-10-28 20:40:53 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -57,9 +45,6 @@
 <createdBy>joaov</createdBy>
 <createdTime>2024-10-28 20:41:52 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT026</logicalDatatype>
@@ -73,9 +58,6 @@
 <createdBy>João</createdBy>
 <createdTime>2024-08-31 16:26:09 UTC</createdTime>
 <ownerDesignName>sprint3</ownerDesignName>
-<engineerTo>
-<item key="EC9A7C03-0D6E-8EF0-26F8-753377E4A5F4" value="true"/>
-</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>59E88D6E-AEFD-C3D2-9C4E-AFB8C1B51CDB</attributeRef>
