@@ -6,17 +6,13 @@ app = Flask(__name__)
 
 # Carregar o modelo e o escalonador
 model_filename = 'sprint4_modelo.pkl'
-scaler_filename = 'scaler.pkl'
 
 with open(model_filename, 'rb') as file:
     model = pickle.load(file)
 
-with open(scaler_filename, 'rb') as file:
-    scaler = pickle.load(file)
-
 @app.route('/')
 def home():
-    return "Bem-vindo ao modelo de previsão de espécies de flores!"
+    return "Bem-vindo ao ChatMech!"
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -25,8 +21,6 @@ def predict():
     # Transformar o dicionário em um DataFrame
     nova_amostra_df = pd.DataFrame.from_dict(data, orient='index').transpose()
     
-    # Escalonar a amostra
-    nova_amostra_scaled = scaler.transform(nova_amostra_df)
     
     # Fazer a previsão
     prediction = model.predict(nova_amostra_scaled)
