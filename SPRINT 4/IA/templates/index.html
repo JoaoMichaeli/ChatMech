@@ -1,54 +1,72 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatMech - Cliente</title>
+    <title>ChatMech</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
 </head>
-<body class="bg-gray-200 flex items-center justify-center h-screen">
-    <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
-        <h1 class="text-2xl font-bold mb-4 text-center">ChatMech</h1>
-        <form id="chat-form" class="mb-4">
-            <label for="mensagem" class="block text-sm font-medium text-gray-700">Digite sua mensagem:</label>
-            <textarea id="mensagem" rows="4" cols="50" required class="mt-1 p-2 border border-gray-300 rounded-md w-full"></textarea>
-            <button type="submit" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Enviar</button>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="bg-white p-8 rounded shadow-lg max-w-md w-full">
+        <h1 class="text-2xl font-semibold mb-6 text-center text-gray-800">Bem vindo ao ChatMech</h1>
+        
+        <form id="formularioPrevisao" class="space-y-4">
+            <div>
+                <label for="pergunta1" class="block text-gray-700">Seja bem-vindo ao ChatMech! Como posso ajudar você com a manutenção do seu veículo?</label>
+                <input type="text" id="pergunta1" name="pergunta1" 
+                       class="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Digite sua resposta...">
+            </div>
+
+            <div>
+                <label for="pergunta2" class="block text-gray-700">Qual foi a ultima revisão feita no seu veiculo ?</label>
+                <input type="text" id="pergunta2" name="pergunta2" 
+                       class="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Digite sua resposta...">
+            </div>
+
+            <div>
+                <label for="pergunta3" class="block text-gray-700">Qual é o modelo e ano do seu veículo?</label>
+                <input type="text" id="pergunta3" name="pergunta3" 
+                       class="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Digite sua resposta...">
+            </div>
+
+            <button type="button" onclick="enviarPrevisao()" 
+                    class="w-full bg-blue-500 text-white p-2 rounded mt-4 hover:bg-blue-600">
+                Enviar
+            </button>
         </form>
-        <h2 class="text-lg font-semibold">Respostas:</h2>
-        <div id="respostas" class="mt-2 border border-gray-300 rounded-md p-2 h-64 overflow-y-auto bg-gray-50"></div>
+        
+        <p id="resultado" class="mt-6 text-center text-lg text-gray-700 font-medium"></p>
     </div>
 
     <script>
-        const respostasDiv = document.getElementById('respostas');
-        let historico = [];
-
-        document.getElementById('chat-form').onsubmit = async function(event) {
-            event.preventDefault();
-
-            const mensagem = document.getElementById('mensagem').value;
-            historico.push({'mensagem': mensagem}); // Adiciona a nova mensagem ao histórico
-
-            // Formata o histórico em um objeto para enviar
-            const dados = {
-                ...historico.reduce((acc, item) => {
-                    acc[item.mensagem] = item.mensagem; // Adiciona cada mensagem como chave e valor
-                    return acc;
-                }, {})
+        function enviarPrevisao() {
+            // Coleta as perguntas do formulário
+            const perguntas = {
+                pergunta1: document.getElementById('pergunta1').value,
+                pergunta2: document.getElementById('pergunta2').value,
+                pergunta3: document.getElementById('pergunta3').value
             };
 
-            const response = await fetch('/prever', {
+            // Envia as perguntas para o backend
+            fetch('/prever', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(dados)
+                body: JSON.stringify(perguntas)
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Exibe a previsão recebida do backend
+                const resultadoDiv = document.getElementById("resultado");
+                resultadoDiv.innerHTML = `<p>Previsão: ${data.previsao}</p>`;
+            })
+            .catch(error => {
+                console.error('Erro na previsão:', error);
             });
-
-            const resultado = await response.json();
-            respostasDiv.innerHTML += `<p class="font-medium text-gray-800"><strong>Você:</strong> ${mensagem}</p>`;
-            respostasDiv.innerHTML += `<p class="text-gray-600"><strong>ChatMech:</strong> ${resultado.previsao || 'Erro ao obter resposta'}</p>`;
-            document.getElementById('mensagem').value = ''; // Limpa a mensagem
-        };
+        }
     </script>
+
 </body>
 </html>

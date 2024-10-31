@@ -17,20 +17,20 @@ def home():
 
 @app.route('/prever', methods=['POST'])
 def prever():
-    # Receber a nova conversa como JSON
+    # Receber as perguntas como JSON
     dados = request.get_json()
 
-    # Converter a conversa em DataFrame
-    nova_conversa_df = pd.DataFrame([dados])
-    
-    # Concatenar as colunas em uma única coluna de texto
-    nova_conversa_df['unificação'] = nova_conversa_df.apply(lambda x: ' '.join(x.astype(str)), axis=1)
+    # Unificar todas as perguntas em uma única string
+    conversa_unificada = ' '.join(dados.values())
+
+    # Criar um DataFrame para a conversa unificada
+    conversa_df = pd.DataFrame({'unificação': [conversa_unificada]})
 
     # Transformar para TF-IDF
-    nova_conversa_tfidf = vetor_tfidf.transform(nova_conversa_df['unificação'])
+    conversa_tfidf = vetor_tfidf.transform(conversa_df['unificação'])
 
     # Fazer a previsão
-    predicao = modelo_tfidf.predict(nova_conversa_tfidf)
+    predicao = modelo_tfidf.predict(conversa_tfidf)
 
     # Retornar a previsão como JSON
     return jsonify({'previsao': predicao[0]})
