@@ -215,7 +215,7 @@ def agendar_servico():
     
     # Aqui segue o fluxo normal após o agendamento correto
     os.system('cls')
-    print(f"Serviço agendado para {dia}/{mes} às {hora}.")
+    print(f"Serviço agendado para {dia:02}/{mes:02} às {hora}.")
     input("\nPressione qualquer tecla para retornar ao menu anterior...")
     menu_servico()
         
