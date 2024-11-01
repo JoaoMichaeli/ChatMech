@@ -453,7 +453,9 @@ def excluir_veiculo(id_cliente):
 
         if not veiculos:
           print("Nenhum veículo cadastrado para este cliente.")
-          return
+          pressione = input('\nPressione enter para retornar ao menu...')
+          clear()
+          menu_veiculo(id_cliente)
         
         print("\--- Veículos Cadastrados ---")
         for i, veiculo in enumerate(veiculos):
@@ -488,69 +490,56 @@ def atualiza_chaves_dicionario(dicionario:dict) -> None:
   veiculos.clear()
   veiculos.update(veiculos_copy)
 
-def editar_veiculo():
-  os.system('cls')
-  selecao_valida = False
-  while True:
-    while selecao_valida == False:
-      mostrar_veiculos()
-      try:
-        selecao = verifica_input_vazio("Digite o número do veículo a ser alterado: ", 'v')
-        if int(selecao) > len(veiculos) or int(selecao) < 1:
-          print("Não existe veículo com este número!")
-        else:
-          os.system('cls')
-          selecao_valida = True
-          break
-      except:
-        print("Erro! digite um número válido")
-    chave = 'veiculo' + selecao
-    veiculo_selecionado = veiculos.get(chave)
-    placa = veiculo_selecionado['placa']
-    modelo = veiculo_selecionado['modelo']
-    dono = veiculo_selecionado['dono']
-    dado_alterar = ""
+def editar_veiculo(id_cliente):
+  sql_listar_veiculos = """
+  SELECT placa, modelo FROM tbl_veiculos WHERE id_cliente = :id_cliente
+  """
+  try:
+      inst_select.execute(sql_listar_veiculos, {'id_cliente': id_cliente})
+      veiculos = inst_select.fetchall()
+
+      if not veiculos:
+          clear()
+          print("Nenhum veículo cadastrado para este cliente.")
+          pressione = input('\nPressione enter para retornar ao menu...')
+          clear()
+          menu_veiculo(id_cliente)
+
+      clear()
+      print("--- Veículos Cadastrados ---")
+      for i, veiculo in enumerate(veiculos):
+          print(f"\n{i + 1} - Placa: {veiculo[0]}, Modelo: {veiculo[1]}")
+
+      escolha = int(input("\nEscolha o número do veículo que deseja editar (ou 0 para voltar): "))
       
-    print(f"""-- DADOS VEICULOS --\n
-Placa: {placa}
-Modelo: {modelo}
-Dono: {dono}
-""")
-    dado_alterar = verifica_input_vazio("\nQual dado deseja alterar (placa, modelo, dono): ", 'v').lower()
-    voltar_menu_principal(dado_alterar)
-    match dado_alterar:
-      case "placa":
-        print(f"Placa atual: {placa}\n")
-        nova_placa = verifica_placa_valida()
-        veiculo_selecionado['placa'] = nova_placa
-        veiculos[chave] = veiculo_selecionado
-        placa = nova_placa
-      case "modelo":
-        print(f"Modelo atual: {modelo}\n")
-        novo_modelo = verifica_input_vazio("Novo modelo: ", 'v').lower()
-        veiculo_selecionado['modelo'] = novo_modelo
-        veiculos[chave] = veiculo_selecionado
-        modelo = novo_modelo
-      case "dono":
-        print(f"Dono atual: {dono}\n")
-        novo_dono = verifica_input_vazio("Novo dono: ", 'v').lower()
-        veiculo_selecionado['dono'] = novo_dono
-        dono = novo_dono
-      case _:
-        print("Opção inválida!")
-    while True:
-      alterar_mais = input("Deseja alterar mais algum item?\nEscolha (S/N): ").lower()
-      match alterar_mais:
-        case "s":
-          os.system('cls')
-          break
+      if escolha == 0:
+        clear()
+        menu_veiculo(id_cliente)
+
+      if 1 <= escolha <= len(veiculos):
+          placa_atual = veiculos[escolha - 1][0]
+
+          nova_placa = input("\nDigite a nova placa (ou pressione ENTER para manter a atual): ").strip()
+          if not nova_placa:
+            nova_placa = placa_atual
           
-        case "n":
-          os.system('cls')
-          menu_veiculo()
-          break
-        case _:
-          print("Opção inválida!")
+          novo_modelo = input("\nDigite o novo modelo (ou pressione ENTER para manter o atual): ").strip()
+          if not novo_modelo:
+              novo_modelo = veiculos[escolha - 1][1]
+
+          sql_editar = """
+          UPDATE tbl_veiculos
+          SET modelo = :modelo, placa = :placa
+          WHERE placa = :placa AND id_cliente = :id_cliente
+          """
+          inst_select.execute(sql_editar, {'modelo': novo_modelo, 'placa': placa_atual, 'id_cliente': id_cliente})
+          conn.commit()
+          print(f"\nVeículo com placa {placa_atual} atualizado com sucesso!")
+
+      else:
+          print("Escolha inválida. Nenhum veículo editado.")
+  except Exception as e:
+      print("Ocorreu um erro ao editar o veículo:", e)
 
 def voltar_menu_veiculo(id_cliente) -> None:
   input("\nPressione enter para voltar ao menu de veículos...")
@@ -569,19 +558,20 @@ def menu_veiculo(id_cliente): #CRUD
     opcao = input("Escolha uma opção: ")
     match opcao:        
       case "1":
-        os.system("cls")
+        clear()
         cadastrar_veiculo(id_cliente)
       case "2":
-        os.system('cls')
+        clear()
         mostrar_veiculos(id_cliente)
         voltar_menu_veiculo(id_cliente)
         break
       case "3":
-        editar_veiculo()
-        os.system('cls')
+        clear()
+        editar_veiculo(id_cliente)
+        voltar_menu_veiculo(id_cliente)
         break
       case "4":
-        os.system('cls')
+        clear()
         excluir_veiculo(id_cliente)
       case "5":
         menu_principal()
@@ -602,12 +592,12 @@ def menu_inicial():
     if opcao != "":  
       match opcao:
         case "0":
-          os.system('cls')
+          clear()
           print("Saindo...")
           exit()
           break
         case "1":
-          os.system('cls')
+          clear()
           acessar_usuario()
           break
         case _:
