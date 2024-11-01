@@ -6,21 +6,21 @@ class ExitProgram(Exception):
     pass
 
 def voltar_menu_inicial(entrada:str):
-  if entrada.lower() == 'sair':
+  if entrada.lower() == '0':
     menu_inicial()
   
 def voltar_menu_principal(entrada:str):
-  if entrada.lower() == 'sair':
+  if entrada.lower() == '0':
     os.system('cls')
     menu_principal()
     
 def voltar_menu_veiculo(entrada:str):
-  if entrada.lower() == 'sair':
+  if entrada.lower() == '0':
     os.system('cls')
     menu_veiculo()
 
 def voltar_menu_agendamento(entrada:str):
-  if entrada.lower() == 'sair':
+  if entrada.lower() == '0':
     os.system('cls')
     menu_servico()
 
@@ -184,7 +184,7 @@ def agendar_servico():
                         raise ValueError("mes")
                     break  # Sai do loop quando o mês for válido
                 except ValueError:
-                    print("**ERRO! Mês deve estar entre 1 e 12.**")
+                    print("**ERRO! Mês deve estar entre 01 e 12.**")
 
             # Verifica o horário
             while True:
@@ -255,7 +255,7 @@ def acessar_usuario():
 def verifica_input_vazio(pergunta:str, tipo:str) -> str:
     while(True):
         entrada = ""
-        entrada = input(f"Digite 'sair' para voltar ao menu --\n{pergunta}")
+        entrada = input(f"Digite '0' para voltar ao menu --\n{pergunta}")
         if tipo == 'i':
           voltar_menu_inicial(entrada)
         elif tipo == 'p':
@@ -532,4 +532,6 @@ def menu_inicial():
     else:
       print("ERRO! Digite uma opção válida")
       
-menu_inicial()
+#menu_inicial()
+
+menu_principal()
