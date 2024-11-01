@@ -407,34 +407,36 @@ def verifica_placa_valida() -> str:
             print("ERRO! Placa deve ter 7 dígitos")
         else:
             return placa
+        
+def mostrar_veiculos(id_cliente):
+    sql = """
+    SELECT placa, modelo FROM tbl_veiculos WHERE id_cliente = :id_cliente
+    """
+    try:
+        inst_select.execute(sql, {'id_cliente': id_cliente})
+        veiculos = inst_select.fetchall()
 
-def mostrar_veiculos():
-  if veiculos:
-    i = 1
-    print("-- VEICULOS CADASTRADOS --\n")
-    for veiculo, dados in veiculos.items():
-      print(f"Veiculo {i}- ")
-      print(f"Placa: {dados['placa']}\nModelo: {dados['modelo']}\nDono: {dados['dono']}\n")
-      i += 1
-  else:
-    print("\nNenhum veículo cadastrado.\n")
-    input("Pressione qualquer tecla para voltar ao menu de veículos: ")
-    os.system('cls')
-    menu_veiculo()
+        if veiculos:
+            print("--- Veículos Cadastrados ---")
+            for veiculo in veiculos:
+                print(f"\nPlaca: {veiculo[0]}\nModelo: {veiculo[1]}")
+        else:
+            print("\nNenhum veículo cadastrado para este cliente.")
+    except Exception as e:
+        print("Ocorreu um erro ao listar os veículos:", e)
 
 def cadastrar_veiculo(id_cliente):
     print("-- CADASTRO DE VEÍCULO --")
     placa = input("Digite a placa do veículo: ").strip().upper()
     modelo = input("Digite o modelo do veículo: ").strip()
-    dono = input("Digite o nome do dono: ").strip()
 
     sql = """
-    INSERT INTO tbl_veiculos (placa, id_cliente, modelo, dono)
+    INSERT INTO tbl_veiculos (placa, id_cliente, modelo)
     VALUES (:placa, :id_cliente, :modelo, :dono)
     """
     
     try:
-        inst_insert.execute(sql, {'placa': placa, 'id_cliente': id_cliente, 'modelo': modelo, 'dono': dono})
+        inst_insert.execute(sql, {'placa': placa, 'id_cliente': id_cliente, 'modelo': modelo})
         conn.commit()
         print("\nVeículo cadastrado com sucesso!")
         continuar()
@@ -558,10 +560,10 @@ def menu_veiculo(id_cliente): #CRUD
         cadastrar_veiculo(id_cliente)
       case "2":
         os.system('cls')
-        mostrar_veiculos()
-        input("Pressione qualquer tecla para voltar ao menu de veículos: ")
+        mostrar_veiculos(id_cliente)
+        input("\nPressione qualquer tecla para voltar ao menu de veículos: ")
         os.system('cls')
-        menu_veiculo()
+        menu_veiculo(id_cliente)
         break
       case "3":
         editar_veiculo()
