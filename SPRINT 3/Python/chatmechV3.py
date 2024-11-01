@@ -443,34 +443,42 @@ def cadastrar_veiculo(id_cliente):
     except Exception as e:
         print("Erro ao cadastrar veículo:", e)
 
-def excluir_veiculo():
-  os.system('cls')
-  selecao_valida = False
-  while True:
-    mostrar_veiculos()
-    while True:
-      selecao = verifica_input_vazio("Digite o número do veículo a ser excluído: ", 'v')
-      if not selecao.isdigit():
-        mostrar_veiculos()
-        print("Número do veículo inexistente!")
-        continue
-      else:
-        chave = 'veiculo' + selecao
-        confirmacao = input(f"Tem certeza que deseja excluir {chave}? (s/n): ").lower()
-        break
-    match confirmacao:
-      case 's':
-        atualiza_chaves_dicionario(veiculos)
-        # Excluir o veículo
-        del veiculos[chave]
-        print("\nVeículo excluído com sucesso!\n")
-        input("Pressione qualquer tecla para voltar ao menu de veículo: ")
-        os.system('cls')
-        menu_veiculo()
-      case 'n':
-        os.system('cls')
-        menu_veiculo()
-        break
+def excluir_veiculo(id_cliente):
+    sql_listar_veiculos = """
+    SELECT placa, modelo FROM tbl_veiculos WHERE id_cliente = :id_cliente
+    """
+    try:
+        inst_select.execute(sql_listar_veiculos, {'id_cliente': id_cliente})
+        veiculos = inst_select.fetchall()
+
+        if not veiculos:
+          print("Nenhum veículo cadastrado para este cliente.")
+          return
+        
+        print("\--- Veículos Cadastrados ---")
+        for i, veiculo in enumerate(veiculos):
+            print(f"\n{i + 1} - Placa: {veiculo[0]}, Modelo: {veiculo[1]}")
+
+        escolha = int(input("\nEscolha o número do veículo que deseja excluir (ou 0 para voltar): "))
+
+        if escolha == 0:
+          clear()
+          menu_veiculo(id_cliente)
+
+        if 1 <= escolha <= len(veiculos):
+            placa = veiculos[escolha - 1][0]
+
+            sql_excluir = """
+            DELETE FROM tbl_veiculos WHERE placa = :placa AND id_cliente = :id_cliente
+            """
+            inst_select.execute(sql_excluir, {'placa': placa, 'id_cliente': id_cliente})
+            conn.commit()
+            print(f"\nVeículo com placa {placa} excluído com sucesso!")
+        else:
+            print("Escolha inválida. Nenhum veículo excluído.")
+    except Exception as e:
+        print("Ocorreu um erro ao excluir o veículo:", e)
+
       
 def atualiza_chaves_dicionario(dicionario:dict) -> None:
   veiculos_copy = {}
@@ -544,6 +552,11 @@ Dono: {dono}
         case _:
           print("Opção inválida!")
 
+def voltar_menu_veiculo(id_cliente) -> None:
+  input("\nPressione enter para voltar ao menu de veículos...")
+  os.system('cls')
+  menu_veiculo(id_cliente)
+
 def menu_veiculo(id_cliente): #CRUD
   while True:
     print(""" -- MENU VEÍCULOS --
@@ -561,9 +574,7 @@ def menu_veiculo(id_cliente): #CRUD
       case "2":
         os.system('cls')
         mostrar_veiculos(id_cliente)
-        input("\nPressione qualquer tecla para voltar ao menu de veículos: ")
-        os.system('cls')
-        menu_veiculo(id_cliente)
+        voltar_menu_veiculo(id_cliente)
         break
       case "3":
         editar_veiculo()
@@ -571,8 +582,7 @@ def menu_veiculo(id_cliente): #CRUD
         break
       case "4":
         os.system('cls')
-        excluir_veiculo()
-        break
+        excluir_veiculo(id_cliente)
       case "5":
         menu_principal()
         break
