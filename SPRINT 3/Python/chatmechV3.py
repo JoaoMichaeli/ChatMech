@@ -22,6 +22,13 @@ else:
 class ExitProgram(Exception):
     pass
 
+def clear():
+    return os.system('cls' if os.name == 'nt' else 'clear')
+
+def continuar():
+    input("\nPressione enter para continuar...")
+    clear()
+
 def voltar_menu_inicial(entrada:str):
   if entrada.lower() == '0':
     menu_inicial()
@@ -252,7 +259,6 @@ def acessar_usuario():
                     os.system("cls")
                     if verificar_login():
                         print("Acesso concedido")
-
                     else:
                         os.system("cls")
                         print("Acesso negado, você não possui uma conta registrada...\n"
@@ -350,12 +356,25 @@ def salvar_usuario (login:str, senha:str, cep:str, dados_endereco:dict) -> None:
       inst_insert.execute(sql, dados_para_inserir)
       conn.commit()
       print('Usuário cadastrado com sucesso!')
+      acessar_usuario()
     except Exception as e:
       print('Erro ao salvar no banco de dados: ', e)
 
 def registrar_usuario():
-    login = input("Digite o login: ")
-    senha = input("Digite a senha: ")
+    while True:
+        login = input("Digite o login (mínimo 4 caracteres): ").strip()
+        if len(login) >= 4:
+            break
+        else:
+            print("\nO login deve ter no mínimo 4 caracteres. Tente novamente.")
+    
+    while True:
+        senha = input("Digite a senha (mínimo 4 caracteres, máximo 16): ").strip()
+        if 4 <= len(senha) <= 16:
+            break
+        else:
+            print("\nA senha deve ter entre 4 e 16 caracteres. Tente novamente.")
+    
     cep = input("Digite o CEP: ")
 
     dados_endereco = consulta_cep(cep)
@@ -363,21 +382,30 @@ def registrar_usuario():
     if dados_endereco and confirmar_informacoes(dados_endereco):
         salvar_usuario(login, senha, cep, dados_endereco)
     else:
-        print("Registro cancelado ou CEP inválido.")
+        print("\nRegistro cancelado ou CEP inválido.")
+        continuar()
+
 
 def verificar_login():
     print("Para realizar seu login, preencha as informações abaixo:\n")
-    login = verifica_input_vazio("Digite seu login: ", 'i')
-    senha = verifica_input_vazio("Digite sua senha: ", 'i')
-    
-    for usuario, dados in cadastros.items():
-        if dados['login'] == login and dados['senha'] == senha:
-            print("Login bem-sucedido!")
-            os.system("cls")                
+    login = verifica_input_vazio("Digite seu login: ", 'i').strip()
+    senha = verifica_input_vazio("Digite sua senha: ", 'i').strip()
+
+    sql = """
+    SELECT COUNT(*) FROM tbl_cadastros WHERE login = :login AND senha = :senha
+    """
+    try:
+        inst_select.execute(sql, {'login': login, 'senha': senha})
+        resultado = inst_select.fetchone()
+
+        if resultado[0] > 0:
+            print("Login bem-sucedido! Bem-vindo,", login)
             menu_principal()
-    os.system('cls')
-    print("\nLogin ou senha incorretos.\n")
-    return True
+        else:
+            print("Login ou senha incorretos. Tente novamente.")
+    except Exception as e:
+      print('Ocorreu um erro inesperado: ', e)
+
 
 veiculos = {} # Um dicionário que armazena os dados do veiculo
    
@@ -582,5 +610,3 @@ def menu_inicial():
       print("ERRO! Digite uma opção válida")
       
 menu_inicial()
-
-#menu_principal()
