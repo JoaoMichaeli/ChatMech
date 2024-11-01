@@ -56,39 +56,27 @@ def presione_qualquer_tecla_principal():
   input("Pressione qualquer tecla para voltar ao menu principal: ")
   menu_principal()
   
-def menu_principal():
+def menu_principal(id_cliente):
     os.system('cls')
     print(
           " -- CHATMECH --\n"
           "\n1 - Veiculos \n"
-          "2 - Conversar com o Mechzinho \n"
-          "3 - Serviços \n"
-          "4 - Quem somos \n"
-          "5 - Retornar a tela inicial\n"
-          "6 - SAIR\n")
+          "2 - Serviços \n"
+          "3 - Retornar a tela inicial\n"
+          "0 - SAIR\n")
     while True:
         opcao = input("Escolha uma opção: ")
         match opcao:
           case '1':
             os.system("cls")
-            menu_veiculo()
+            menu_veiculo(id_cliente)
           case '2':
-            print("\nBem vindo ao ChatMech, nosso mecânico virtual, qual o seu problema ?\n") # Aqui o programa irá retornar ao menu, pois só irá ter continuidade com a implementação do ChatBot
-            input("\n Pressione qualquer tecla para voltar ao menu: ")
-            menu_principal()  
-          case '3':
             menu_servico()
             break
-          case '4':
-            os.system('cls')
-            print("\nSomos uma solução rapida e prática para problemas mecânicos em geral, atendemos via internet por meio do Mechzinho, nosso ChatBot, onde ele fará uma série de perguntas sobre o problema de seu veiculo e por meio de sua inteligência ele será capaz de dar um diagnóstico da possivel solução e em quais mecânicas atendem o caso, além de dar um breve orçamento das peças necessárias para a manutenção, o preço é obtido por meio do mercado geral, podendo ter mudanças por região.")
-            input("\n Pressione qualquer tecla para voltar ao menu: ")
-            menu_principal()
-            break
-          case '5':
+          case '3':
             menu_inicial()
             break
-          case '6':
+          case '0':
             print("Saindo....")
             exit()
           case _:
@@ -256,9 +244,10 @@ def acessar_usuario():
                     os.system("cls")
                     registrar_usuario()
                 elif opcao == 2: # Irá chamar a tela de login
-                    os.system("cls")
-                    if verificar_login():
-                        print("Acesso concedido")
+                    id_cliente = verificar_login()
+                    if id_cliente is not None:
+                        print("\nAcesso concedido")
+                        menu_principal(id_cliente)
                     else:
                         os.system("cls")
                         print("Acesso negado, você não possui uma conta registrada...\n"
@@ -387,22 +376,24 @@ def registrar_usuario():
 
 
 def verificar_login():
+    clear()
     print("Para realizar seu login, preencha as informações abaixo:\n")
     login = verifica_input_vazio("Digite seu login: ", 'i').strip()
     senha = verifica_input_vazio("Digite sua senha: ", 'i').strip()
 
     sql = """
-    SELECT COUNT(*) FROM tbl_cadastros WHERE login = :login AND senha = :senha
+    SELECT id_cliente FROM tbl_cadastros WHERE login = :login AND senha = :senha
     """
     try:
         inst_select.execute(sql, {'login': login, 'senha': senha})
         resultado = inst_select.fetchone()
 
-        if resultado[0] > 0:
-            print("Login bem-sucedido! Bem-vindo,", login)
-            menu_principal()
+        if resultado:
+            id_cliente = resultado[0]
+            return id_cliente
         else:
             print("Login ou senha incorretos. Tente novamente.")
+            return None
     except Exception as e:
       print('Ocorreu um erro inesperado: ', e)
 
@@ -430,21 +421,25 @@ def mostrar_veiculos():
     input("Pressione qualquer tecla para voltar ao menu de veículos: ")
     os.system('cls')
     menu_veiculo()
-        
-def cadastrar_veiculo():
-    print("-- CADASTRO DE VEICULO --\n")
-    placa = verifica_placa_valida()
-    while verifica_se_existe(placa, 'placa', veiculos):
-      print("ESTE DADO JÁ EXISTE!")
-      placa = verifica_placa_valida()
 
-    modelo = verifica_input_vazio("Digite o modelo do seu veículo: ", 'p')
-    dono = verifica_input_vazio("Digite o nome do dono do veículo: ", 'p')
+def cadastrar_veiculo(id_cliente):
+    print("-- CADASTRO DE VEÍCULO --")
+    placa = input("Digite a placa do veículo: ").strip().upper()
+    modelo = input("Digite o modelo do veículo: ").strip()
+    dono = input("Digite o nome do dono: ").strip()
 
-    veiculo = {'placa': placa, 'modelo': modelo, 'dono': dono}
-
-    veiculos[f'veiculo{len(veiculos)+1}'] = veiculo
-    print("\nVeículo cadastrado com sucesso!\n")
+    sql = """
+    INSERT INTO tbl_veiculos (placa, id_cliente, modelo, dono)
+    VALUES (:placa, :id_cliente, :modelo, :dono)
+    """
+    
+    try:
+        inst_insert.execute(sql, {'placa': placa, 'id_cliente': id_cliente, 'modelo': modelo, 'dono': dono})
+        conn.commit()
+        print("\nVeículo cadastrado com sucesso!")
+        continuar()
+    except Exception as e:
+        print("Erro ao cadastrar veículo:", e)
 
 def excluir_veiculo():
   os.system('cls')
@@ -547,10 +542,9 @@ Dono: {dono}
         case _:
           print("Opção inválida!")
 
-def menu_veiculo(): #CRUD
+def menu_veiculo(id_cliente): #CRUD
   while True:
     print(""" -- MENU VEÍCULOS --
-   
 1 - Cadastrar veículo
 2 - Mostrar veículos cadastrados
 3 - Editar veículo
@@ -561,7 +555,7 @@ def menu_veiculo(): #CRUD
     match opcao:        
       case "1":
         os.system("cls")
-        cadastrar_veiculo()
+        cadastrar_veiculo(id_cliente)
       case "2":
         os.system('cls')
         mostrar_veiculos()
@@ -610,3 +604,5 @@ def menu_inicial():
       print("ERRO! Digite uma opção válida")
       
 menu_inicial()
+
+#menu_principal()
