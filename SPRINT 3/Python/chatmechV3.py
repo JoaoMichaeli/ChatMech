@@ -1,5 +1,22 @@
 import os
+import oracledb
+
+
+
 os.system("cls")
+
+# Conexão com o banco de dados
+try: 
+    conn = oracledb.connect(user="RM555678", password="310302", dsn="oracle.fiap.com.br:1521/ORCL")
+    inst_insert = conn.cursor()
+    inst_select = conn.cursor()
+    inst_update = conn.cursor()
+    inst_delete = conn.cursor()
+except Exception as e:
+    print("Conexão deu erro: ", e)
+    conexao = False
+else:
+    conexao = True
 
 #---------------------------------- Funções
 class ExitProgram(Exception):
