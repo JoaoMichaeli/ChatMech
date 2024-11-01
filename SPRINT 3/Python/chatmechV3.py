@@ -1,13 +1,13 @@
 import os
 import oracledb
-
-
+import pandas as pd
+import requests
 
 os.system("cls")
 
 # Conexão com o banco de dados
 try: 
-    conn = oracledb.connect(user="RM555678", password="310302", dsn="oracle.fiap.com.br:1521/ORCL")
+    conn = oracledb.connect(user="RM554456", password="080995", dsn="oracle.fiap.com.br:1521/ORCL")
     inst_insert = conn.cursor()
     inst_select = conn.cursor()
     inst_update = conn.cursor()
@@ -288,12 +288,8 @@ def verifica_input_vazio(pergunta:str, tipo:str) -> str:
           break
     return entrada
 
-usuarios = {  # Um dicionário que armazena os dados de login e senha
-  'usuario1': 
-    {
-      'login':'admin', 
-      'senha':'admin'
-    }
+cadastros = {  # Um dicionário que armazena os dados de login e senha
+
 }
 
 def verifica_se_existe(dado:str,chave:str,dicionario:dict) -> bool:
@@ -304,36 +300,77 @@ def verifica_se_existe(dado:str,chave:str,dicionario:dict) -> bool:
       return False
     # break  # Sai do loop se a placa não existir
 
-def registrar_usuario():
-    print("Bem vindo, Cadastre-se em nosso sistema: \n")
-    login = ""
-    login = verifica_input_vazio("Digite o login: ", 'i')
-    while verifica_se_existe(login, 'login', usuarios):
-      print("ERRO! Usuário já cadastrado.\n")
-      login = verifica_input_vazio("Digite o login: ", 'i')
-    
-    
-    def verifica_senha_valida() -> str:
-      while True:
-        senha = verifica_input_vazio("Digite a senha: ", 'i')
-        if len(senha) < 5:
-          print("**ERRO! Senha deve possuir no mínimo 5 caracteres**\n")
+def consulta_cep(cep:str) -> None:
+    url = f'https://viacep.com.br/ws/{cep}/json/'
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        dados = response.json()
+        if 'erro' not in dados:
+            return dados
         else:
-          return senha
+            print("CEP não encontrado.")
+            return None
+    else:
+        print("Erro ao consultar o CEP.")
+        return None
+
+def confirmar_informacoes(dados: dict):
+    os.system('cls')
+
+    print(f'''
+  Informações encontradas: 
+  CEP: {dados['cep']}
+  Logradouro: {dados['logradouro']}
+  Bairro: {dados['bairro']}
+  Localidade: {dados['localidade']}
+  Estado: {dados['uf']}''')
+
+    confirmacao = input("\nEssas informações estão corretas? (s/n): ").strip().lower()
+    return confirmacao == 's'
+
+def salvar_usuario (login:str, senha:str, cep:str, dados_endereco:dict) -> None:
     
-    senha = verifica_senha_valida()
-      
-    
-    usuarios[len(usuarios)+1] = {'login': login, 'senha': senha}
-    print("\nUsuário registrado com sucesso!\n")
-    return verificar_login()
+    sql = """
+    INSERT INTO tbl_cadastros (login, senha, cep, logradouro,bairro, localidade, uf)
+    VALUES (:login, :senha, :cep, :logradouro, :bairro, :localidade, :uf)
+    """
+
+    dados_para_inserir = {
+      'login': login,
+      'senha': senha,
+      'cep': cep,
+      'logradouro': dados_endereco['logradouro'],
+      'bairro': dados_endereco['bairro'],
+      'localidade': dados_endereco['localidade'],
+      'uf': dados_endereco['uf']
+    }
+
+    try:
+      inst_insert.execute(sql, dados_para_inserir)
+      conn.commit()
+      print('Usuário cadastrado com sucesso!')
+    except Exception as e:
+      print('Erro ao salvar no banco de dados: ', e)
+
+def registrar_usuario():
+    login = input("Digite o login: ")
+    senha = input("Digite a senha: ")
+    cep = input("Digite o CEP: ")
+
+    dados_endereco = consulta_cep(cep)
+
+    if dados_endereco and confirmar_informacoes(dados_endereco):
+        salvar_usuario(login, senha, cep, dados_endereco)
+    else:
+        print("Registro cancelado ou CEP inválido.")
 
 def verificar_login():
     print("Para realizar seu login, preencha as informações abaixo:\n")
     login = verifica_input_vazio("Digite seu login: ", 'i')
     senha = verifica_input_vazio("Digite sua senha: ", 'i')
     
-    for usuario, dados in usuarios.items():# Aqui o usuário terá que digitar o mesmo login e senha que foi digitado na tela de registro, pois é a informação que está armazenada na lista, caso digite outra informação, resultará em dados incorretos, e ficará dando loop até digitar as informações dadas no registro
+    for usuario, dados in cadastros.items():
         if dados['login'] == login and dados['senha'] == senha:
             print("Login bem-sucedido!")
             os.system("cls")                
@@ -524,7 +561,7 @@ def menu_veiculo(): #CRUD
 def menu_inicial():
   os.system("cls")
   print("Bem vindo ao ChatMech, acesse sua conta: \n")
-  print("0 - SAIR\n1 - Acessar ou Cadastrar usuário\n2 - Acessar o Mechzinho sem cadastro\n")
+  print("0 - SAIR\n1 - Acessar ou Cadastrar usuário\n")
 
   while True:
     opcao = input("\nEscolha uma opção: ")
@@ -539,16 +576,11 @@ def menu_inicial():
           os.system('cls')
           acessar_usuario()
           break
-        case "2":
-          os.system('cls')
-          print("Bem vindo ao ChatMech, nosso mecânico virtual, qual o seu problema?\n")
-          presione_qualquer_tecla_inicial()
-          break
         case _:
           print("ERRO! Digite uma opção válida.")
     else:
       print("ERRO! Digite uma opção válida")
       
-#menu_inicial()
+menu_inicial()
 
-menu_principal()
+#menu_principal()
