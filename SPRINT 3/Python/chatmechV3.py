@@ -132,7 +132,7 @@ def servicos_agendados(id_cliente):
       for i, (servico, data, hora) in enumerate(agendamentos, start=1):
         print(f"\nServiço {i}: {servico}, Data: {data}, Hora: {hora}")
     else:
-      print("Nenhum serviço agendado para este cliente.")
+      print("\nNenhum serviço agendado para este cliente.")
     voltar_menu_servico(id_cliente)
   except Exception as e:
     print("Erro ao buscar serviços agendados:", e)
@@ -158,7 +158,11 @@ def cancelar_agendamento(id_cliente):
   for id, (id_agendamento, servico, data, hora) in enumerate(agendamentos):
     print(f"\n{id + 1}. {servico} - {data} às {hora}")
 
-  escolha = int(input("\nEscolha o número do serviço a ser cancelado: ")) - 1
+  escolha = int(input("\nEscolha o número do serviço a ser cancelado, ou 0 para retornar ao menu de serviço: ")) - 1
+
+  if escolha == -1:
+    clear()
+    menu_veiculo(id_cliente)
 
   sql_cancelar = """
   DELETE FROM tbl_agendamentos
@@ -250,6 +254,8 @@ def verifica_input_vazio(pergunta:str, tipo:str) -> str:
     entrada = input(f"Digite '0' para voltar ao menu\n{pergunta}")
     if tipo == 'v':
       voltar_menu_veiculo(entrada)
+    elif tipo == 's':
+      voltar_menu_servico(entrada)
     if entrada == "":
       print("ERRO! campo não pode estar vazio!")
     else:
