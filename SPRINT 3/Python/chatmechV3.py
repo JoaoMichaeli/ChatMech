@@ -33,12 +33,12 @@ def voltar_menu_inicial(entrada:str):
   
 def voltar_menu_principal(entrada:str):
   if entrada.lower() == '0':
-    os.system('cls')
+    clear()
     menu_principal()
 
 def voltar_menu_agendamento(entrada:str):
   if entrada.lower() == '0':
-    os.system('cls')
+    clear
     menu_servico()
 
 def presione_qualquer_tecla_inicial():
@@ -52,11 +52,11 @@ def presione_qualquer_tecla_principal():
 def menu_principal(id_cliente):
   os.system('cls')
   print(
-        " -- CHATMECH --\n"
-        "\n1 - Veiculos \n"
-        "2 - Serviços \n"
-        "3 - Retornar a tela inicial\n"
-        "0 - SAIR\n")
+" -- CHATMECH --\n"
+"\n1 - Veiculos \n"
+"2 - Serviços \n"
+"3 - Retornar a tela inicial\n"
+"0 - SAIR\n")
   while True:
       opcao = input("Escolha uma opção: ")
       match opcao:
@@ -172,7 +172,7 @@ def agendar_servico():
               try:
                   dia = int(dia)
                   if not (1 <= dia <= 31):
-                      raise ValueError("dia")
+                    raise ValueError("dia")
                   break  # Sai do loop quando o dia for válido
               except ValueError:
                   print("**ERRO! Dia deve estar entre 1 e 31.**")
@@ -183,10 +183,10 @@ def agendar_servico():
               try:
                   mes = int(mes)
                   if not (1 <= mes <= 12):
-                      raise ValueError("mes")
+                    raise ValueError("mes")
                   break  # Sai do loop quando o mês for válido
               except ValueError:
-                  print("**ERRO! Mês deve estar entre 01 e 12.**")
+                print("**ERRO! Mês deve estar entre 01 e 12.**")
 
           # Verifica o horário
           while True:
@@ -194,24 +194,24 @@ def agendar_servico():
               try:
                   hora_parts = hora.split(':')
                   if len(hora_parts) != 2 or not all(part.isdigit() for part in hora_parts):
-                      raise ValueError("hora_formato")
+                    raise ValueError("hora_formato")
                   
                   # Valida a hora e minuto
                   hora_int = int(hora_parts[0])
                   minuto_int = int(hora_parts[1])
                   if not (0 <= hora_int < 24 and 0 <= minuto_int < 60):
-                      raise ValueError("hora_valor")
+                    raise ValueError("hora_valor")
                   break  # Sai do loop quando o horário for válido
               except ValueError as e:
                   if str(e) == "hora_formato":
-                      print("**ERRO! O horário deve estar no formato hh:mm.**")
+                    print("**ERRO! O horário deve estar no formato hh:mm.**")
                   elif str(e) == "hora_valor":
-                      print("**ERRO! Horário inválido. Hora deve estar entre 00:00 e 23:59.**")
+                    print("**ERRO! Horário inválido. Hora deve estar entre 00:00 e 23:59.**")
           break  # Sai do loop geral se todos os dados forem válidos
       
       except Exception as e:
-          os.system("cls")
-          print(f"Erro inesperado: {e}")
+        os.system("cls")
+        print(f"Erro inesperado: {e}")
   
   servicos[f"servico{len(servicos)+1}"] = {'dia':dia,'mes':mes,'hora':hora}
   
@@ -226,33 +226,33 @@ def acessar_usuario():
       while True:
           print("-- MENU ACESSO --")
           print("\n1 - Registrar usuário\n"
-              "2 - Fazer login\n"
-              "3 - Encerrar programa\n")
+          "2 - Fazer login\n"
+          "3 - Encerrar programa\n")
           try:
               opcao = int(input("Escolha uma opção: "))
               if opcao == 1: # Irá chamar a tela de registro de usuário
-                  clear()
-                  registrar_usuario()
+                clear()
+                registrar_usuario()
               elif opcao == 2: # Irá chamar a tela de login
                   id_cliente = verificar_login()
                   if id_cliente is not None:
-                      print("\nAcesso concedido")
-                      menu_principal(id_cliente)
+                    print("\nAcesso concedido")
+                    menu_principal(id_cliente)
                   else:
                       clear()
                       print("Acesso negado, você não possui uma conta registrada...\n"
-                          "Por favor, Registre-se aqui: \n")
+                      "Por favor, Registre-se aqui: \n")
                       return registrar_usuario()
               elif opcao == 3: # Sairá do programa
-                  print("Saindo...")
-                  exit()
+                print("Saindo...")
+                exit()
               else:
-                  print("Opção inválida. Tente novamente.\n")
+                print("Opção inválida. Tente novamente.\n")
           except ValueError:
-              print("Entrada inválida! Por favor, digite um número.")
-              clear()
+            print("Entrada inválida! Por favor, digite um número.")
+            clear()
   except ExitProgram:
-      print("Programa encerrado.")
+    print("Programa encerrado.")
 
 def voltar_menu_veiculo(id_cliente) -> None:
   input("\nPressione enter para voltar ao menu de veículos...")
@@ -283,19 +283,18 @@ def consulta_cep(cep:str) -> None:
   resposta = requests.get(url)
 
   if resposta.status_code == 200:
-      dados = resposta.json()
-      if 'erro' not in dados:
-          return dados
-      else:
-          print("CEP não encontrado.")
-          return None
-  else:
-      print("Erro ao consultar o CEP.")
+    dados = resposta.json()
+    if 'erro' not in dados:
+      return dados
+    else:
+      print("CEP não encontrado.")
       return None
+  else:
+    print("Erro ao consultar o CEP.")
+    return None
 
 def confirmar_informacoes(dados_endereco: dict):
   clear()
-
   print(f'''
 Informações encontradas: 
 CEP: {dados_endereco['cep']}
@@ -338,26 +337,26 @@ def registrar_usuario():
       print('Para realizar o seu cadastro, preencha as informações abaixo:')
       login = verifica_input_vazio("\nDigite o login (mínimo 4 caracteres): ", 'i').strip()
       if len(login) >= 4:
-          break
+        break
       else:
-          print("\nO login deve ter no mínimo 4 caracteres. Tente novamente.")
+        print("\nO login deve ter no mínimo 4 caracteres. Tente novamente.")
   
   while True:
       senha = verifica_input_vazio("\nDigite a senha (mínimo 4 caracteres, máximo 16): ", 'i').strip()
       if 4 <= len(senha) <= 16:
-          break
+        break
       else:
-          print("\nA senha deve ter entre 4 e 16 caracteres. Tente novamente.")
+        print("\nA senha deve ter entre 4 e 16 caracteres. Tente novamente.")
   
   cep = input("Digite o CEP: ")
 
   dados_endereco = consulta_cep(cep)
 
   if dados_endereco and confirmar_informacoes(dados_endereco):
-      salvar_usuario(login, senha, cep, dados_endereco)
+    salvar_usuario(login, senha, cep, dados_endereco)
   else:
-      print("\nRegistro cancelado ou CEP inválido.")
-      continuar()
+    print("\nRegistro cancelado ou CEP inválido.")
+    continuar()
 
 
 def verificar_login():
@@ -374,11 +373,11 @@ def verificar_login():
       resultado = inst_select.fetchone()
 
       if resultado:
-          id_cliente = resultado[0]
-          return id_cliente
+        id_cliente = resultado[0]
+        return id_cliente
       else:
-          print("Login ou senha incorretos. Tente novamente.")
-          return None
+        print("Login ou senha incorretos. Tente novamente.")
+        return None
   except Exception as e:
     print('Ocorreu um erro inesperado: ', e)
 
@@ -390,10 +389,10 @@ def verifica_placa_valida(id_cliente) -> str:
         clear()
         menu_veiculo(id_cliente)
       elif len(placa) != 7:
-          clear()
-          print("ERRO! Placa deve ter 7 dígitos")
+        clear()
+        print("ERRO! Placa deve ter 7 dígitos")
       else:
-          return placa
+        return placa
 
 def verifica_modelo_valio(id_cliente):
   while True:
@@ -420,148 +419,148 @@ def cadastrar_veiculo(id_cliente):
   """
   
   try:
-      inst_insert.execute(sql, {'placa': placa, 'id_cliente': id_cliente, 'modelo': modelo})
-      conn.commit()
-      print("\nVeículo cadastrado com sucesso!")
-      continuar()
+    inst_insert.execute(sql, {'placa': placa, 'id_cliente': id_cliente, 'modelo': modelo})
+    conn.commit()
+    print("\nVeículo cadastrado com sucesso!")
+    continuar()
   except Exception as e:
-      print("Erro ao cadastrar veículo:", e)
+    print("Erro ao cadastrar veículo:", e)
 
 def mostrar_veiculos(id_cliente):
   sql = """
   SELECT placa, modelo FROM tbl_veiculos WHERE id_cliente = :id_cliente
   """
   try:
-      inst_select.execute(sql, {'id_cliente': id_cliente})
-      veiculos = inst_select.fetchall()
+    inst_select.execute(sql, {'id_cliente': id_cliente})
+    veiculos = inst_select.fetchall()
 
-      if veiculos:
-          print("--- Veículos Cadastrados ---")
-          for veiculo in veiculos:
-              print(f"\nPlaca: {veiculo[0]}\nModelo: {veiculo[1]}")
-      else:
-          print("\nNenhum veículo cadastrado para este cliente.")
+    if veiculos:
+      print("--- Veículos Cadastrados ---")
+      for veiculo in veiculos:
+        print(f"\nPlaca: {veiculo[0]}\nModelo: {veiculo[1]}")
+    else:
+      print("\nNenhum veículo cadastrado para este cliente.")
   except Exception as e:
-      print("Ocorreu um erro ao listar os veículos:", e)
+    print("Ocorreu um erro ao listar os veículos:", e)
 
 def editar_veiculo(id_cliente):
   sql_listar_veiculos = """
   SELECT placa, modelo FROM tbl_veiculos WHERE id_cliente = :id_cliente
   """
   try:
-      inst_select.execute(sql_listar_veiculos, {'id_cliente': id_cliente})
-      veiculos = inst_select.fetchall()
+    inst_select.execute(sql_listar_veiculos, {'id_cliente': id_cliente})
+    veiculos = inst_select.fetchall()
 
-      if not veiculos:
-          clear()
-          print("Nenhum veículo cadastrado para este cliente.")
-          voltar_menu_veiculo(id_cliente)
-
+    if not veiculos:
       clear()
-      print("--- Veículos Cadastrados ---")
-      for i, veiculo in enumerate(veiculos):
-          print(f"\n{i + 1} - Placa: {veiculo[0]}, Modelo: {veiculo[1]}")
+      print("Nenhum veículo cadastrado para este cliente.")
+      voltar_menu_veiculo(id_cliente)
 
-      escolha = int(input("\nEscolha o número do veículo que deseja editar (ou 0 para voltar): "))
+    clear()
+    print("--- Veículos Cadastrados ---")
+    for i, veiculo in enumerate(veiculos):
+      print(f"\n{i + 1} - Placa: {veiculo[0]}, Modelo: {veiculo[1]}")
+
+    escolha = int(input("\nEscolha o número do veículo que deseja editar (ou 0 para voltar): "))
+    
+    if escolha == 0:
+      clear()
+      menu_veiculo(id_cliente)
+
+    if 1 <= escolha <= len(veiculos):
+      placa_atual = veiculos[escolha - 1][0]
+
+      nova_placa = input("\nDigite a nova placa (ou pressione ENTER para manter a atual): ").strip()
+      if not nova_placa:
+        nova_placa = placa_atual
       
-      if escolha == 0:
-        clear()
-        menu_veiculo(id_cliente)
+      novo_modelo = input("\nDigite o novo modelo (ou pressione ENTER para manter o atual): ").strip()
+      if not novo_modelo:
+        novo_modelo = veiculos[escolha - 1][1]
 
-      if 1 <= escolha <= len(veiculos):
-          placa_atual = veiculos[escolha - 1][0]
+      sql_editar = """
+      UPDATE tbl_veiculos
+      SET modelo = :modelo, placa = :placa
+      WHERE placa = :placa AND id_cliente = :id_cliente
+      """
+      inst_select.execute(sql_editar, {'modelo': novo_modelo, 'placa': placa_atual, 'id_cliente': id_cliente})
+      conn.commit()
+      print(f"\nVeículo com placa {placa_atual} atualizado com sucesso!")
 
-          nova_placa = input("\nDigite a nova placa (ou pressione ENTER para manter a atual): ").strip()
-          if not nova_placa:
-            nova_placa = placa_atual
-          
-          novo_modelo = input("\nDigite o novo modelo (ou pressione ENTER para manter o atual): ").strip()
-          if not novo_modelo:
-              novo_modelo = veiculos[escolha - 1][1]
-
-          sql_editar = """
-          UPDATE tbl_veiculos
-          SET modelo = :modelo, placa = :placa
-          WHERE placa = :placa AND id_cliente = :id_cliente
-          """
-          inst_select.execute(sql_editar, {'modelo': novo_modelo, 'placa': placa_atual, 'id_cliente': id_cliente})
-          conn.commit()
-          print(f"\nVeículo com placa {placa_atual} atualizado com sucesso!")
-
-      else:
-          print("Escolha inválida. Nenhum veículo editado.")
+    else:
+      print("Escolha inválida. Nenhum veículo editado.")
   except Exception as e:
-      print("Ocorreu um erro ao editar o veículo:", e)
+    print("Ocorreu um erro ao editar o veículo:", e)
 
 def excluir_veiculo(id_cliente):
   sql_listar_veiculos = """
   SELECT placa, modelo FROM tbl_veiculos WHERE id_cliente = :id_cliente
   """
   try:
-      inst_select.execute(sql_listar_veiculos, {'id_cliente': id_cliente})
-      veiculos = inst_select.fetchall()
+    inst_select.execute(sql_listar_veiculos, {'id_cliente': id_cliente})
+    veiculos = inst_select.fetchall()
 
-      if not veiculos:
-        print("Nenhum veículo cadastrado para este cliente.")
-        voltar_menu_veiculo(id_cliente)
-      
-      print("\--- Veículos Cadastrados ---")
-      for i, veiculo in enumerate(veiculos):
-          print(f"\n{i + 1} - Placa: {veiculo[0]}, Modelo: {veiculo[1]}")
+    if not veiculos:
+      print("Nenhum veículo cadastrado para este cliente.")
+      voltar_menu_veiculo(id_cliente)
+    
+    print("\--- Veículos Cadastrados ---")
+    for i, veiculo in enumerate(veiculos):
+      print(f"\n{i + 1} - Placa: {veiculo[0]}, Modelo: {veiculo[1]}")
 
-      escolha = int(input("\nEscolha o número do veículo que deseja excluir (ou 0 para voltar): "))
+    escolha = int(input("\nEscolha o número do veículo que deseja excluir (ou 0 para voltar): "))
 
-      if escolha == 0:
-        clear()
-        menu_veiculo(id_cliente)
+    if escolha == 0:
+      clear()
+      menu_veiculo(id_cliente)
 
-      if 1 <= escolha <= len(veiculos):
-          placa = veiculos[escolha - 1][0]
+    if 1 <= escolha <= len(veiculos):
+      placa = veiculos[escolha - 1][0]
 
-          sql_excluir = """
-          DELETE FROM tbl_veiculos WHERE placa = :placa AND id_cliente = :id_cliente
-          """
-          inst_select.execute(sql_excluir, {'placa': placa, 'id_cliente': id_cliente})
-          conn.commit()
-          print(f"\nVeículo com placa {placa} excluído com sucesso!")
-          voltar_menu_veiculo(id_cliente)
-      else:
-          print("Escolha inválida. Nenhum veículo excluído.")
+      sql_excluir = """
+      DELETE FROM tbl_veiculos WHERE placa = :placa AND id_cliente = :id_cliente
+      """
+      inst_select.execute(sql_excluir, {'placa': placa, 'id_cliente': id_cliente})
+      conn.commit()
+      print(f"\nVeículo com placa {placa} excluído com sucesso!")
+      voltar_menu_veiculo(id_cliente)
+    else:
+      print("Escolha inválida. Nenhum veículo excluído.")
   except Exception as e:
-      print("Ocorreu um erro ao excluir o veículo:", e)
+    print("Ocorreu um erro ao excluir o veículo:", e)
 
 def exportar_veiculos(id_cliente):
   sql = """
   SELECT placa, modelo FROM tbl_veiculos WHERE id_cliente = :id_cliente
   """
   try:
-      inst_select.execute(sql, {'id_cliente': id_cliente})
-      veiculos = inst_select.fetchall()
+    inst_select.execute(sql, {'id_cliente': id_cliente})
+    veiculos = inst_select.fetchall()
 
-      if veiculos:
-          veiculos_dict = [{'placa': veiculo[0], 'modelo': veiculo[1]} for veiculo in veiculos]
-          nome_arquivo = f"veiculos_cliente_{id_cliente}.json"
+    if veiculos:
+      veiculos_dict = [{'placa': veiculo[0], 'modelo': veiculo[1]} for veiculo in veiculos]
+      nome_arquivo = f"veiculos_cliente_{id_cliente}.json"
 
-          with open(nome_arquivo, 'w', encoding='utf-8') as f:
-              json.dump(veiculos_dict, f, ensure_ascii=False, indent=4)
-          print(f"\nDados exportados com sucesso para o arquivo '{nome_arquivo}'!")
-          voltar_menu_veiculo(id_cliente)
-      else:
-          print("\nNenhum veículo cadastrado para exportar.")
-          voltar_menu_veiculo(id_cliente)
+      with open(nome_arquivo, 'w', encoding='utf-8') as f:
+        json.dump(veiculos_dict, f, ensure_ascii=False, indent=4)
+      print(f"\nDados exportados com sucesso para o arquivo '{nome_arquivo}'!")
+      voltar_menu_veiculo(id_cliente)
+    else:
+      print("\nNenhum veículo cadastrado para exportar.")
+      voltar_menu_veiculo(id_cliente)
   except Exception as e:
-      print("Ocorreu um erro ao exportar os veículos:", e)
+    print("Ocorreu um erro ao exportar os veículos:", e)
 
 def menu_veiculo(id_cliente): #CRUD
   while True:
     print(""" -- MENU VEÍCULOS --
-\n1 - Cadastrar veículo
-2 - Mostrar veículos cadastrados
-3 - Editar veículo
-4 - Excluir veículo
-5 - Exportar veículos para JSON
-5 - Voltar ao menu principal
-""")
+  \n1 - Cadastrar veículo
+  2 - Mostrar veículos cadastrados
+  3 - Editar veículo
+  4 - Excluir veículo
+  5 - Exportar veículos para JSON
+  5 - Voltar ao menu principal
+  """)
     opcao = input("Escolha uma opção: ")
     match opcao:        
       case "1":
