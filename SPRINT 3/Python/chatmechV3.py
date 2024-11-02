@@ -379,23 +379,6 @@ def verificar_login():
             return None
     except Exception as e:
       print('Ocorreu um erro inesperado: ', e)
-   
-def mostrar_veiculos(id_cliente):
-    sql = """
-    SELECT placa, modelo FROM tbl_veiculos WHERE id_cliente = :id_cliente
-    """
-    try:
-        inst_select.execute(sql, {'id_cliente': id_cliente})
-        veiculos = inst_select.fetchall()
-
-        if veiculos:
-            print("--- Veículos Cadastrados ---")
-            for veiculo in veiculos:
-                print(f"\nPlaca: {veiculo[0]}\nModelo: {veiculo[1]}")
-        else:
-            print("\nNenhum veículo cadastrado para este cliente.")
-    except Exception as e:
-        print("Ocorreu um erro ao listar os veículos:", e)
 
 def verifica_placa_valida(id_cliente) -> str:
     while True:
@@ -442,46 +425,22 @@ def cadastrar_veiculo(id_cliente):
     except Exception as e:
         print("Erro ao cadastrar veículo:", e)
 
-def excluir_veiculo(id_cliente):
-    sql_listar_veiculos = """
+def mostrar_veiculos(id_cliente):
+    sql = """
     SELECT placa, modelo FROM tbl_veiculos WHERE id_cliente = :id_cliente
     """
     try:
-        inst_select.execute(sql_listar_veiculos, {'id_cliente': id_cliente})
+        inst_select.execute(sql, {'id_cliente': id_cliente})
         veiculos = inst_select.fetchall()
 
-        if not veiculos:
-          print("Nenhum veículo cadastrado para este cliente.")
-          pressione = input('\nPressione enter para retornar ao menu...')
-          clear()
-          menu_veiculo(id_cliente)
-        
-        print("\--- Veículos Cadastrados ---")
-        for i, veiculo in enumerate(veiculos):
-            print(f"\n{i + 1} - Placa: {veiculo[0]}, Modelo: {veiculo[1]}")
-
-        escolha = int(input("\nEscolha o número do veículo que deseja excluir (ou 0 para voltar): "))
-
-        if escolha == 0:
-          clear()
-          menu_veiculo(id_cliente)
-
-        if 1 <= escolha <= len(veiculos):
-            placa = veiculos[escolha - 1][0]
-
-            sql_excluir = """
-            DELETE FROM tbl_veiculos WHERE placa = :placa AND id_cliente = :id_cliente
-            """
-            inst_select.execute(sql_excluir, {'placa': placa, 'id_cliente': id_cliente})
-            conn.commit()
-            print(f"\nVeículo com placa {placa} excluído com sucesso!")
-            pressione = input('\nPressione enter para retornar ao menu...')
-            clear()
-            menu_veiculo(id_cliente)
+        if veiculos:
+            print("--- Veículos Cadastrados ---")
+            for veiculo in veiculos:
+                print(f"\nPlaca: {veiculo[0]}\nModelo: {veiculo[1]}")
         else:
-            print("Escolha inválida. Nenhum veículo excluído.")
+            print("\nNenhum veículo cadastrado para este cliente.")
     except Exception as e:
-        print("Ocorreu um erro ao excluir o veículo:", e)
+        print("Ocorreu um erro ao listar os veículos:", e)
 
 def editar_veiculo(id_cliente):
   sql_listar_veiculos = """
@@ -533,6 +492,47 @@ def editar_veiculo(id_cliente):
           print("Escolha inválida. Nenhum veículo editado.")
   except Exception as e:
       print("Ocorreu um erro ao editar o veículo:", e)
+
+def excluir_veiculo(id_cliente):
+    sql_listar_veiculos = """
+    SELECT placa, modelo FROM tbl_veiculos WHERE id_cliente = :id_cliente
+    """
+    try:
+        inst_select.execute(sql_listar_veiculos, {'id_cliente': id_cliente})
+        veiculos = inst_select.fetchall()
+
+        if not veiculos:
+          print("Nenhum veículo cadastrado para este cliente.")
+          pressione = input('\nPressione enter para retornar ao menu...')
+          clear()
+          menu_veiculo(id_cliente)
+        
+        print("\--- Veículos Cadastrados ---")
+        for i, veiculo in enumerate(veiculos):
+            print(f"\n{i + 1} - Placa: {veiculo[0]}, Modelo: {veiculo[1]}")
+
+        escolha = int(input("\nEscolha o número do veículo que deseja excluir (ou 0 para voltar): "))
+
+        if escolha == 0:
+          clear()
+          menu_veiculo(id_cliente)
+
+        if 1 <= escolha <= len(veiculos):
+            placa = veiculos[escolha - 1][0]
+
+            sql_excluir = """
+            DELETE FROM tbl_veiculos WHERE placa = :placa AND id_cliente = :id_cliente
+            """
+            inst_select.execute(sql_excluir, {'placa': placa, 'id_cliente': id_cliente})
+            conn.commit()
+            print(f"\nVeículo com placa {placa} excluído com sucesso!")
+            pressione = input('\nPressione enter para retornar ao menu...')
+            clear()
+            menu_veiculo(id_cliente)
+        else:
+            print("Escolha inválida. Nenhum veículo excluído.")
+    except Exception as e:
+        print("Ocorreu um erro ao excluir o veículo:", e)
 
 def voltar_menu_veiculo(id_cliente) -> None:
   input("\nPressione enter para voltar ao menu de veículos...")
