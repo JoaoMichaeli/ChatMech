@@ -37,11 +37,6 @@ def voltar_menu_principal(entrada:str):
   if entrada.lower() == '0':
     os.system('cls')
     menu_principal()
-    
-def voltar_menu_veiculo(entrada:str):
-  if entrada.lower() == '0':
-    os.system('cls')
-    menu_veiculo()
 
 def voltar_menu_agendamento(entrada:str):
   if entrada.lower() == '0':
@@ -104,9 +99,7 @@ def mostra_servicos_agendados():
         
       print(f"- Serviço {i}: {dia}/{mes} ás {dados['hora']}hrs\n")
       i += 1
-  
-  
-  
+
 def atualiza_chaves_agendamento(dicionario:dict) -> None:
   servicos_copy = {}
   for i, (servico, dados) in enumerate(dicionario.items()):
@@ -143,7 +136,6 @@ def cancelar_agendamento():
         menu_servico()
         break
   
-
 def menu_servico():
     os.system('cls')
     print(" -- SERVIÇOS --")
@@ -241,7 +233,7 @@ def acessar_usuario():
             try:
                 opcao = int(input("Escolha uma opção: "))
                 if opcao == 1: # Irá chamar a tela de registro de usuário
-                    os.system("cls")
+                    clear()
                     registrar_usuario()
                 elif opcao == 2: # Irá chamar a tela de login
                     id_cliente = verificar_login()
@@ -249,7 +241,7 @@ def acessar_usuario():
                         print("\nAcesso concedido")
                         menu_principal(id_cliente)
                     else:
-                        os.system("cls")
+                        clear()
                         print("Acesso negado, você não possui uma conta registrada...\n"
                             "Por favor, Registre-se aqui: \n")
                         return registrar_usuario()
@@ -260,7 +252,7 @@ def acessar_usuario():
                     print("Opção inválida. Tente novamente.\n")
             except ValueError:
                 print("Entrada inválida! Por favor, digite um número.")
-                os.system("cls")
+                clear()
     except ExitProgram:
         print("Programa encerrado.")
 
@@ -279,28 +271,16 @@ def verifica_input_vazio(pergunta:str, tipo:str) -> str:
         if entrada == "":
           print("ERRO! campo não pode estar vazio!")
         else:
-          os.system('cls')
+          clear()
           break
     return entrada
 
-cadastros = {  # Um dicionário que armazena os dados de login e senha
-
-}
-
-def verifica_se_existe(dado:str,chave:str,dicionario:dict) -> bool:
-  for k, v in dicionario.items():
-    if dado == v[chave]:
-      return True
-    else:
-      return False
-    # break  # Sai do loop se a placa não existir
-
 def consulta_cep(cep:str) -> None:
     url = f'https://viacep.com.br/ws/{cep}/json/'
-    response = requests.get(url)
+    resposta = requests.get(url)
 
-    if response.status_code == 200:
-        dados = response.json()
+    if resposta.status_code == 200:
+        dados = resposta.json()
         if 'erro' not in dados:
             return dados
         else:
@@ -310,16 +290,16 @@ def consulta_cep(cep:str) -> None:
         print("Erro ao consultar o CEP.")
         return None
 
-def confirmar_informacoes(dados: dict):
-    os.system('cls')
+def confirmar_informacoes(dados_endereco: dict):
+    clear()
 
     print(f'''
   Informações encontradas: 
-  CEP: {dados['cep']}
-  Logradouro: {dados['logradouro']}
-  Bairro: {dados['bairro']}
-  Localidade: {dados['localidade']}
-  Estado: {dados['uf']}''')
+  CEP: {dados_endereco['cep']}
+  Logradouro: {dados_endereco['logradouro']}
+  Bairro: {dados_endereco['bairro']}
+  Localidade: {dados_endereco['localidade']}
+  Estado: {dados_endereco['uf']}''')
 
     confirmacao = input("\nEssas informações estão corretas? (s/n): ").strip().lower()
     return confirmacao == 's'
@@ -396,9 +376,6 @@ def verificar_login():
             return None
     except Exception as e:
       print('Ocorreu um erro inesperado: ', e)
-
-
-veiculos = {} # Um dicionário que armazena os dados do veiculo
    
 def verifica_placa_valida() -> str:
     while True:
@@ -480,15 +457,6 @@ def excluir_veiculo(id_cliente):
             print("Escolha inválida. Nenhum veículo excluído.")
     except Exception as e:
         print("Ocorreu um erro ao excluir o veículo:", e)
-
-      
-def atualiza_chaves_dicionario(dicionario:dict) -> None:
-  veiculos_copy = {}
-  for i, (veiculo, dados) in enumerate(dicionario.items()):
-    veiculos_copy[f"veiculo{i+1}"] = dados
-  
-  veiculos.clear()
-  veiculos.update(veiculos_copy)
 
 def editar_veiculo(id_cliente):
   sql_listar_veiculos = """
@@ -580,7 +548,6 @@ def menu_veiculo(id_cliente): #CRUD
         print("Opção inválida. Tente novamente.")
         
 #---------------------------------- Programa principal ----------------------------------
-
 
 def menu_inicial():
   os.system("cls")
