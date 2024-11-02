@@ -64,24 +64,50 @@ def menu_principal(id_cliente):
 
 def cadastrar_agendamento(id_cliente):
   print("-- AGENDAR SERVIÇO --")
-  servico = input("\nDigite o serviço a ser agendado: ").strip()
+  servico = input("\nDigite o serviço a ser agendado, ou 0 para retornar ao menu: ").strip()
+
+  if servico == "0":
+    clear()
+    menu_servico(id_cliente)
   
   ano_atual = datetime.now().year
 
   while True:
+    dia = input("\nDigite o dia do agendamento (1-31), ou 0 para retornar ao menu: ").strip()
+    if dia == "0":
+      clear()
+      menu_servico(id_cliente)
+
     try:
-      dia = int(input("\nDigite o dia do agendamento (1-31): ").strip())
-      mes = int(input("\nDigite o mês do agendamento (1-12): ").strip())
-
-      data = f"{ano_atual}-{mes:02d}-{dia:02d}"
-
-      datetime.strptime(data, '%Y-%m-%d')
+      dia = int(dia)
+      if not (1 <= dia <= 31):
+        raise ValueError("Dia inválido. Deve estar entre 1 e 31.")
       break
     except ValueError:
-      print("**ERRO! Data inválida. Por favor, insira uma data válida.**")
+      print("**ERRO! Dia inválido. Por favor, insira um dia válido.**")
 
   while True:
-    hora = input("\nDigite a hora do agendamento (HH:MM): ").strip()
+    mes = input("\nDigite o mês do agendamento (1-12), ou 0 para retornar ao menu: ").strip()
+    if mes == "0":
+      clear()
+      menu_servico(id_cliente)
+
+    try:
+      mes = int(mes)
+      if not (1 <= mes <= 12):
+        raise ValueError("Mês inválido. Deve estar entre 1 e 12.")
+      break
+    except ValueError:
+      print("**ERRO! Mês inválido. Por favor, insira um mês válido.**")
+  
+  data = f"{ano_atual}-{mes:02d}-{dia:02d}"
+
+  while True:
+    hora = input("\nDigite a hora do agendamento (HH:MM), ou 0 para retornar ao menu: ").strip()
+    if hora == "0":
+      clear()
+      menu_servico(id_cliente)
+
     try:
       hora_min = hora.split(':')
       if len(hora_min) != 2:
@@ -92,7 +118,6 @@ def cadastrar_agendamento(id_cliente):
       
       if not (0 <= hora_int < 24 and 0 <= minuto_int < 60):
         raise ValueError("Horário inválido. Hora deve estar entre 00:00 e 23:59.")
-
       break
 
     except ValueError as e:
@@ -108,7 +133,6 @@ def cadastrar_agendamento(id_cliente):
     conn.commit()
     clear()
     print(f"Serviço agendado para {dia}/{mes:02d} às {hora} horas.")
-    print("\nAgendamento realizado com sucesso!")
     voltar_menu_servico(id_cliente)
   except Exception as e:
     print("Erro ao agendar serviço:", e)
