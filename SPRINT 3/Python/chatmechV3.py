@@ -2,6 +2,7 @@ import os
 import oracledb
 import requests
 import json
+from datetime import datetime
 
 # Conexão com o banco de dados
 try: 
@@ -27,20 +28,6 @@ def continuar():
   input("\nPressione enter para continuar...")
   clear()
 
-def voltar_menu_inicial(entrada:str):
-  if entrada.lower() == '0':
-    menu_inicial()
-  
-def voltar_menu_principal(entrada:str):
-  if entrada.lower() == '0':
-    clear()
-    menu_principal()
-
-def voltar_menu_agendamento(entrada:str):
-  if entrada.lower() == '0':
-    clear
-    menu_servico()
-
 def presione_qualquer_tecla_inicial():
   input("Pressione qualquer tecla para voltar ao menu inicial: ")
   menu_inicial()
@@ -64,7 +51,7 @@ def menu_principal(id_cliente):
           os.system("cls")
           menu_veiculo(id_cliente)
         case '2':
-          menu_servico()
+          menu_servico(id_cliente)
           break
         case '3':
           menu_inicial()
@@ -75,66 +62,124 @@ def menu_principal(id_cliente):
         case _:
           print("\nOpção inválida! digite novamente.")
 
-servicos = {
-  } # Um dicionário que armazena os dados de serviços agendados
-
-def mostra_servicos_agendados():
-  if not servicos:
-    os.system('cls')
-    print("Não há nenhum serviço cadastrado!\n")
-  else:
-    os.system('cls')
-    print(" -- SERVIÇOS AGENDADOS -- \n")
-    i = 1
-    for servico, dados in servicos.items():
-      dia = dados.get('dia')
-      mes = dados.get('mes')
-      
-      if dia < 10:
-        dia = "0" + str(dia)
-      if mes < 10:
-        mes = "0" + str(mes)
-        
-      print(f"- Serviço {i}: {dia}/{mes} ás {dados['hora']}hrs\n")
-      i += 1
-
-def atualiza_chaves_agendamento(dicionario:dict) -> None:
-  servicos_copy = {}
-  for i, (servico, dados) in enumerate(dicionario.items()):
-    servicos_copy[f"servico{i+1}"] = dados
-  servicos.clear()
-  servicos.update(servicos_copy)
-
-def cancelar_agendamento():
-  os.system('cls')
-  selecao_valida = False
-  while True:
-    mostra_servicos_agendados()
-    while True:
-      selecao = verifica_input_vazio("Digite o número do agendamento a ser cancelado: ", 'a')
-      if not selecao.isdigit():
-        mostra_servicos_agendados()
-        print("Número de agendamento inexistente!")
-        continue
-      else:
-        chave = 'servico' + selecao
-        confirmacao = input(f"Tem certeza que deseja excluir {chave}? (s/n): ").lower()
-        break
-    match confirmacao:
-      case 's':
-        atualiza_chaves_agendamento(servicos)
-        # Cancelar o agendamento
-        del servicos[chave]
-        print("\nAgendamento cancelado com sucesso!\n")
-        input("Pressione qualquer tecla para voltar ao menu de servicos: ")
-        os.system('cls')
-        menu_servico()
-      case 'n':
-        os.system('cls')
-        menu_servico()
-        break
+def cadastrar_agendamento(id_cliente):
+  print("-- AGENDAR SERVIÇO --")
+  servico = input("\nDigite o serviço a ser agendado: ").strip()
   
-def menu_servico():
+  ano_atual = datetime.now().year
+
+  while True:
+    try:
+      dia = int(input("\nDigite o dia do agendamento (1-31): ").strip())
+      mes = int(input("\nDigite o mês do agendamento (1-12): ").strip())
+
+      data = f"{ano_atual}-{mes:02d}-{dia:02d}"
+
+      datetime.strptime(data, '%Y-%m-%d')
+      break
+    except ValueError:
+      print("**ERRO! Data inválida. Por favor, insira uma data válida.**")
+
+  while True:
+    hora = input("\nDigite a hora do agendamento (HH:MM): ").strip()
+    try:
+      hora_min = hora.split(':')
+      if len(hora_min) != 2:
+        raise ValueError("O horário deve estar no formato hh:mm.")
+
+      hora_int = int(hora_min[0])
+      minuto_int = int(hora_min[1])
+      
+      if not (0 <= hora_int < 24 and 0 <= minuto_int < 60):
+        raise ValueError("Horário inválido. Hora deve estar entre 00:00 e 23:59.")
+
+      break
+
+    except ValueError as e:
+      print(f"**ERRO! {e}**. Por favor, insira um horário válido.")
+
+  sql = """
+  INSERT INTO tbl_agendamentos (id_cliente, servico, data_agendamento, hora)
+  VALUES (:id_cliente, :servico, TO_DATE(:data_agendamento, 'YYYY-MM-DD'), TO_TIMESTAMP(:hora, 'HH24:MI'))
+  """
+
+  try:
+    inst_insert.execute(sql, {'id_cliente': id_cliente, 'servico': servico, 'data_agendamento': data, 'hora': hora})
+    conn.commit()
+    clear()
+    print(f"Serviço agendado para {dia}/{mes:02d} às {hora} horas.")
+    print("\nAgendamento realizado com sucesso!")
+    voltar_menu_servico(id_cliente)
+  except Exception as e:
+    print("Erro ao agendar serviço:", e)
+
+def servicos_agendados(id_cliente):
+  clear()
+  print("-- SERVIÇOS AGENDADOS --")
+  
+  sql = """
+  SELECT servico, TO_CHAR(data_agendamento, 'DD/MM') AS data, TO_CHAR(hora, 'HH24:MI') AS hora
+  FROM tbl_agendamentos
+  WHERE id_cliente = :id_cliente
+  ORDER BY data_agendamento, hora
+  """
+
+  try:
+    inst_select.execute(sql, {'id_cliente': id_cliente})
+    agendamentos = inst_select.fetchall()
+
+    if agendamentos:
+      for i, (servico, data, hora) in enumerate(agendamentos, start=1):
+        print(f"\nServiço {i}: {servico}, Data: {data}, Hora: {hora}")
+    else:
+      print("Nenhum serviço agendado para este cliente.")
+    voltar_menu_servico(id_cliente)
+  except Exception as e:
+    print("Erro ao buscar serviços agendados:", e)
+
+def cancelar_agendamento(id_cliente):
+  clear()
+  print("-- CANCELAR AGENDAMENTO --")
+
+  sql_busca = """
+  SELECT id_agendamento, servico, TO_CHAR(data_agendamento, 'DD/MM') AS data, TO_CHAR(hora, 'HH24:MI') AS hora
+  FROM tbl_agendamentos
+  WHERE id_cliente = :id_cliente
+  """
+
+  inst_query = conn.cursor()
+  inst_query.execute(sql_busca, {'id_cliente': id_cliente})
+  agendamentos = inst_query.fetchall()
+
+  if not agendamentos:
+    print("\nNenhum serviço agendado.")
+    return
+
+  for id, (id_agendamento, servico, data, hora) in enumerate(agendamentos):
+    print(f"\n{id + 1}. {servico} - {data} às {hora}")
+
+  escolha = int(input("\nEscolha o número do serviço a ser cancelado: ")) - 1
+
+  sql_cancelar = """
+  DELETE FROM tbl_agendamentos
+  WHERE id_agendamento = :id_agendamento
+  """
+  
+  try:
+    inst_delete = conn.cursor()
+    inst_delete.execute(sql_cancelar, {'id_agendamento': agendamentos[escolha][0]})
+    conn.commit()
+    print("\nAgendamento cancelado com sucesso!")
+    voltar_menu_servico(id_cliente)
+  except Exception as e:
+    print("Erro ao cancelar agendamento:", e)
+
+def voltar_menu_servico(id_cliente) -> None:
+  pressione = input('\nPressione enter para retornar ao menu de serviços...')
+  clear()
+  menu_servico(id_cliente)
+  
+def menu_servico(id_cliente):
   os.system('cls')
   print(" -- SERVIÇOS --")
   while True:
@@ -147,80 +192,20 @@ def menu_servico():
 Escolha: """)
     match opcao:
       case "1":
-        os.system('cls')
-        agendar_servico()
+        clear()
+        cadastrar_agendamento(id_cliente)
       case "2":
-        mostra_servicos_agendados()
-        input("Pressione qualquer tecla para voltar: ")
-        menu_servico()
+        clear()
+        servicos_agendados(id_cliente)
         break
       case "3":
-        cancelar_agendamento()
+        cancelar_agendamento(id_cliente)
       case "4":
-        menu_principal()
+        menu_principal(id_cliente)
         break
       case _:
         print(" **ERRO! Digite uma opção válida**")
-          
-def agendar_servico():
-  os.system('cls')
-  while True:
-      try:
-          # Verifica o dia
-          while True:
-              dia = verifica_input_vazio("\nQual dia gostaria de agendar seu serviço?\nEscolha: ", 'a')
-              try:
-                  dia = int(dia)
-                  if not (1 <= dia <= 31):
-                    raise ValueError("dia")
-                  break  # Sai do loop quando o dia for válido
-              except ValueError:
-                  print("**ERRO! Dia deve estar entre 1 e 31.**")
 
-          # Verifica o mês
-          while True:
-              mes = verifica_input_vazio("\nQual o mês?\nEscolha: ", 'a')
-              try:
-                mes = int(mes)
-                if not (1 <= mes <= 12):
-                  raise ValueError("mes")
-                break  # Sai do loop quando o mês for válido
-              except ValueError:
-                print("**ERRO! Mês deve estar entre 01 e 12.**")
-
-          # Verifica o horário
-          while True:
-              hora = verifica_input_vazio("\nQual o horário do agendamento? (Formato hh:mm)\nEscolha: ", 'a')
-              try:
-                hora_parts = hora.split(':')
-                if len(hora_parts) != 2 or not all(part.isdigit() for part in hora_parts):
-                  raise ValueError("hora_formato")
-                
-                # Valida a hora e minuto
-                hora_int = int(hora_parts[0])
-                minuto_int = int(hora_parts[1])
-                if not (0 <= hora_int < 24 and 0 <= minuto_int < 60):
-                  raise ValueError("hora_valor")
-                break  # Sai do loop quando o horário for válido
-              except ValueError as e:
-                if str(e) == "hora_formato":
-                  print("**ERRO! O horário deve estar no formato hh:mm.**")
-                elif str(e) == "hora_valor":
-                  print("**ERRO! Horário inválido. Hora deve estar entre 00:00 e 23:59.**")
-          break  # Sai do loop geral se todos os dados forem válidos
-      
-      except Exception as e:
-        os.system("cls")
-        print(f"Erro inesperado: {e}")
-  
-  servicos[f"servico{len(servicos)+1}"] = {'dia':dia,'mes':mes,'hora':hora}
-  
-  # Aqui segue o fluxo normal após o agendamento correto
-  os.system('cls')
-  print(f"Serviço agendado para {dia:02}/{mes:02} às {hora}.")
-  input("\nPressione qualquer tecla para retornar ao menu anterior...")
-  menu_servico()
-        
 def acessar_usuario():
   try:
       while True:
@@ -263,13 +248,7 @@ def verifica_input_vazio(pergunta:str, tipo:str) -> str:
   while(True):
     entrada = ""
     entrada = input(f"Digite '0' para voltar ao menu\n{pergunta}")
-    if tipo == 'i':
-      voltar_menu_inicial(entrada)
-    elif tipo == 'p':
-      voltar_menu_principal(entrada)
-    elif tipo == 'a':
-      voltar_menu_agendamento(entrada)
-    elif tipo == 'v':
+    if tipo == 'v':
       voltar_menu_veiculo(entrada)
     if entrada == "":
       print("ERRO! campo não pode estar vazio!")
@@ -553,13 +532,13 @@ def exportar_veiculos(id_cliente):
 
 def menu_veiculo(id_cliente): #CRUD
   while True:
-    print(""" -- MENU VEÍCULOS --
-  \n1 - Cadastrar veículo
+    print(""" -- MENU VEÍCULOS --\n
+  1 - Cadastrar veículo
   2 - Mostrar veículos cadastrados
   3 - Editar veículo
   4 - Excluir veículo
   5 - Exportar veículos para JSON
-  5 - Voltar ao menu principal
+  6 - Voltar ao menu principal
   """)
     opcao = input("Escolha uma opção: ")
     match opcao:        
