@@ -181,10 +181,10 @@ def agendar_servico():
           while True:
               mes = verifica_input_vazio("\nQual o mês?\nEscolha: ", 'a')
               try:
-                  mes = int(mes)
-                  if not (1 <= mes <= 12):
-                    raise ValueError("mes")
-                  break  # Sai do loop quando o mês for válido
+                mes = int(mes)
+                if not (1 <= mes <= 12):
+                  raise ValueError("mes")
+                break  # Sai do loop quando o mês for válido
               except ValueError:
                 print("**ERRO! Mês deve estar entre 01 e 12.**")
 
@@ -192,21 +192,21 @@ def agendar_servico():
           while True:
               hora = verifica_input_vazio("\nQual o horário do agendamento? (Formato hh:mm)\nEscolha: ", 'a')
               try:
-                  hora_parts = hora.split(':')
-                  if len(hora_parts) != 2 or not all(part.isdigit() for part in hora_parts):
-                    raise ValueError("hora_formato")
-                  
-                  # Valida a hora e minuto
-                  hora_int = int(hora_parts[0])
-                  minuto_int = int(hora_parts[1])
-                  if not (0 <= hora_int < 24 and 0 <= minuto_int < 60):
-                    raise ValueError("hora_valor")
-                  break  # Sai do loop quando o horário for válido
+                hora_parts = hora.split(':')
+                if len(hora_parts) != 2 or not all(part.isdigit() for part in hora_parts):
+                  raise ValueError("hora_formato")
+                
+                # Valida a hora e minuto
+                hora_int = int(hora_parts[0])
+                minuto_int = int(hora_parts[1])
+                if not (0 <= hora_int < 24 and 0 <= minuto_int < 60):
+                  raise ValueError("hora_valor")
+                break  # Sai do loop quando o horário for válido
               except ValueError as e:
-                  if str(e) == "hora_formato":
-                    print("**ERRO! O horário deve estar no formato hh:mm.**")
-                  elif str(e) == "hora_valor":
-                    print("**ERRO! Horário inválido. Hora deve estar entre 00:00 e 23:59.**")
+                if str(e) == "hora_formato":
+                  print("**ERRO! O horário deve estar no formato hh:mm.**")
+                elif str(e) == "hora_valor":
+                  print("**ERRO! Horário inválido. Hora deve estar entre 00:00 e 23:59.**")
           break  # Sai do loop geral se todos os dados forem válidos
       
       except Exception as e:
@@ -261,21 +261,21 @@ def voltar_menu_veiculo(id_cliente) -> None:
 
 def verifica_input_vazio(pergunta:str, tipo:str) -> str:
   while(True):
-      entrada = ""
-      entrada = input(f"Digite '0' para voltar ao menu\n{pergunta}")
-      if tipo == 'i':
-        voltar_menu_inicial(entrada)
-      elif tipo == 'p':
-        voltar_menu_principal(entrada)
-      elif tipo == 'a':
-        voltar_menu_agendamento(entrada)
-      elif tipo == 'v':
-        voltar_menu_veiculo(entrada)
-      if entrada == "":
-        print("ERRO! campo não pode estar vazio!")
-      else:
-        clear()
-        break
+    entrada = ""
+    entrada = input(f"Digite '0' para voltar ao menu\n{pergunta}")
+    if tipo == 'i':
+      voltar_menu_inicial(entrada)
+    elif tipo == 'p':
+      voltar_menu_principal(entrada)
+    elif tipo == 'a':
+      voltar_menu_agendamento(entrada)
+    elif tipo == 'v':
+      voltar_menu_veiculo(entrada)
+    if entrada == "":
+      print("ERRO! campo não pode estar vazio!")
+    else:
+      clear()
+      break
   return entrada
 
 def consulta_cep(cep:str) -> None:
@@ -334,19 +334,19 @@ def salvar_usuario (login:str, senha:str, cep:str, dados_endereco:dict) -> None:
 
 def registrar_usuario():
   while True:
-      print('Para realizar o seu cadastro, preencha as informações abaixo:')
-      login = verifica_input_vazio("\nDigite o login (mínimo 4 caracteres): ", 'i').strip()
-      if len(login) >= 4:
-        break
-      else:
-        print("\nO login deve ter no mínimo 4 caracteres. Tente novamente.")
+    print('Para realizar o seu cadastro, preencha as informações abaixo:')
+    login = verifica_input_vazio("\nDigite o login (mínimo 4 caracteres): ", 'i').strip()
+    if len(login) >= 4:
+      break
+    else:
+      print("\nO login deve ter no mínimo 4 caracteres. Tente novamente.")
   
   while True:
-      senha = verifica_input_vazio("\nDigite a senha (mínimo 4 caracteres, máximo 16): ", 'i').strip()
-      if 4 <= len(senha) <= 16:
-        break
-      else:
-        print("\nA senha deve ter entre 4 e 16 caracteres. Tente novamente.")
+    senha = verifica_input_vazio("\nDigite a senha (mínimo 4 caracteres, máximo 16): ", 'i').strip()
+    if 4 <= len(senha) <= 16:
+      break
+    else:
+      print("\nA senha deve ter entre 4 e 16 caracteres. Tente novamente.")
   
   cep = input("Digite o CEP: ")
 
