@@ -259,7 +259,7 @@ def acessar_usuario():
 def verifica_input_vazio(pergunta:str, tipo:str) -> str:
     while(True):
         entrada = ""
-        entrada = input(f"Digite '0' para voltar ao menu --\n{pergunta}")
+        entrada = input(f"Digite '0' para voltar ao menu\n{pergunta}")
         if tipo == 'i':
           voltar_menu_inicial(entrada)
         elif tipo == 'p':
@@ -324,21 +324,24 @@ def salvar_usuario (login:str, senha:str, cep:str, dados_endereco:dict) -> None:
     try:
       inst_insert.execute(sql, dados_para_inserir)
       conn.commit()
-      print('Usuário cadastrado com sucesso!')
+      print('\nUsuário cadastrado com sucesso!')
+      pressione = print('\nPressione enter para acessar o Menu')
+      clear()
       acessar_usuario()
     except Exception as e:
       print('Erro ao salvar no banco de dados: ', e)
 
 def registrar_usuario():
     while True:
-        login = input("Digite o login (mínimo 4 caracteres): ").strip()
+        print('Para realizar o seu cadastro, preencha as informações abaixo:')
+        login = verifica_input_vazio("\nDigite o login (mínimo 4 caracteres): ", 'i').strip()
         if len(login) >= 4:
             break
         else:
             print("\nO login deve ter no mínimo 4 caracteres. Tente novamente.")
     
     while True:
-        senha = input("Digite a senha (mínimo 4 caracteres, máximo 16): ").strip()
+        senha = verifica_input_vazio("\nDigite a senha (mínimo 4 caracteres, máximo 16): ", 'i').strip()
         if 4 <= len(senha) <= 16:
             break
         else:
@@ -377,14 +380,6 @@ def verificar_login():
     except Exception as e:
       print('Ocorreu um erro inesperado: ', e)
    
-def verifica_placa_valida() -> str:
-    while True:
-        placa = verifica_input_vazio("Digite a placa do veículo: ", 'v').upper()
-        if len(placa) != 7:
-            print("ERRO! Placa deve ter 7 dígitos")
-        else:
-            return placa
-        
 def mostrar_veiculos(id_cliente):
     sql = """
     SELECT placa, modelo FROM tbl_veiculos WHERE id_cliente = :id_cliente
@@ -402,14 +397,41 @@ def mostrar_veiculos(id_cliente):
     except Exception as e:
         print("Ocorreu um erro ao listar os veículos:", e)
 
+def verifica_placa_valida(id_cliente) -> str:
+    while True:
+        print('Caso queira retornar ao menu, digite "0"')
+        placa = input("\nDigite a placa do veículo: ").strip().upper()
+        if placa == '0':
+          clear()
+          menu_veiculo(id_cliente)
+        elif len(placa) != 7:
+            clear()
+            print("ERRO! Placa deve ter 7 dígitos")
+        else:
+            return placa
+
+def verifica_modelo_valio(id_cliente):
+   while True:
+      clear()
+      print('Caso queira retornar ao menu, digite "0"')
+      modelo = input("\nDigite o modelo do veículo: ").strip().lower()
+      if modelo == '0':
+        clear()
+        menu_veiculo(id_cliente)
+      elif modelo:
+        return modelo
+      else:
+        print('\nErro! O modelo do veiculo não pode ser vazio')
+      
+
 def cadastrar_veiculo(id_cliente):
     print("-- CADASTRO DE VEÍCULO --")
-    placa = input("Digite a placa do veículo: ").strip().upper()
-    modelo = input("Digite o modelo do veículo: ").strip()
+    placa = verifica_placa_valida(id_cliente)
+    modelo = verifica_modelo_valio(id_cliente)
 
     sql = """
     INSERT INTO tbl_veiculos (placa, id_cliente, modelo)
-    VALUES (:placa, :id_cliente, :modelo, :dono)
+    VALUES (:placa, :id_cliente, :modelo)
     """
     
     try:
@@ -453,6 +475,9 @@ def excluir_veiculo(id_cliente):
             inst_select.execute(sql_excluir, {'placa': placa, 'id_cliente': id_cliente})
             conn.commit()
             print(f"\nVeículo com placa {placa} excluído com sucesso!")
+            pressione = input('\nPressione enter para retornar ao menu...')
+            clear()
+            menu_veiculo(id_cliente)
         else:
             print("Escolha inválida. Nenhum veículo excluído.")
     except Exception as e:
@@ -517,7 +542,7 @@ def voltar_menu_veiculo(id_cliente) -> None:
 def menu_veiculo(id_cliente): #CRUD
   while True:
     print(""" -- MENU VEÍCULOS --
-1 - Cadastrar veículo
+\n1 - Cadastrar veículo
 2 - Mostrar veículos cadastrados
 3 - Editar veículo
 4 - Excluir veículo
@@ -542,7 +567,7 @@ def menu_veiculo(id_cliente): #CRUD
         clear()
         excluir_veiculo(id_cliente)
       case "5":
-        menu_principal()
+        menu_principal(id_cliente)
         break
       case _:
         print("Opção inválida. Tente novamente.")
