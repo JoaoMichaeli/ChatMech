@@ -178,7 +178,7 @@ def cancelar_agendamento(id_cliente):
 
   if escolha == -1:
     clear()
-    menu_veiculo(id_cliente)
+    menu_servico(id_cliente)
 
   sql_cancelar = """
   DELETE FROM tbl_agendamentos
