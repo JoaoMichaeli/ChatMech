@@ -344,7 +344,7 @@ def registrar_usuario():
     login = verifica_input_vazio("\nDigite o login (mínimo 4 caracteres): ", 'i').strip()
 
     if login == '0':
-      print("Voltando ao menu...")
+      clear()
       return
 
     if len(login) < 4:
