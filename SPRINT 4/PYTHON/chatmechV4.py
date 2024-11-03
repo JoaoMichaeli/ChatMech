@@ -124,7 +124,7 @@ def cadastrar_agendamento(id_cliente):
     inst_insert.execute(sql, {'id_cliente': id_cliente, 'servico': servico, 'data_agendamento': data, 'hora': hora})
     conn.commit()
     clear()
-    print(f"Serviço agendado para {dia}/{mes:02d} às {hora} horas.")
+    print(f"Serviço agendado para {dia:02d}/{mes:02d} às {hora} horas.")
     voltar_menu_servico(id_cliente)
   except Exception as e:
     print("Erro ao agendar serviço:", e)
@@ -264,19 +264,23 @@ def voltar_menu_veiculo(id_cliente) -> None:
   clear()
   menu_veiculo(id_cliente)
 
-def verifica_input_vazio(pergunta:str, tipo:str) -> str:
-  while(True):
-    entrada = ""
-    entrada = input(f"Digite '0' para voltar ao menu\n{pergunta}")
-    if tipo == 'v':
-      voltar_menu_veiculo(entrada)
-    elif tipo == 's':
-      voltar_menu_servico(entrada)
+def verifica_input_vazio(pergunta: str, tipo: str) -> str:
+  while True:
+    entrada = input(f"Digite '0' para voltar ao menu\n{pergunta}").strip()
+    
+    if entrada == '0':
+      if tipo == 'v':
+        voltar_menu_veiculo(entrada)
+      elif tipo == 's':
+        voltar_menu_servico(entrada)
+      return '0'
+    
     if entrada == "":
-      print("ERRO! campo não pode estar vazio!")
+      print("ERRO! Campo não pode estar vazio!")
     else:
       clear()
       break
+  
   return entrada
 
 def consulta_cep(cep:str) -> None:
@@ -334,14 +338,19 @@ def salvar_usuario (login:str, senha:str, cep:str, dados_endereco:dict) -> None:
     print('Erro ao salvar no banco de dados: ', e)
 
 def registrar_usuario():
+  print('Para realizar o seu cadastro, preencha as informações abaixo:')
+  
   while True:
-    print('Para realizar o seu cadastro, preencha as informações abaixo:')
     login = verifica_input_vazio("\nDigite o login (mínimo 4 caracteres): ", 'i').strip()
-        
+
+    if login == '0':
+      print("Voltando ao menu...")
+      return
+
     if len(login) < 4:
       print("\nO login deve ter no mínimo 4 caracteres. Tente novamente.")
       continue
-    
+
     if verificar_login_existente(login):
       print("Já existe um usuário com este login. Tente novamente com outro login.")
     else:
@@ -353,26 +362,32 @@ def registrar_usuario():
       break
     else:
       print("\nA senha deve ter entre 4 e 16 caracteres. Tente novamente.")
-  
-  cep = input("Digite o CEP: ")
 
+  cep = input("Digite o CEP: ")
   dados_endereco = consulta_cep(cep)
 
   if dados_endereco and confirmar_informacoes(dados_endereco):
     salvar_usuario(login, senha, cep, dados_endereco)
+    print("\nUsuário cadastrado com sucesso!")
   else:
     print("\nRegistro cancelado ou CEP inválido.")
     continuar()
 
-def verificar_login_existente(login):
 
-  sql = """
-  SELECT 1 FROM tbl_cadastros WHERE login = :login
-  """
-  inst_select.execute(sql, {'login': login})
-  
-  resultado = inst_select.fetchone()
-  return resultado is not None
+def verificar_login_existente(login):
+  try:
+    sql = """
+    SELECT 1 FROM tbl_cadastros WHERE login = :login
+    """
+    inst_select.execute(sql, {'login': login})
+    
+    resultado = inst_select.fetchone()
+    return resultado is not None
+  except Exception as e:
+    print("Erro ao verificar login existente:", e)
+    return False
+
+
 
 def verificar_login():
   clear()
