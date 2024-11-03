@@ -337,11 +337,16 @@ def registrar_usuario():
   while True:
     print('Para realizar o seu cadastro, preencha as informações abaixo:')
     login = verifica_input_vazio("\nDigite o login (mínimo 4 caracteres): ", 'i').strip()
-    if len(login) >= 4:
-      break
-    else:
+        
+    if len(login) < 4:
       print("\nO login deve ter no mínimo 4 caracteres. Tente novamente.")
-  
+      continue
+    
+    if verificar_login_existente(login):
+      print("Já existe um usuário com este login. Tente novamente com outro login.")
+    else:
+      break
+
   while True:
     senha = verifica_input_vazio("\nDigite a senha (mínimo 4 caracteres, máximo 16): ", 'i').strip()
     if 4 <= len(senha) <= 16:
@@ -359,10 +364,19 @@ def registrar_usuario():
     print("\nRegistro cancelado ou CEP inválido.")
     continuar()
 
+def verificar_login_existente(login):
+
+  sql = """
+  SELECT 1 FROM tbl_cadastros WHERE login = :login
+  """
+  inst_select.execute(sql, {'login': login})
+  
+  resultado = inst_select.fetchone()
+  return resultado is not None
 
 def verificar_login():
   clear()
-  print("Para realizar seu login, preencha as informações abaixo:\n")
+  print("\nPara realizar seu login, preencha as informações abaixo:\n")
   login = verifica_input_vazio("Digite seu login: ", 'i').strip()
   senha = verifica_input_vazio("Digite sua senha: ", 'i').strip()
 
