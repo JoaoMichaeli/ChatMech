@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+
+.button_submit {
+  @apply bg-blue_1 border-2 border-blue_1 text-white text-xl rounded-lg w-[100%] py-2 mt-4 hover:bg-white hover:border-2 hover:text-black
+}
+
+.cadastro_links {
+  @apply text-blue_3 decoration-solid underline underline-offset-4 max-w-fit
+}
+
+.titulo_login {
+  @apply font-roboto text-5xl mt-6 mb-8 text-center
+}
+
+.home_nav {
+  @apply font-medium hover:bg-blue_1 hover:rounded-lg hover:text-white hover:py-1 hover:px-2
+}
