@@ -63,3 +63,13 @@ O **ChatMech** é um sistema completo que integra tecnologias de inteligência a
 1. Clone o repositório:
    ```bash
    git clone https://github.com/JoaoMichaeli/ChatMech.git
+
+2. Acesse o diretório:
+   ```bash
+   cd ChatMech
+
+3. Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+
+4. Explore os diretórios de SPRINT para visualizar os módulos implementados.
